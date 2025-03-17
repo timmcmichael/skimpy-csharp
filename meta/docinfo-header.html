@@ -1,0 +1,43 @@
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const fileName = window.location.pathname.split('/').pop(); // Get current file name
+      console.log("Current file name:", fileName);
+
+      // Update the Light Mode link dynamically
+      const lightLink = document.querySelector("#header a.light-mode");
+      if (lightLink) {
+        lightLink.href = `https://timmcmichael.github.io/skimpy-csharp/${fileName}`;
+        lightLink.textContent = `Light Mode`;
+      }
+
+      // Update the Dark Mode link dynamically
+      const darkLink = document.querySelector("#header a.dark-mode");
+      if (darkLink) {
+        darkLink.href = `https://timmcmichael.github.io/skimpy-csharp-dark/${fileName}`;
+        darkLink.textContent = `Dark Mode (experimental)`;
+      }
+    });
+</script>
+
+<div id="header">
+    <span>
+      <a class="light-mode" href="https://timmcmichael.github.io/skimpy-csharp/current-file">Light Mode</a>
+      &nbsp;|&nbsp;
+      <a class="dark-mode" href="https://timmcmichael.github.io/skimpy-csharp-dark/current-file">Dark Mode</a>
+    </span>
+</div>
+
+
+<!--
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const fileName = window.location.pathname.split('/').pop();
+      console.log("Current file name:", fileName);
+      // Optionally, inject it into the page
+      document.getElementById("current-file").textContent = fileName;
+    });
+  </script>
+<div id="header">
+    <span><a href="https://timmcmichael.github.io/skimpy-csharp/current-file">Light Mode ({docname})</a>&nbsp;|&nbsp;<a href="https://timmcmichael.github.io/skimpy-csharp-dark/{docname}">Dark Mode (experimental)</a></span>
+</div>
+-->
