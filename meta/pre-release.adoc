@@ -1,0 +1,3 @@
+ifeval::["{edition}" == "Tripucka Edition"]
+#This is the "pre-release" working draft of the eBook. Content will change as chapters are developed and refined. Check back later for a more complete version.#
+endif::[]
