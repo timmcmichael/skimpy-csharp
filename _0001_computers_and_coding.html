@@ -528,8 +528,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><a href="https://forms.gle/H9VgmhJkQcKx9iRi8" target="_blank" rel="noopener">CIS162AD Course Materials Feedback (Google Form)</a></p>
 </div>
 <div class="paragraph">
-<p><mark>This is the "pre-release" working draft of the eBook. Content will change as chapters are developed and refined. Check back later for a more complete version.</mark>
-<mark>This is the "pre-release" working copy of the eBook.</mark></p>
+<p><mark>This is the "pre-release" working draft of this <strong>very incomplete</strong> eBook. Content will change as chapters are developed and refined. Check back later for a more complete version.</mark></p>
 </div>
 </div>
 </div>
@@ -781,7 +780,7 @@ And, as our programs become more complex, that traditional approach will keep ou
 <div class="content">
 <div class="title">Time To Watch!</div>
 <div class="paragraph">
-<p>First C# Program [COMING SOON!]</p>
+<p>C# Projects and First Program [COMING SOON!]</p>
 </div>
 </div>
 </div>
@@ -789,9 +788,9 @@ And, as our programs become more complex, that traditional approach will keep ou
 <p>Take a look at the code for a traditional "Hello World" program; we&#8217;ll learn what all of these pieces are as we go, but we should at least identify them now.</p>
 </div>
 <div class="listingblock">
-<div class="title">TraditionalHelloWorld.cs - Hello World program in C#, the traditional way</div>
+<div class="title">Example 1.1 - <code>TraditionalHelloWorld.cs</code> - Hello World program in C#, the traditional way</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">class TraditionalHelloWorld
+<pre class="pygments highlight"><code data-lang="c#">class TraditionalHelloWorld
 {
     static void Main(string[] args)
     {
@@ -804,9 +803,9 @@ And, as our programs become more complex, that traditional approach will keep ou
 <p>And here&#8217;s the same program using top-level statements.</p>
 </div>
 <div class="listingblock">
-<div class="title">HelloWorld.cs - Hello World program in C#, using top-level statements</div>
+<div class="title">Example 1.2 - <code>HelloWorld.cs</code> - Hello World program in C#, using top-level statements</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">Console.WriteLine("Hello, World!");</code></pre>
+<pre class="pygments highlight"><code data-lang="c#">Console.WriteLine("Hello, World!");</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -837,8 +836,10 @@ Since <code>Write</code> and <code>WriteLine</code> don&#8217;t exist in the fil
 To start with, we&#8217;ll use two basic ways to output text to the console: <code>Console.Write()</code> and <code>Console.WriteLine()</code> statements.
 <code>Write</code> outputs whatever text is in the parentheses, and we&#8217;ll need to put that text in quotation marks:</p>
 </div>
-<div class="paragraph">
-<p><code>Console.Write("Michael Stipe");</code></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="c#">Console.Write("Michael Stipe");</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p>This line of code outputs <strong>Michael Stipe</strong> to the console window.
@@ -854,9 +855,9 @@ Basically, it hits <em>enter</em>, and the next output statement will begin on a
 <p>To understand the difference between <code>Write()</code> and <code>WriteLine()</code>, consider this program.</p>
 </div>
 <div class="listingblock">
-<div class="title">OutputExample.cs - Simple console output in C#</div>
+<div class="title">Example 1.3 - <code>OutputExample.cs</code> - Simple console output in C#</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">Console.Write("In the words of Michael Stipe,");
+<pre class="pygments highlight"><code data-lang="c#">Console.Write("In the words of Michael Stipe,");
 Console.WriteLine("Don't go back to Rockville...");
 Console.WriteLine("...and waste another year.");</code></pre>
 </div>
@@ -864,10 +865,10 @@ Console.WriteLine("...and waste another year.");</code></pre>
 <div class="paragraph">
 <p>The program produces the following output:</p>
 </div>
-<div class="listingblock">
+<div class="literalblock">
 <div class="content">
-<pre class="pygments highlight"><code>In the words of Michael Stipe,Don't go back to Rockville...
-...and waste another year.</code></pre>
+<pre>In the words of Michael Stipe,Don't go back to Rockville...
+...and waste another year.</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -898,8 +899,9 @@ To indicate a comment, use two slashes:</p>
 We can add a comment onto the end of a line of code:</p>
 </div>
 <div class="listingblock">
+<div class="title">Inline comment placed at the end of a line of code</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">Console.WriteLine("Hello World"); // this outputs text to the console</code></pre>
+<pre class="pygments highlight"><code data-lang="c#">Console.WriteLine("Hello World"); // this line outputs text to the console</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -910,8 +912,9 @@ We can add a comment onto the end of a line of code:</p>
 When the compiler sees <code>/*</code> it will ignore everything until it finds <code>*/</code>, and then it will resume processing as usual.</p>
 </div>
 <div class="listingblock">
+<div class="title">Multi-line comment block</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">/*
+<pre class="pygments highlight"><code data-lang="c#">/*
 This program shows the difference between Write() and WriteLine().
 It is referring to an old R.E.M. song.
 
@@ -962,7 +965,7 @@ But if we want to see or use the code again down the road, it&#8217;s still ther
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Almost all IDEs have a keyboard shortcut for commenting out code&#8212;&#8203;and in most, it&#8217;s the same shortcut. Highlight a section of code and press <strong>alt-/</strong> (or <strong>⌘-/</strong> on macOS) and many IDEs will add <code>//</code> at the start of each line. Highlighting a comment and pressing the shortcut again will usually "uncomment" it and remove the slashes. If that doesn&#8217;t work, check the IDE&#8217;s documentation to see if there&#8217;s a different shortcut.
+Almost all IDEs have a keyboard shortcut for commenting out code&#8212;&#8203;and in most, it&#8217;s the same shortcut. Highlight a section of code and press <span class="keyseq"><kbd>Alt</kbd>+<kbd>/</kbd></span> on Windows or <span class="keyseq"><kbd>⌘</kbd>+<kbd>/</kbd></span> on macOS, and many IDEs will add <code>//</code> at the start of each line. Highlighting a comment and pressing the shortcut again will usually "uncomment" it and remove the slashes. If that doesn&#8217;t work, check the IDE&#8217;s documentation to see if there&#8217;s a different shortcut.
 </td>
 </tr>
 </table>
@@ -1004,7 +1007,7 @@ Almost all IDEs have a keyboard shortcut for commenting out code&#8212;&#8203;an
 </div>
 <div id="footer">
     <div id="footer-text">
-        Tripucka Edition,&nbsp;revised&nbsp;2025-03-18
+        Tripucka Edition,&nbsp;revised&nbsp;2025-03-21
     </div>
 </div>
 </body>
