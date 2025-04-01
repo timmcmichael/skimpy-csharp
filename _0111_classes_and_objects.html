@@ -683,7 +683,7 @@ The class header is followed by a code block, enclosed in curly braces.</p>
 <div class="listingblock">
 <div class="title"><code>WeatherRecord.cs</code>. A class header and code block.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public class WeatherRecord {
+<pre class="highlight"><code class="language-csharp" data-lang="csharp">public class WeatherRecord {
 
    // class code goes here
 
@@ -736,7 +736,7 @@ Since a class will compile and run even if we leave off the <code>private</code>
 <div class="listingblock">
 <div class="title"><code>WeatherRecord.cs</code>. Fields added to the <code>WeatherRecord</code> class.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public class WeatherRecord {
+<pre class="highlight"><code class="language-csharp" data-lang="csharp">public class WeatherRecord {
    private string date;
    private int highTemp;
    private int avgTemp;
@@ -791,7 +791,7 @@ Because of that convention, another name for accessor methods is <strong>getters
 <div class="listingblock">
 <div class="title">Example of an accessor method (or "getter")</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public int getHighTemperature() {
+<pre class="highlight"><code class="language-csharp" data-lang="csharp">public int getHighTemperature() {
         return highTemperature;
     }</code></pre>
 </div>
@@ -806,7 +806,7 @@ But read-only access usually does no harm, so often we&#8217;ll have getters for
 <div class="listingblock">
 <div class="title"><code>WeatherRecord.cs</code>. Getters added to the <code>WeatherRecord</code> class.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public class WeatherRecord {
+<pre class="highlight"><code class="language-csharp" data-lang="csharp">public class WeatherRecord {
    private string date;
    private int highTemp;
    private int avgTemp;
@@ -837,7 +837,7 @@ The naming convention for setters is to start with <code>set</code> and then the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public void setHighTemperature(int temp) {
+<pre class="highlight"><code class="language-csharp" data-lang="csharp">public void setHighTemperature(int temp) {
         highTemperature = temp;
     }</code></pre>
 </div>
@@ -871,7 +871,7 @@ But for now, this is just another one of those frustrating rules that you just h
 <div class="listingblock">
 <div class="title"><code>WeatherRecord.cs</code>. Setters added to the <code>WeatherRecord</code> class, and comments identifying the parts.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public class WeatherRecord {
+<pre class="highlight"><code class="language-csharp" data-lang="csharp">public class WeatherRecord {
     // Fields
     private string date;
     private int highTemperature;
@@ -939,7 +939,7 @@ The declaration is still a <em>data type</em> and an _identifier, but in this ca
 <div class="listingblock">
 <div class="title">Example of a declaration statement for an object.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">WeatherRecord day1;</code></pre>
+<pre class="highlight"><code class="language-csharp" data-lang="csharp">WeatherRecord day1;</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -954,7 +954,7 @@ We&#8217;ll use the <code>new</code> keyword to allocate memory, and then we&#82
 <div class="listingblock">
 <div class="title">Example of an assignment statement for a newly declared object.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">WeatherRecord day1;
+<pre class="highlight"><code class="language-csharp" data-lang="csharp">WeatherRecord day1;
 day1 = new WeatherRecord();</code></pre>
 </div>
 </div>
@@ -985,7 +985,7 @@ We&#8217;ve already learned that parentheses in Java <strong>always</strong> mea
 <div class="listingblock">
 <div class="title">Instance method calls using dot notation.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">WeatherRecord day1 = new WeatherRecord();
+<pre class="highlight"><code class="language-csharp" data-lang="csharp">WeatherRecord day1 = new WeatherRecord();
 day1.setHighTemperature(87);
 Console.WriteLine("High temperature on day 1:" + day1.getHighTemperature());</code></pre>
 </div>
@@ -1001,7 +1001,7 @@ To see why it&#8217;s necessary, consider the following example.</p>
 <div class="listingblock">
 <div class="title">An instance method call using dot notation with multiple objects.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">WeatherRecord day1 = new WeatherRecord();
+<pre class="highlight"><code class="language-csharp" data-lang="csharp">WeatherRecord day1 = new WeatherRecord();
 WeatherRecord day2 = new WeatherRecord();
 
 day1.setHighTemperature(87);</code></pre>
@@ -1060,7 +1060,7 @@ Sorry, I can&#8217;t do much better than that for now.</p>
 <div class="listingblock">
 <div class="title"><code>WeatherRecordDemo.cs</code>. A driver class to demonstrate the <code>WeatherRecord</code> class.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public class WeatherRecordDemo {
+<pre class="highlight"><code class="language-csharp" data-lang="csharp">public class WeatherRecordDemo {
     public static void Main() {
         // Instantiate two objects
         WeatherRecord day1 = new WeatherRecord();
@@ -1159,7 +1159,7 @@ A definition for a constructor for the <code>WeatherRecord</code> class would lo
 <div class="listingblock">
 <div class="title">Example of a constructor for the <code>WeatherRecord</code> class.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public WeatherRecord() {
+<pre class="highlight"><code class="language-csharp" data-lang="csharp">public WeatherRecord() {
     // code to initialize fields goes here
 }</code></pre>
 </div>
@@ -1171,7 +1171,7 @@ As a beginner, our rule of thumb is to just make a simple assignment statement f
 <div class="listingblock">
 <div class="title">Example of a constructor that initializes fields.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public WeatherRecord() {
+<pre class="highlight"><code class="language-csharp" data-lang="csharp">public WeatherRecord() {
     date = "2025-01-01";
     highTemperature = 0;
     averageWindSpeed = 0.0;
@@ -1205,7 +1205,7 @@ We add parameters to our constructor just like we do with any other method, by l
 <div class="listingblock">
 <div class="title">Example of a constructor with parameters.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public WeatherRecord(string date) {
+<pre class="highlight"><code class="language-csharp" data-lang="csharp">public WeatherRecord(string date) {
     this.date = date;
     this.highTemperature = 0;
     this.averageWindSpeed = 0.0;
@@ -1343,7 +1343,7 @@ If we have a savings account class, a common example when learning OOP, we might
 <div class="listingblock">
 <div class="title"><code>SavingsAccount.cs</code>. A class with a <code>static</code> constant.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public class SavingsAccount {
+<pre class="highlight"><code class="language-csharp" data-lang="csharp">public class SavingsAccount {
     private static final double INTEREST_RATE = 0.02;
 
     // other fields and methods go here. See the repository for the complete code.
@@ -1384,7 +1384,7 @@ If we have a savings account class, a common example when learning OOP, we might
 </div>
 <div id="footer">
     <div id="footer-text">
-        Tripucka Edition,&nbsp;revised&nbsp;2025-04-01&nbsp;-&nbsp;18:21:56 UTC
+        Tripucka Edition,&nbsp;revised&nbsp;2025-04-01&nbsp;-&nbsp;18:32:30 UTC
     </div>
 </div>
 </body>
