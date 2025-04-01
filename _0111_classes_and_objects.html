@@ -679,11 +679,25 @@ The UML standards are extensive, but we&#8217;ll be using a simplified version i
 <div class="paragraph">
 <p>Consider a program to handle orders at a restaurant. A simple class to represent one person&#8217;s order might look like this:</p>
 </div>
-<div class="imageblock">
-<div class="content">
-<img src="chapter07/images/OrderDiagram.png" alt="OrderDiagram" width="192" height="214">
-</div>
+<div class="listingblock">
 <div class="title">Example of a class diagram for a restaurant order</div>
+<div class="content">
+<pre>!theme crt-green // delete for light theme
+@startuml
+skinparam classAttributeIconSize 0
+class Order {
+   -serverName:string
+   -tableNum:int
+   -appetizer:string
+   -entree:string
+   -dessert:string
+   -totalPrice:double
+   +void sendToKitchen()
+   +void printBill()
+   +double closeBill()
+}
+@enduml</pre>
+</div>
 </div>
 <div class="paragraph">
 <p>The top section of the diagram has the name of the class, which is <code>Order</code>.
