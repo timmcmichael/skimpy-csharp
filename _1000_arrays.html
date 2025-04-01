@@ -418,6 +418,88 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+pre.pygments .hll { background-color: #49483e }
+pre.pygments { background: #272822; color: #f8f8f2 }
+pre.pygments .tok-c { color: #959077 } /* Comment */
+pre.pygments .tok-err { color: #ed007e; background-color: #1e0010 } /* Error */
+pre.pygments .tok-esc { color: #f8f8f2 } /* Escape */
+pre.pygments .tok-g { color: #f8f8f2 } /* Generic */
+pre.pygments .tok-k { color: #66d9ef } /* Keyword */
+pre.pygments .tok-l { color: #ae81ff } /* Literal */
+pre.pygments .tok-n { color: #f8f8f2 } /* Name */
+pre.pygments .tok-o { color: #ff4689 } /* Operator */
+pre.pygments .tok-x { color: #f8f8f2 } /* Other */
+pre.pygments .tok-p { color: #f8f8f2 } /* Punctuation */
+pre.pygments .tok-ch { color: #959077 } /* Comment.Hashbang */
+pre.pygments .tok-cm { color: #959077 } /* Comment.Multiline */
+pre.pygments .tok-cp { color: #959077 } /* Comment.Preproc */
+pre.pygments .tok-cpf { color: #959077 } /* Comment.PreprocFile */
+pre.pygments .tok-c1 { color: #959077 } /* Comment.Single */
+pre.pygments .tok-cs { color: #959077 } /* Comment.Special */
+pre.pygments .tok-gd { color: #ff4689 } /* Generic.Deleted */
+pre.pygments .tok-ge { color: #f8f8f2; font-style: italic } /* Generic.Emph */
+pre.pygments .tok-ges { color: #f8f8f2; font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+pre.pygments .tok-gr { color: #f8f8f2 } /* Generic.Error */
+pre.pygments .tok-gh { color: #f8f8f2 } /* Generic.Heading */
+pre.pygments .tok-gi { color: #a6e22e } /* Generic.Inserted */
+pre.pygments .tok-go { color: #66d9ef } /* Generic.Output */
+pre.pygments .tok-gp { color: #ff4689; font-weight: bold } /* Generic.Prompt */
+pre.pygments .tok-gs { color: #f8f8f2; font-weight: bold } /* Generic.Strong */
+pre.pygments .tok-gu { color: #959077 } /* Generic.Subheading */
+pre.pygments .tok-gt { color: #f8f8f2 } /* Generic.Traceback */
+pre.pygments .tok-kc { color: #66d9ef } /* Keyword.Constant */
+pre.pygments .tok-kd { color: #66d9ef } /* Keyword.Declaration */
+pre.pygments .tok-kn { color: #ff4689 } /* Keyword.Namespace */
+pre.pygments .tok-kp { color: #66d9ef } /* Keyword.Pseudo */
+pre.pygments .tok-kr { color: #66d9ef } /* Keyword.Reserved */
+pre.pygments .tok-kt { color: #66d9ef } /* Keyword.Type */
+pre.pygments .tok-ld { color: #e6db74 } /* Literal.Date */
+pre.pygments .tok-m { color: #ae81ff } /* Literal.Number */
+pre.pygments .tok-s { color: #e6db74 } /* Literal.String */
+pre.pygments .tok-na { color: #a6e22e } /* Name.Attribute */
+pre.pygments .tok-nb { color: #f8f8f2 } /* Name.Builtin */
+pre.pygments .tok-nc { color: #a6e22e } /* Name.Class */
+pre.pygments .tok-no { color: #66d9ef } /* Name.Constant */
+pre.pygments .tok-nd { color: #a6e22e } /* Name.Decorator */
+pre.pygments .tok-ni { color: #f8f8f2 } /* Name.Entity */
+pre.pygments .tok-ne { color: #a6e22e } /* Name.Exception */
+pre.pygments .tok-nf { color: #a6e22e } /* Name.Function */
+pre.pygments .tok-nl { color: #f8f8f2 } /* Name.Label */
+pre.pygments .tok-nn { color: #f8f8f2 } /* Name.Namespace */
+pre.pygments .tok-nx { color: #a6e22e } /* Name.Other */
+pre.pygments .tok-py { color: #f8f8f2 } /* Name.Property */
+pre.pygments .tok-nt { color: #ff4689 } /* Name.Tag */
+pre.pygments .tok-nv { color: #f8f8f2 } /* Name.Variable */
+pre.pygments .tok-ow { color: #ff4689 } /* Operator.Word */
+pre.pygments .tok-pm { color: #f8f8f2 } /* Punctuation.Marker */
+pre.pygments .tok-w { color: #f8f8f2 } /* Text.Whitespace */
+pre.pygments .tok-mb { color: #ae81ff } /* Literal.Number.Bin */
+pre.pygments .tok-mf { color: #ae81ff } /* Literal.Number.Float */
+pre.pygments .tok-mh { color: #ae81ff } /* Literal.Number.Hex */
+pre.pygments .tok-mi { color: #ae81ff } /* Literal.Number.Integer */
+pre.pygments .tok-mo { color: #ae81ff } /* Literal.Number.Oct */
+pre.pygments .tok-sa { color: #e6db74 } /* Literal.String.Affix */
+pre.pygments .tok-sb { color: #e6db74 } /* Literal.String.Backtick */
+pre.pygments .tok-sc { color: #e6db74 } /* Literal.String.Char */
+pre.pygments .tok-dl { color: #e6db74 } /* Literal.String.Delimiter */
+pre.pygments .tok-sd { color: #e6db74 } /* Literal.String.Doc */
+pre.pygments .tok-s2 { color: #e6db74 } /* Literal.String.Double */
+pre.pygments .tok-se { color: #ae81ff } /* Literal.String.Escape */
+pre.pygments .tok-sh { color: #e6db74 } /* Literal.String.Heredoc */
+pre.pygments .tok-si { color: #e6db74 } /* Literal.String.Interpol */
+pre.pygments .tok-sx { color: #e6db74 } /* Literal.String.Other */
+pre.pygments .tok-sr { color: #e6db74 } /* Literal.String.Regex */
+pre.pygments .tok-s1 { color: #e6db74 } /* Literal.String.Single */
+pre.pygments .tok-ss { color: #e6db74 } /* Literal.String.Symbol */
+pre.pygments .tok-bp { color: #f8f8f2 } /* Name.Builtin.Pseudo */
+pre.pygments .tok-fm { color: #a6e22e } /* Name.Function.Magic */
+pre.pygments .tok-vc { color: #f8f8f2 } /* Name.Variable.Class */
+pre.pygments .tok-vg { color: #f8f8f2 } /* Name.Variable.Global */
+pre.pygments .tok-vi { color: #f8f8f2 } /* Name.Variable.Instance */
+pre.pygments .tok-vm { color: #f8f8f2 } /* Name.Variable.Magic */
+pre.pygments .tok-il { color: #ae81ff } /* Literal.Number.Integer.Long */
+</style>
 <style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
              .nav-footer{text-align: center; margin-top: auto;}
@@ -602,7 +684,8 @@ Any time you see square brackets in Java, you&#8217;re dealing with an array.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="java">String[] groceryItems = new String[5];</code></pre>
+<pre class="pygments highlight"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-n">String</span><span class="tok-o">[]</span><span class="tok-w"> </span><span class="tok-n">groceryItems</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">new</span><span class="tok-w"> </span><span class="tok-n">String</span><span class="tok-o">[</span><span class="tok-mi">5</span><span class="tok-o">]</span><span class="tok-p">;</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -613,11 +696,16 @@ Any time you see square brackets in Java, you&#8217;re dealing with an array.
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="java">groceryItems[0] = "milk";
-groceryItems[1] = "eggs";
-groceryItems[2] = "bread";
-groceryItems[3] = "butter";
-groceryItems[4] = "cheese";</code></pre>
+<pre class="pygments highlight"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-n">groceryItems</span><span class="tok-o">[</span><span class="tok-mi">0</span><span class="tok-o">]</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-s">&quot;milk&quot;</span><span class="tok-p">;</span>
+<span class="tok-n">groceryItems</span><span class="tok-o">[</span><span class="tok-mi">1</span><span class="tok-o">]</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-s">&quot;eggs&quot;</span><span class="tok-p">;</span>
+<span class="tok-n">groceryItems</span><span class="tok-o">[</span><span class="tok-mi">2</span><span class="tok-o">]</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-s">&quot;bread&quot;</span><span class="tok-p">;</span>
+<span class="tok-n">groceryItems</span><span class="tok-o">[</span><span class="tok-mi">3</span><span class="tok-o">]</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-s">&quot;butter&quot;</span><span class="tok-p">;</span>
+<span class="tok-n">groceryItems</span><span class="tok-o">[</span><span class="tok-mi">4</span><span class="tok-o">]</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-s">&quot;cheese&quot;</span><span class="tok-p">;</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -629,10 +717,14 @@ The element is just like any other variable, so we can use it in expressions, pa
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="java">System.out.println("The first item on the list is " + groceryItems[0]);
-System.out.println("The last item on the list is " + groceryItems[4]);
-groceryItems[2] = "bananas";
-System.out.println("Bread has been replaced with " + groceryItems[2]);</code></pre>
+<pre class="pygments highlight"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-n">System</span><span class="tok-p">.</span><span class="tok-na">out</span><span class="tok-p">.</span><span class="tok-na">println</span><span class="tok-p">(</span><span class="tok-s">&quot;The first item on the list is &quot;</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-n">groceryItems</span><span class="tok-o">[</span><span class="tok-mi">0</span><span class="tok-o">]</span><span class="tok-p">);</span>
+<span class="tok-n">System</span><span class="tok-p">.</span><span class="tok-na">out</span><span class="tok-p">.</span><span class="tok-na">println</span><span class="tok-p">(</span><span class="tok-s">&quot;The last item on the list is &quot;</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-n">groceryItems</span><span class="tok-o">[</span><span class="tok-mi">4</span><span class="tok-o">]</span><span class="tok-p">);</span>
+<span class="tok-n">groceryItems</span><span class="tok-o">[</span><span class="tok-mi">2</span><span class="tok-o">]</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-s">&quot;bananas&quot;</span><span class="tok-p">;</span>
+<span class="tok-n">System</span><span class="tok-p">.</span><span class="tok-na">out</span><span class="tok-p">.</span><span class="tok-na">println</span><span class="tok-p">(</span><span class="tok-s">&quot;Bread has been replaced with &quot;</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-n">groceryItems</span><span class="tok-o">[</span><span class="tok-mi">2</span><span class="tok-o">]</span><span class="tok-p">);</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -688,12 +780,18 @@ The syntax for a <code>for</code> traversal is:</p>
 <div class="listingblock">
 <div class="title">Example of a <code>for</code> loop to traverse an array</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="java">int scores[] = {90, 85, 95, 88, 92};
-int sum = 0;
-for (int i = 0; i &lt; scores.length; i++) {
-    sum += scores[i];
-}
-System.out.println("The sum of the scores is " + sum);</code></pre>
+<pre class="pygments highlight"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">scores</span><span class="tok-o">[]</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-p">{</span><span class="tok-mi">90</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-mi">85</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-mi">95</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-mi">88</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-mi">92</span><span class="tok-p">};</span>
+<span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">sum</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-mi">0</span><span class="tok-p">;</span>
+<span class="tok-k">for</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">i</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-mi">0</span><span class="tok-p">;</span><span class="tok-w"> </span><span class="tok-n">i</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-n">scores</span><span class="tok-p">.</span><span class="tok-na">length</span><span class="tok-p">;</span><span class="tok-w"> </span><span class="tok-n">i</span><span class="tok-o">++</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-n">sum</span><span class="tok-w"> </span><span class="tok-o">+=</span><span class="tok-w"> </span><span class="tok-n">scores</span><span class="tok-o">[</span><span class="tok-n">i</span><span class="tok-o">]</span><span class="tok-p">;</span>
+<span class="tok-p">}</span>
+<span class="tok-n">System</span><span class="tok-p">.</span><span class="tok-na">out</span><span class="tok-p">.</span><span class="tok-na">println</span><span class="tok-p">(</span><span class="tok-s">&quot;The sum of the scores is &quot;</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-n">sum</span><span class="tok-p">);</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -724,12 +822,18 @@ If we hard-coded the size of the array into the loop, we would have to change ou
 <div class="listingblock">
 <div class="title">Example of a hard-coded loop</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="java">int scores[] = {90, 85, 95, 88, 92};
-int sum = 0;
-for (int i = 0; i &lt; 5; i++) { // Uh oh! What if we add another score?
-    sum += scores[i];
-}
-System.out.println("The sum of the scores is " + sum);</code></pre>
+<pre class="pygments highlight"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">scores</span><span class="tok-o">[]</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-p">{</span><span class="tok-mi">90</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-mi">85</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-mi">95</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-mi">88</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-mi">92</span><span class="tok-p">};</span>
+<span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">sum</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-mi">0</span><span class="tok-p">;</span>
+<span class="tok-k">for</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">i</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-mi">0</span><span class="tok-p">;</span><span class="tok-w"> </span><span class="tok-n">i</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-mi">5</span><span class="tok-p">;</span><span class="tok-w"> </span><span class="tok-n">i</span><span class="tok-o">++</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span><span class="tok-w"> </span><span class="tok-c1">// Uh oh! What if we add another score?</span>
+<span class="tok-w">    </span><span class="tok-n">sum</span><span class="tok-w"> </span><span class="tok-o">+=</span><span class="tok-w"> </span><span class="tok-n">scores</span><span class="tok-o">[</span><span class="tok-n">i</span><span class="tok-o">]</span><span class="tok-p">;</span>
+<span class="tok-p">}</span>
+<span class="tok-n">System</span><span class="tok-p">.</span><span class="tok-na">out</span><span class="tok-p">.</span><span class="tok-na">println</span><span class="tok-p">(</span><span class="tok-s">&quot;The sum of the scores is &quot;</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-n">sum</span><span class="tok-p">);</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="sidebarblock">
@@ -782,12 +886,18 @@ We&#8217;ve been using arrays of Strings, which are objects, but students someti
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="java">GroceryItem[] groceryItems = new GroceryItem[5];
-groceryItems[0] = new GroceryItem("milk", 4);
-groceryItems[1] = new GroceryItem("eggs", 9);
-groceryItems[2] = new GroceryItem("bread", 7);
-groceryItems[3] = new GroceryItem("butter", 4);
-groceryItems[4] = new GroceryItem("cheese", 4);</code></pre>
+<pre class="pygments highlight"><code data-lang="java"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-n">GroceryItem</span><span class="tok-o">[]</span><span class="tok-w"> </span><span class="tok-n">groceryItems</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">new</span><span class="tok-w"> </span><span class="tok-n">GroceryItem</span><span class="tok-o">[</span><span class="tok-mi">5</span><span class="tok-o">]</span><span class="tok-p">;</span>
+<span class="tok-n">groceryItems</span><span class="tok-o">[</span><span class="tok-mi">0</span><span class="tok-o">]</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">new</span><span class="tok-w"> </span><span class="tok-n">GroceryItem</span><span class="tok-p">(</span><span class="tok-s">&quot;milk&quot;</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-mi">4</span><span class="tok-p">);</span>
+<span class="tok-n">groceryItems</span><span class="tok-o">[</span><span class="tok-mi">1</span><span class="tok-o">]</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">new</span><span class="tok-w"> </span><span class="tok-n">GroceryItem</span><span class="tok-p">(</span><span class="tok-s">&quot;eggs&quot;</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-mi">9</span><span class="tok-p">);</span>
+<span class="tok-n">groceryItems</span><span class="tok-o">[</span><span class="tok-mi">2</span><span class="tok-o">]</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">new</span><span class="tok-w"> </span><span class="tok-n">GroceryItem</span><span class="tok-p">(</span><span class="tok-s">&quot;bread&quot;</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-mi">7</span><span class="tok-p">);</span>
+<span class="tok-n">groceryItems</span><span class="tok-o">[</span><span class="tok-mi">3</span><span class="tok-o">]</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">new</span><span class="tok-w"> </span><span class="tok-n">GroceryItem</span><span class="tok-p">(</span><span class="tok-s">&quot;butter&quot;</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-mi">4</span><span class="tok-p">);</span>
+<span class="tok-n">groceryItems</span><span class="tok-o">[</span><span class="tok-mi">4</span><span class="tok-o">]</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">new</span><span class="tok-w"> </span><span class="tok-n">GroceryItem</span><span class="tok-p">(</span><span class="tok-s">&quot;cheese&quot;</span><span class="tok-p">,</span><span class="tok-w"> </span><span class="tok-mi">4</span><span class="tok-p">);</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">

@@ -418,6 +418,88 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+pre.pygments .hll { background-color: #49483e }
+pre.pygments { background: #272822; color: #f8f8f2 }
+pre.pygments .tok-c { color: #959077 } /* Comment */
+pre.pygments .tok-err { color: #ed007e; background-color: #1e0010 } /* Error */
+pre.pygments .tok-esc { color: #f8f8f2 } /* Escape */
+pre.pygments .tok-g { color: #f8f8f2 } /* Generic */
+pre.pygments .tok-k { color: #66d9ef } /* Keyword */
+pre.pygments .tok-l { color: #ae81ff } /* Literal */
+pre.pygments .tok-n { color: #f8f8f2 } /* Name */
+pre.pygments .tok-o { color: #ff4689 } /* Operator */
+pre.pygments .tok-x { color: #f8f8f2 } /* Other */
+pre.pygments .tok-p { color: #f8f8f2 } /* Punctuation */
+pre.pygments .tok-ch { color: #959077 } /* Comment.Hashbang */
+pre.pygments .tok-cm { color: #959077 } /* Comment.Multiline */
+pre.pygments .tok-cp { color: #959077 } /* Comment.Preproc */
+pre.pygments .tok-cpf { color: #959077 } /* Comment.PreprocFile */
+pre.pygments .tok-c1 { color: #959077 } /* Comment.Single */
+pre.pygments .tok-cs { color: #959077 } /* Comment.Special */
+pre.pygments .tok-gd { color: #ff4689 } /* Generic.Deleted */
+pre.pygments .tok-ge { color: #f8f8f2; font-style: italic } /* Generic.Emph */
+pre.pygments .tok-ges { color: #f8f8f2; font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+pre.pygments .tok-gr { color: #f8f8f2 } /* Generic.Error */
+pre.pygments .tok-gh { color: #f8f8f2 } /* Generic.Heading */
+pre.pygments .tok-gi { color: #a6e22e } /* Generic.Inserted */
+pre.pygments .tok-go { color: #66d9ef } /* Generic.Output */
+pre.pygments .tok-gp { color: #ff4689; font-weight: bold } /* Generic.Prompt */
+pre.pygments .tok-gs { color: #f8f8f2; font-weight: bold } /* Generic.Strong */
+pre.pygments .tok-gu { color: #959077 } /* Generic.Subheading */
+pre.pygments .tok-gt { color: #f8f8f2 } /* Generic.Traceback */
+pre.pygments .tok-kc { color: #66d9ef } /* Keyword.Constant */
+pre.pygments .tok-kd { color: #66d9ef } /* Keyword.Declaration */
+pre.pygments .tok-kn { color: #ff4689 } /* Keyword.Namespace */
+pre.pygments .tok-kp { color: #66d9ef } /* Keyword.Pseudo */
+pre.pygments .tok-kr { color: #66d9ef } /* Keyword.Reserved */
+pre.pygments .tok-kt { color: #66d9ef } /* Keyword.Type */
+pre.pygments .tok-ld { color: #e6db74 } /* Literal.Date */
+pre.pygments .tok-m { color: #ae81ff } /* Literal.Number */
+pre.pygments .tok-s { color: #e6db74 } /* Literal.String */
+pre.pygments .tok-na { color: #a6e22e } /* Name.Attribute */
+pre.pygments .tok-nb { color: #f8f8f2 } /* Name.Builtin */
+pre.pygments .tok-nc { color: #a6e22e } /* Name.Class */
+pre.pygments .tok-no { color: #66d9ef } /* Name.Constant */
+pre.pygments .tok-nd { color: #a6e22e } /* Name.Decorator */
+pre.pygments .tok-ni { color: #f8f8f2 } /* Name.Entity */
+pre.pygments .tok-ne { color: #a6e22e } /* Name.Exception */
+pre.pygments .tok-nf { color: #a6e22e } /* Name.Function */
+pre.pygments .tok-nl { color: #f8f8f2 } /* Name.Label */
+pre.pygments .tok-nn { color: #f8f8f2 } /* Name.Namespace */
+pre.pygments .tok-nx { color: #a6e22e } /* Name.Other */
+pre.pygments .tok-py { color: #f8f8f2 } /* Name.Property */
+pre.pygments .tok-nt { color: #ff4689 } /* Name.Tag */
+pre.pygments .tok-nv { color: #f8f8f2 } /* Name.Variable */
+pre.pygments .tok-ow { color: #ff4689 } /* Operator.Word */
+pre.pygments .tok-pm { color: #f8f8f2 } /* Punctuation.Marker */
+pre.pygments .tok-w { color: #f8f8f2 } /* Text.Whitespace */
+pre.pygments .tok-mb { color: #ae81ff } /* Literal.Number.Bin */
+pre.pygments .tok-mf { color: #ae81ff } /* Literal.Number.Float */
+pre.pygments .tok-mh { color: #ae81ff } /* Literal.Number.Hex */
+pre.pygments .tok-mi { color: #ae81ff } /* Literal.Number.Integer */
+pre.pygments .tok-mo { color: #ae81ff } /* Literal.Number.Oct */
+pre.pygments .tok-sa { color: #e6db74 } /* Literal.String.Affix */
+pre.pygments .tok-sb { color: #e6db74 } /* Literal.String.Backtick */
+pre.pygments .tok-sc { color: #e6db74 } /* Literal.String.Char */
+pre.pygments .tok-dl { color: #e6db74 } /* Literal.String.Delimiter */
+pre.pygments .tok-sd { color: #e6db74 } /* Literal.String.Doc */
+pre.pygments .tok-s2 { color: #e6db74 } /* Literal.String.Double */
+pre.pygments .tok-se { color: #ae81ff } /* Literal.String.Escape */
+pre.pygments .tok-sh { color: #e6db74 } /* Literal.String.Heredoc */
+pre.pygments .tok-si { color: #e6db74 } /* Literal.String.Interpol */
+pre.pygments .tok-sx { color: #e6db74 } /* Literal.String.Other */
+pre.pygments .tok-sr { color: #e6db74 } /* Literal.String.Regex */
+pre.pygments .tok-s1 { color: #e6db74 } /* Literal.String.Single */
+pre.pygments .tok-ss { color: #e6db74 } /* Literal.String.Symbol */
+pre.pygments .tok-bp { color: #f8f8f2 } /* Name.Builtin.Pseudo */
+pre.pygments .tok-fm { color: #a6e22e } /* Name.Function.Magic */
+pre.pygments .tok-vc { color: #f8f8f2 } /* Name.Variable.Class */
+pre.pygments .tok-vg { color: #f8f8f2 } /* Name.Variable.Global */
+pre.pygments .tok-vi { color: #f8f8f2 } /* Name.Variable.Instance */
+pre.pygments .tok-vm { color: #f8f8f2 } /* Name.Variable.Magic */
+pre.pygments .tok-il { color: #ae81ff } /* Literal.Number.Integer.Long */
+</style>
 <style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
              .nav-footer{text-align: center; margin-top: auto;}
@@ -599,7 +681,7 @@ The UML standards are extensive, but we&#8217;ll be using a simplified version i
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="chapter07/images/OrderDiagram.png" alt="Class diagram for the `Order` class">
+<img src="chapter07/images/OrderDiagram.png" alt="OrderDiagram" width="192" height="214">
 </div>
 <div class="title">Example of a class diagram for a restaurant order</div>
 </div>
@@ -669,11 +751,16 @@ The class header is followed by a code block, enclosed in curly braces.</p>
 <div class="listingblock">
 <div class="title"><code>WeatherRecord.cs</code>. A class header and code block.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public class WeatherRecord {
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">WeatherRecord</span><span class="tok-w"> </span><span class="tok-p">{</span>
 
-   // class code goes here
+<span class="tok-w">   </span><span class="tok-c1">// class code goes here</span>
 
-}</code></pre>
+<span class="tok-p">}</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="dlist">
@@ -722,11 +809,16 @@ Since a class will compile and run even if we leave off the <code>private</code>
 <div class="listingblock">
 <div class="title"><code>WeatherRecord.cs</code>. Fields added to the <code>WeatherRecord</code> class.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public class WeatherRecord {
-   private string date;
-   private int highTemp;
-   private int avgTemp;
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">WeatherRecord</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">   </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">;</span>
+<span class="tok-w">   </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">highTemp</span><span class="tok-p">;</span>
+<span class="tok-w">   </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">avgTemp</span><span class="tok-p">;</span>
+<span class="tok-p">}</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -777,9 +869,12 @@ Because of that convention, another name for accessor methods is <strong>getters
 <div class="listingblock">
 <div class="title">Example of an accessor method (or "getter")</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public int getHighTemperature() {
-        return highTemperature;
-    }</code></pre>
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-nf">getHighTemperature</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-n">highTemperature</span><span class="tok-p">;</span>
+<span class="tok-w">    </span><span class="tok-p">}</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -792,24 +887,42 @@ But read-only access usually does no harm, so often we&#8217;ll have getters for
 <div class="listingblock">
 <div class="title"><code>WeatherRecord.cs</code>. Getters added to the <code>WeatherRecord</code> class.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public class WeatherRecord {
-   private string date;
-   private int highTemp;
-   private int avgTemp;
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">WeatherRecord</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">   </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">;</span>
+<span class="tok-w">   </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">highTemp</span><span class="tok-p">;</span>
+<span class="tok-w">   </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">avgTemp</span><span class="tok-p">;</span>
 
-   public string getDate() {
-      return date;
-   }
+<span class="tok-w">   </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-nf">getDate</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">      </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">;</span>
+<span class="tok-w">   </span><span class="tok-p">}</span>
 
-   public int getHighTemp() {
-      return highTemp;
-   }
+<span class="tok-w">   </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-nf">getHighTemp</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">      </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-n">highTemp</span><span class="tok-p">;</span>
+<span class="tok-w">   </span><span class="tok-p">}</span>
 
-   public int getAvgTemp() {
-      return avgTemp;
-   }
+<span class="tok-w">   </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-nf">getAvgTemp</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">      </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-n">avgTemp</span><span class="tok-p">;</span>
+<span class="tok-w">   </span><span class="tok-p">}</span>
 
-}</code></pre>
+<span class="tok-p">}</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 </div>
@@ -823,9 +936,12 @@ The naming convention for setters is to start with <code>set</code> and then the
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public void setHighTemperature(int temp) {
-        highTemperature = temp;
-    }</code></pre>
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">setHighTemperature</span><span class="tok-p">(</span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">temp</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">        </span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">temp</span><span class="tok-p">;</span>
+<span class="tok-w">    </span><span class="tok-p">}</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -857,38 +973,70 @@ But for now, this is just another one of those frustrating rules that you just h
 <div class="listingblock">
 <div class="title"><code>WeatherRecord.cs</code>. Setters added to the <code>WeatherRecord</code> class, and comments identifying the parts.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public class WeatherRecord {
-    // Fields
-    private string date;
-    private int highTemperature;
-    private double averageWindSpeed;
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">WeatherRecord</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-c1">// Fields</span>
+<span class="tok-w">    </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">;</span>
+<span class="tok-w">    </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">highTemperature</span><span class="tok-p">;</span>
+<span class="tok-w">    </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">double</span><span class="tok-w"> </span><span class="tok-n">averageWindSpeed</span><span class="tok-p">;</span>
 
-    // Getters
-    public string getDate() {
-        return date;
-    }
+<span class="tok-w">    </span><span class="tok-c1">// Getters</span>
+<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-nf">getDate</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">;</span>
+<span class="tok-w">    </span><span class="tok-p">}</span>
 
-    public int getHighTemperature() {
-        return highTemperature;
-    }
+<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-nf">getHighTemperature</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-n">highTemperature</span><span class="tok-p">;</span>
+<span class="tok-w">    </span><span class="tok-p">}</span>
 
-    public double getAverageWindSpeed() {
-        return averageWindSpeed;
-    }
+<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">double</span><span class="tok-w"> </span><span class="tok-nf">getAverageWindSpeed</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-n">averageWindSpeed</span><span class="tok-p">;</span>
+<span class="tok-w">    </span><span class="tok-p">}</span>
 
-    // Setters and Mutators
-    public void setDate(string date) {
-        this.date = date;
-    }
+<span class="tok-w">    </span><span class="tok-c1">// Setters and Mutators</span>
+<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">setDate</span><span class="tok-p">(</span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">        </span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">date</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">;</span>
+<span class="tok-w">    </span><span class="tok-p">}</span>
 
-    public void setHighTemperature(int highTemperature) {
-        this.highTemperature = highTemperature;
-    }
+<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">setHighTemperature</span><span class="tok-p">(</span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">highTemperature</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">        </span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">highTemperature</span><span class="tok-p">;</span>
+<span class="tok-w">    </span><span class="tok-p">}</span>
 
-    public void setAverageWindSpeed(double averageWindSpeed) {
-        this.averageWindSpeed = averageWindSpeed;
-    }
-}</code></pre>
+<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">setAverageWindSpeed</span><span class="tok-p">(</span><span class="tok-kt">double</span><span class="tok-w"> </span><span class="tok-n">averageWindSpeed</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">        </span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">averageWindSpeed</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">averageWindSpeed</span><span class="tok-p">;</span>
+<span class="tok-w">    </span><span class="tok-p">}</span>
+<span class="tok-p">}</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -925,7 +1073,8 @@ The declaration is still a <em>data type</em> and an _identifier, but in this ca
 <div class="listingblock">
 <div class="title">Example of a declaration statement for an object.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">WeatherRecord day1;</code></pre>
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-n">WeatherRecord</span><span class="tok-w"> </span><span class="tok-n">day1</span><span class="tok-p">;</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -940,8 +1089,10 @@ We&#8217;ll use the <code>new</code> keyword to allocate memory, and then we&#82
 <div class="listingblock">
 <div class="title">Example of an assignment statement for a newly declared object.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">WeatherRecord day1;
-day1 = new WeatherRecord();</code></pre>
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-n">WeatherRecord</span><span class="tok-w"> </span><span class="tok-n">day1</span><span class="tok-p">;</span>
+<span class="tok-n">day1</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">new</span><span class="tok-w"> </span><span class="tok-n">WeatherRecord</span><span class="tok-p">();</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -971,9 +1122,12 @@ We&#8217;ve already learned that parentheses in Java <strong>always</strong> mea
 <div class="listingblock">
 <div class="title">Instance method calls using dot notation.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">WeatherRecord day1 = new WeatherRecord();
-day1.setHighTemperature(87);
-Console.WriteLine("High temperature on day 1:" + day1.getHighTemperature());</code></pre>
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-n">WeatherRecord</span><span class="tok-w"> </span><span class="tok-n">day1</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">new</span><span class="tok-w"> </span><span class="tok-n">WeatherRecord</span><span class="tok-p">();</span>
+<span class="tok-n">day1</span><span class="tok-p">.</span><span class="tok-n">setHighTemperature</span><span class="tok-p">(</span><span class="tok-m">87</span><span class="tok-p">);</span>
+<span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;High temperature on day 1:&quot;</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-n">day1</span><span class="tok-p">.</span><span class="tok-n">getHighTemperature</span><span class="tok-p">());</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -987,10 +1141,14 @@ To see why it&#8217;s necessary, consider the following example.</p>
 <div class="listingblock">
 <div class="title">An instance method call using dot notation with multiple objects.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">WeatherRecord day1 = new WeatherRecord();
-WeatherRecord day2 = new WeatherRecord();
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-n">WeatherRecord</span><span class="tok-w"> </span><span class="tok-n">day1</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">new</span><span class="tok-w"> </span><span class="tok-n">WeatherRecord</span><span class="tok-p">();</span>
+<span class="tok-n">WeatherRecord</span><span class="tok-w"> </span><span class="tok-n">day2</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">new</span><span class="tok-w"> </span><span class="tok-n">WeatherRecord</span><span class="tok-p">();</span>
 
-day1.setHighTemperature(87);</code></pre>
+<span class="tok-n">day1</span><span class="tok-p">.</span><span class="tok-n">setHighTemperature</span><span class="tok-p">(</span><span class="tok-m">87</span><span class="tok-p">);</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1046,33 +1204,60 @@ Sorry, I can&#8217;t do much better than that for now.</p>
 <div class="listingblock">
 <div class="title"><code>WeatherRecordDemo.cs</code>. A driver class to demonstrate the <code>WeatherRecord</code> class.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public class WeatherRecordDemo {
-    public static void Main() {
-        // Instantiate two objects
-        WeatherRecord day1 = new WeatherRecord();
-        WeatherRecord day2 = new WeatherRecord();
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">WeatherRecordDemo</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">static</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">Main</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">        </span><span class="tok-c1">// Instantiate two objects</span>
+<span class="tok-w">        </span><span class="tok-n">WeatherRecord</span><span class="tok-w"> </span><span class="tok-n">day1</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">new</span><span class="tok-w"> </span><span class="tok-n">WeatherRecord</span><span class="tok-p">();</span>
+<span class="tok-w">        </span><span class="tok-n">WeatherRecord</span><span class="tok-w"> </span><span class="tok-n">day2</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">new</span><span class="tok-w"> </span><span class="tok-n">WeatherRecord</span><span class="tok-p">();</span>
 
-        // Set field values for both instances
-        day1.setDate("2024-10-01");
-        day1.setHighTemperature(87);
-        day1.setAverageWindSpeed(1.5);
+<span class="tok-w">        </span><span class="tok-c1">// Set field values for both instances</span>
+<span class="tok-w">        </span><span class="tok-n">day1</span><span class="tok-p">.</span><span class="tok-n">setDate</span><span class="tok-p">(</span><span class="tok-s">&quot;2024-10-01&quot;</span><span class="tok-p">);</span>
+<span class="tok-w">        </span><span class="tok-n">day1</span><span class="tok-p">.</span><span class="tok-n">setHighTemperature</span><span class="tok-p">(</span><span class="tok-m">87</span><span class="tok-p">);</span>
+<span class="tok-w">        </span><span class="tok-n">day1</span><span class="tok-p">.</span><span class="tok-n">setAverageWindSpeed</span><span class="tok-p">(</span><span class="tok-m">1.5</span><span class="tok-p">);</span>
 
-        day2.setDate("2024-10-02");
-        day2.setHighTemperature(75);
-        day2.setAverageWindSpeed(8.25);
+<span class="tok-w">        </span><span class="tok-n">day2</span><span class="tok-p">.</span><span class="tok-n">setDate</span><span class="tok-p">(</span><span class="tok-s">&quot;2024-10-02&quot;</span><span class="tok-p">);</span>
+<span class="tok-w">        </span><span class="tok-n">day2</span><span class="tok-p">.</span><span class="tok-n">setHighTemperature</span><span class="tok-p">(</span><span class="tok-m">75</span><span class="tok-p">);</span>
+<span class="tok-w">        </span><span class="tok-n">day2</span><span class="tok-p">.</span><span class="tok-n">setAverageWindSpeed</span><span class="tok-p">(</span><span class="tok-m">8.25</span><span class="tok-p">);</span>
 
-        // Output field values for both instances
-        Console.WriteLine("Date: " + day1.getDate());
-        Console.WriteLine("High Temperature: " + day1.getHighTemperature());
-        Console.WriteLine("Average Wind Speed: " + day1.getAverageWindSpeed());
+<span class="tok-w">        </span><span class="tok-c1">// Output field values for both instances</span>
+<span class="tok-w">        </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Date: &quot;</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-n">day1</span><span class="tok-p">.</span><span class="tok-n">getDate</span><span class="tok-p">());</span>
+<span class="tok-w">        </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;High Temperature: &quot;</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-n">day1</span><span class="tok-p">.</span><span class="tok-n">getHighTemperature</span><span class="tok-p">());</span>
+<span class="tok-w">        </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Average Wind Speed: &quot;</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-n">day1</span><span class="tok-p">.</span><span class="tok-n">getAverageWindSpeed</span><span class="tok-p">());</span>
 
-        Console.WriteLine("------------------------------");
+<span class="tok-w">        </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;------------------------------&quot;</span><span class="tok-p">);</span>
 
-        Console.WriteLine("Date: " + day2.getDate());
-        Console.WriteLine("High Temperature: " + day2.getHighTemperature());
-        Console.WriteLine("Average Wind Speed: " + day2.getAverageWindSpeed());
-    }
-}</code></pre>
+<span class="tok-w">        </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Date: &quot;</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-n">day2</span><span class="tok-p">.</span><span class="tok-n">getDate</span><span class="tok-p">());</span>
+<span class="tok-w">        </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;High Temperature: &quot;</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-n">day2</span><span class="tok-p">.</span><span class="tok-n">getHighTemperature</span><span class="tok-p">());</span>
+<span class="tok-w">        </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Average Wind Speed: &quot;</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-n">day2</span><span class="tok-p">.</span><span class="tok-n">getAverageWindSpeed</span><span class="tok-p">());</span>
+<span class="tok-w">    </span><span class="tok-p">}</span>
+<span class="tok-p">}</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1145,9 +1330,12 @@ A definition for a constructor for the <code>WeatherRecord</code> class would lo
 <div class="listingblock">
 <div class="title">Example of a constructor for the <code>WeatherRecord</code> class.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public WeatherRecord() {
-    // code to initialize fields goes here
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-nf">WeatherRecord</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-c1">// code to initialize fields goes here</span>
+<span class="tok-p">}</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1157,11 +1345,16 @@ As a beginner, our rule of thumb is to just make a simple assignment statement f
 <div class="listingblock">
 <div class="title">Example of a constructor that initializes fields.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public WeatherRecord() {
-    date = "2025-01-01";
-    highTemperature = 0;
-    averageWindSpeed = 0.0;
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-nf">WeatherRecord</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-n">date</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-s">&quot;2025-01-01&quot;</span><span class="tok-p">;</span>
+<span class="tok-w">    </span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0</span><span class="tok-p">;</span>
+<span class="tok-w">    </span><span class="tok-n">averageWindSpeed</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0.0</span><span class="tok-p">;</span>
+<span class="tok-p">}</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1191,11 +1384,16 @@ We add parameters to our constructor just like we do with any other method, by l
 <div class="listingblock">
 <div class="title">Example of a constructor with parameters.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public WeatherRecord(string date) {
-    this.date = date;
-    this.highTemperature = 0;
-    this.averageWindSpeed = 0.0;
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-nf">WeatherRecord</span><span class="tok-p">(</span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">date</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">;</span>
+<span class="tok-w">    </span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0</span><span class="tok-p">;</span>
+<span class="tok-w">    </span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">averageWindSpeed</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0.0</span><span class="tok-p">;</span>
+<span class="tok-p">}</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1329,16 +1527,26 @@ If we have a savings account class, a common example when learning OOP, we might
 <div class="listingblock">
 <div class="title"><code>SavingsAccount.cs</code>. A class with a <code>static</code> constant.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public class SavingsAccount {
-    private static final double INTEREST_RATE = 0.02;
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">SavingsAccount</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-k">static</span><span class="tok-w"> </span><span class="tok-n">final</span><span class="tok-w"> </span><span class="tok-kt">double</span><span class="tok-w"> </span><span class="tok-n">INTEREST_RATE</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0.02</span><span class="tok-p">;</span>
 
-    // other fields and methods go here. See the repository for the complete code.
+<span class="tok-w">    </span><span class="tok-c1">// other fields and methods go here. See the repository for the complete code.</span>
 
-    public void addInterest() {
-        balance += balance * INTEREST_RATE;
-    }
+<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">addInterest</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">        </span><span class="tok-n">balance</span><span class="tok-w"> </span><span class="tok-o">+=</span><span class="tok-w"> </span><span class="tok-n">balance</span><span class="tok-w"> </span><span class="tok-o">*</span><span class="tok-w"> </span><span class="tok-n">INTEREST_RATE</span><span class="tok-p">;</span>
+<span class="tok-w">    </span><span class="tok-p">}</span>
 
-}</code></pre>
+<span class="tok-p">}</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <hr>
