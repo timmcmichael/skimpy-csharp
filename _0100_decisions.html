@@ -418,88 +418,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-pre.pygments .hll { background-color: #49483e }
-pre.pygments { background: #272822; color: #f8f8f2 }
-pre.pygments .tok-c { color: #959077 } /* Comment */
-pre.pygments .tok-err { color: #ed007e; background-color: #1e0010 } /* Error */
-pre.pygments .tok-esc { color: #f8f8f2 } /* Escape */
-pre.pygments .tok-g { color: #f8f8f2 } /* Generic */
-pre.pygments .tok-k { color: #66d9ef } /* Keyword */
-pre.pygments .tok-l { color: #ae81ff } /* Literal */
-pre.pygments .tok-n { color: #f8f8f2 } /* Name */
-pre.pygments .tok-o { color: #ff4689 } /* Operator */
-pre.pygments .tok-x { color: #f8f8f2 } /* Other */
-pre.pygments .tok-p { color: #f8f8f2 } /* Punctuation */
-pre.pygments .tok-ch { color: #959077 } /* Comment.Hashbang */
-pre.pygments .tok-cm { color: #959077 } /* Comment.Multiline */
-pre.pygments .tok-cp { color: #959077 } /* Comment.Preproc */
-pre.pygments .tok-cpf { color: #959077 } /* Comment.PreprocFile */
-pre.pygments .tok-c1 { color: #959077 } /* Comment.Single */
-pre.pygments .tok-cs { color: #959077 } /* Comment.Special */
-pre.pygments .tok-gd { color: #ff4689 } /* Generic.Deleted */
-pre.pygments .tok-ge { color: #f8f8f2; font-style: italic } /* Generic.Emph */
-pre.pygments .tok-ges { color: #f8f8f2; font-weight: bold; font-style: italic } /* Generic.EmphStrong */
-pre.pygments .tok-gr { color: #f8f8f2 } /* Generic.Error */
-pre.pygments .tok-gh { color: #f8f8f2 } /* Generic.Heading */
-pre.pygments .tok-gi { color: #a6e22e } /* Generic.Inserted */
-pre.pygments .tok-go { color: #66d9ef } /* Generic.Output */
-pre.pygments .tok-gp { color: #ff4689; font-weight: bold } /* Generic.Prompt */
-pre.pygments .tok-gs { color: #f8f8f2; font-weight: bold } /* Generic.Strong */
-pre.pygments .tok-gu { color: #959077 } /* Generic.Subheading */
-pre.pygments .tok-gt { color: #f8f8f2 } /* Generic.Traceback */
-pre.pygments .tok-kc { color: #66d9ef } /* Keyword.Constant */
-pre.pygments .tok-kd { color: #66d9ef } /* Keyword.Declaration */
-pre.pygments .tok-kn { color: #ff4689 } /* Keyword.Namespace */
-pre.pygments .tok-kp { color: #66d9ef } /* Keyword.Pseudo */
-pre.pygments .tok-kr { color: #66d9ef } /* Keyword.Reserved */
-pre.pygments .tok-kt { color: #66d9ef } /* Keyword.Type */
-pre.pygments .tok-ld { color: #e6db74 } /* Literal.Date */
-pre.pygments .tok-m { color: #ae81ff } /* Literal.Number */
-pre.pygments .tok-s { color: #e6db74 } /* Literal.String */
-pre.pygments .tok-na { color: #a6e22e } /* Name.Attribute */
-pre.pygments .tok-nb { color: #f8f8f2 } /* Name.Builtin */
-pre.pygments .tok-nc { color: #a6e22e } /* Name.Class */
-pre.pygments .tok-no { color: #66d9ef } /* Name.Constant */
-pre.pygments .tok-nd { color: #a6e22e } /* Name.Decorator */
-pre.pygments .tok-ni { color: #f8f8f2 } /* Name.Entity */
-pre.pygments .tok-ne { color: #a6e22e } /* Name.Exception */
-pre.pygments .tok-nf { color: #a6e22e } /* Name.Function */
-pre.pygments .tok-nl { color: #f8f8f2 } /* Name.Label */
-pre.pygments .tok-nn { color: #f8f8f2 } /* Name.Namespace */
-pre.pygments .tok-nx { color: #a6e22e } /* Name.Other */
-pre.pygments .tok-py { color: #f8f8f2 } /* Name.Property */
-pre.pygments .tok-nt { color: #ff4689 } /* Name.Tag */
-pre.pygments .tok-nv { color: #f8f8f2 } /* Name.Variable */
-pre.pygments .tok-ow { color: #ff4689 } /* Operator.Word */
-pre.pygments .tok-pm { color: #f8f8f2 } /* Punctuation.Marker */
-pre.pygments .tok-w { color: #f8f8f2 } /* Text.Whitespace */
-pre.pygments .tok-mb { color: #ae81ff } /* Literal.Number.Bin */
-pre.pygments .tok-mf { color: #ae81ff } /* Literal.Number.Float */
-pre.pygments .tok-mh { color: #ae81ff } /* Literal.Number.Hex */
-pre.pygments .tok-mi { color: #ae81ff } /* Literal.Number.Integer */
-pre.pygments .tok-mo { color: #ae81ff } /* Literal.Number.Oct */
-pre.pygments .tok-sa { color: #e6db74 } /* Literal.String.Affix */
-pre.pygments .tok-sb { color: #e6db74 } /* Literal.String.Backtick */
-pre.pygments .tok-sc { color: #e6db74 } /* Literal.String.Char */
-pre.pygments .tok-dl { color: #e6db74 } /* Literal.String.Delimiter */
-pre.pygments .tok-sd { color: #e6db74 } /* Literal.String.Doc */
-pre.pygments .tok-s2 { color: #e6db74 } /* Literal.String.Double */
-pre.pygments .tok-se { color: #ae81ff } /* Literal.String.Escape */
-pre.pygments .tok-sh { color: #e6db74 } /* Literal.String.Heredoc */
-pre.pygments .tok-si { color: #e6db74 } /* Literal.String.Interpol */
-pre.pygments .tok-sx { color: #e6db74 } /* Literal.String.Other */
-pre.pygments .tok-sr { color: #e6db74 } /* Literal.String.Regex */
-pre.pygments .tok-s1 { color: #e6db74 } /* Literal.String.Single */
-pre.pygments .tok-ss { color: #e6db74 } /* Literal.String.Symbol */
-pre.pygments .tok-bp { color: #f8f8f2 } /* Name.Builtin.Pseudo */
-pre.pygments .tok-fm { color: #a6e22e } /* Name.Function.Magic */
-pre.pygments .tok-vc { color: #f8f8f2 } /* Name.Variable.Class */
-pre.pygments .tok-vg { color: #f8f8f2 } /* Name.Variable.Global */
-pre.pygments .tok-vi { color: #f8f8f2 } /* Name.Variable.Instance */
-pre.pygments .tok-vm { color: #f8f8f2 } /* Name.Variable.Magic */
-pre.pygments .tok-il { color: #ae81ff } /* Literal.Number.Integer.Long */
-</style>
 <style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
              .nav-footer{text-align: center; margin-top: auto;}
@@ -667,10 +585,8 @@ These can be assigned to variables of type <code>bool</code>:</p>
 <div class="listingblock">
 <div class="title">Example 4.35 - Declaring and assigning Boolean variables in C#.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">bool</span><span class="tok-w"> </span><span class="tok-n">isTimAmazing</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">true</span><span class="tok-p">;</span>
-<span class="tok-kt">bool</span><span class="tok-w"> </span><span class="tok-n">isClassBoring</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">false</span><span class="tok-p">;</span>
-</pre></div></td></tr></table></div></code></pre>
+<pre class="pygments highlight"><code data-lang="csharp">bool isTimAmazing = true;
+bool isClassBoring = false;</code></pre>
 </div>
 </div>
 </div>
@@ -728,14 +644,10 @@ We can store that result in a <code>boolean</code> variable, as shown below, and
 <div class="listingblock">
 <div class="title">Example 4.36 - Using comparison operators in C#</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">bool</span><span class="tok-w"> </span><span class="tok-n">canBuyAlcohol</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">age</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-m">21</span><span class="tok-p">;</span>
-<span class="tok-kt">bool</span><span class="tok-w"> </span><span class="tok-n">isNegative</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">number</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">0</span><span class="tok-p">;</span>
-<span class="tok-kt">bool</span><span class="tok-w"> </span><span class="tok-n">isArethaFranklin</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">name</span><span class="tok-w"> </span><span class="tok-o">==</span><span class="tok-w"> </span><span class="tok-s">&quot;Aretha Franklin&quot;</span><span class="tok-p">;</span><span class="tok-w"> </span><i class="conum" data-value="1"></i><b>(1)</b>
-<span class="tok-kt">bool</span><span class="tok-w"> </span><span class="tok-n">isArethaFranklin2</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">name</span><span class="tok-p">.</span><span class="tok-k">equals</span><span class="tok-p">(</span><span class="tok-s">&quot;Aretha Franklin&quot;</span><span class="tok-p">);</span><span class="tok-w"> </span><i class="conum" data-value="2"></i><b>(2)</b>
-</pre></div></td></tr></table></div></code></pre>
+<pre class="pygments highlight"><code data-lang="csharp">bool canBuyAlcohol = age &gt;= 21;
+bool isNegative = number &lt; 0;
+bool isArethaFranklin = name == "Aretha Franklin"; <i class="conum" data-value="1"></i><b>(1)</b>
+bool isArethaFranklin2 = name.equals("Aretha Franklin"); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -782,16 +694,11 @@ In either case the program will continue executing the next line of code after t
 <div class="listingblock">
 <div class="title">Example 4.37 - A basic <code>if</code> statement in C#.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">age</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">20</span><span class="tok-p">;</span>
-<span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">age</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">21</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">    </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;You can&#39;t buy alcohol.&quot;</span><span class="tok-p">);</span>
-<span class="tok-p">}</span>
-<span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Keep that in mind when you go to the store!&quot;</span><span class="tok-p">);</span>
-</pre></div></td></tr></table></div></code></pre>
+<pre class="pygments highlight"><code data-lang="csharp">int age = 20;
+if (age &lt; 21) {
+    Console.WriteLine("You can't buy alcohol.");
+}
+Console.WriteLine("Keep that in mind when you go to the store!");</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -818,22 +725,14 @@ The syntax is simple: after the <code>if</code> block, add the keyword <code>els
 <div class="listingblock">
 <div class="title">Example 4.38 - An <code>if-else</code> statement in C#.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span>
-<span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">age</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">20</span><span class="tok-p">;</span>
-<span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">age</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">21</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">    </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;You can&#39;t buy alcohol.&quot;</span><span class="tok-p">);</span>
-<span class="tok-p">}</span>
-<span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">    </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;You can buy alcohol.&quot;</span><span class="tok-p">);</span>
-<span class="tok-p">}</span>
-<span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Keep that in mind when you go to the store!&quot;</span><span class="tok-p">);</span>
-</pre></div></td></tr></table></div></code></pre>
+<pre class="pygments highlight"><code data-lang="csharp">int age = 20;
+if (age &lt; 21) {
+    Console.WriteLine("You can't buy alcohol.");
+}
+else {
+    Console.WriteLine("You can buy alcohol.");
+}
+Console.WriteLine("Keep that in mind when you go to the store!");</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -869,42 +768,24 @@ To handle this, we can chain multiple <code>if-else</code> statements together.<
 <div class="listingblock">
 <div class="title">Example 4.39 - <code>WeatherRecord.cs</code> (excerpt). Excerpt showing an <code>if-else if</code> structure. See <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/04%20Decisions" target="_blank" rel="noopener">GitHub</a> for the complete file.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">WeatherRecord</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">    </span><span class="tok-c1">// Fields</span>
-<span class="tok-w">    </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">;</span>
-<span class="tok-w">    </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">highTemperature</span><span class="tok-p">;</span>
-<span class="tok-w">    </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">double</span><span class="tok-w"> </span><span class="tok-n">averageWindSpeed</span><span class="tok-p">;</span>
+<pre class="pygments highlight"><code data-lang="csharp">public class WeatherRecord {
+    // Fields
+    private string date;
+    private int highTemperature;
+    private double averageWindSpeed;
 
-<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-nf">GetTempDescription</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">        </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">90</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">            </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Hot&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">        </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">70</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">            </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Warm&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">        </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">50</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">            </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Cool&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">        </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">            </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Cold&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">        </span><span class="tok-p">}</span>
-<span class="tok-w">    </span><span class="tok-p">}</span>
-<span class="tok-p">}</span>
-</pre></div></td></tr></table></div></code></pre>
+    public string GetTempDescription() {
+        if (this.highTemperature &gt; 90) {
+            return "Hot";
+        } else if (this.highTemperature &gt; 70) {
+            return "Warm";
+        } else if (this.highTemperature &gt; 50) {
+            return "Cool";
+        } else {
+            return "Cold";
+        }
+    }
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -968,28 +849,17 @@ Nested if statements check multiple conditions in a hierarchical way: if one con
 <div class="listingblock">
 <div class="title">Example 4.40 - Basic structure of a nested <code>if-else</code> statement in C#.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">condition1</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">    </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">condition2</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">        </span><span class="tok-c1">// executes if both condition1 and condition2 are true</span>
-<span class="tok-w">    </span><span class="tok-p">}</span>
-<span class="tok-w">    </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">        </span><span class="tok-c1">// executes if condition1 is true and condition2 is false</span>
-<span class="tok-w">    </span><span class="tok-p">}</span>
-<span class="tok-p">}</span>
-<span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">    </span><span class="tok-c1">// executes if condition1 is false</span>
-<span class="tok-p">}</span>
-</pre></div></td></tr></table></div></code></pre>
+<pre class="pygments highlight"><code data-lang="csharp">if (condition1) {
+    if (condition2) {
+        // executes if both condition1 and condition2 are true
+    }
+    else {
+        // executes if condition1 is true and condition2 is false
+    }
+}
+else {
+    // executes if condition1 is false
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -999,60 +869,33 @@ The if-else structures within those blocks check the average wind speed and retu
 <div class="listingblock">
 <div class="title">Example 4.41 - <code>WeatherRecord.cs</code> (excerpt). Excerpt showing a nested <code>if-else</code> structure. See <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/04%20Decisions" target="_blank" rel="noopener">GitHub</a> for the complete file.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-n">String</span><span class="tok-w"> </span><span class="tok-nf">GetFullDescription</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">        </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">90</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">            </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">averageWindSpeed</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">                </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Hot and Windy&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">            </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">                </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Hot&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">            </span><span class="tok-p">}</span>
-<span class="tok-w">        </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">70</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">            </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">averageWindSpeed</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">                </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Warm and Windy&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">            </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">                </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Warm&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">            </span><span class="tok-p">}</span>
-<span class="tok-w">        </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">50</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">            </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">averageWindSpeed</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">                </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Cool and Windy&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">            </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">                </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Cool&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">            </span><span class="tok-p">}</span>
-<span class="tok-w">        </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">            </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">averageWindSpeed</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">                </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Cold and Windy&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">            </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">                </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Cold&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">            </span><span class="tok-p">}</span>
-<span class="tok-w">        </span><span class="tok-p">}</span>
-<span class="tok-w">    </span><span class="tok-p">}</span>
-</pre></div></td></tr></table></div></code></pre>
+<pre class="pygments highlight"><code data-lang="csharp">public String GetFullDescription() {
+        if (this.highTemperature &gt; 90) {
+            if (this.averageWindSpeed &gt; 10) {
+                return "Hot and Windy";
+            } else {
+                return "Hot";
+            }
+        } else if (this.highTemperature &gt; 70) {
+            if (this.averageWindSpeed &gt; 10) {
+                return "Warm and Windy";
+            } else {
+                return "Warm";
+            }
+        } else if (this.highTemperature &gt; 50) {
+            if (this.averageWindSpeed &gt; 10) {
+                return "Cool and Windy";
+            } else {
+                return "Cool";
+            }
+        } else {
+            if (this.averageWindSpeed &gt; 10) {
+                return "Cold and Windy";
+            } else {
+                return "Cold";
+            }
+        }
+    }</code></pre>
 </div>
 </div>
 <div class="sidebarblock">
@@ -1107,12 +950,9 @@ For example, we could check if a student is eligible for a scholarship based on 
 <div class="listingblock">
 <div class="title">Example 4.42 - A decision using a logical AND operation in C#.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">gpa</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-m">3.5</span><span class="tok-w"> </span><span class="tok-o">&amp;&amp;</span><span class="tok-w"> </span><span class="tok-n">age</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">25</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">    </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;You qualify for the scholarship!&quot;</span><span class="tok-p">);</span>
-<span class="tok-p">}</span>
-</pre></div></td></tr></table></div></code></pre>
+<pre class="pygments highlight"><code data-lang="csharp">if (gpa &gt;= 3.5 &amp;&amp; age &lt; 25) {
+    Console.WriteLine("You qualify for the scholarship!");
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1137,18 +977,12 @@ Often, the logic we create using an AND operation can be implemented using neste
 <div class="listingblock">
 <div class="title">Example 4.43 - A decision using a logical OR operation in C#.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">bool</span><span class="tok-w"> </span><span class="tok-n">isTimAmazing</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">false</span><span class="tok-p">;</span>
-<span class="tok-kt">bool</span><span class="tok-w"> </span><span class="tok-n">isClassFun</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">true</span><span class="tok-p">;</span>
+<pre class="pygments highlight"><code data-lang="csharp">bool isTimAmazing = false;
+bool isClassFun = true;
 
-<span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">isTimAmazing</span><span class="tok-w"> </span><span class="tok-o">||</span><span class="tok-w"> </span><span class="tok-n">isClassFun</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">    </span><span class="tok-n">System</span><span class="tok-p">.</span><span class="tok-k">out</span><span class="tok-p">.</span><span class="tok-n">println</span><span class="tok-p">(</span><span class="tok-s">&quot;You should take this class!&quot;</span><span class="tok-p">);</span>
-<span class="tok-p">}</span>
-</pre></div></td></tr></table></div></code></pre>
+if (isTimAmazing || isClassFun) {
+    System.out.println("You should take this class!");
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1172,16 +1006,11 @@ If the operand is <code>false</code>, the NOT operation will evaluate to <code>t
 <div class="listingblock">
 <div class="title">Example 4.44 - A decision using a logical NOT operation in C#.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">bool</span><span class="tok-w"> </span><span class="tok-n">isTimAmazing</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">false</span><span class="tok-p">;</span>
+<pre class="pygments highlight"><code data-lang="csharp">bool isTimAmazing = false;
 
-<span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-o">!</span><span class="tok-n">isTimAmazing</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">    </span><span class="tok-n">System</span><span class="tok-p">.</span><span class="tok-k">out</span><span class="tok-p">.</span><span class="tok-n">println</span><span class="tok-p">(</span><span class="tok-s">&quot;At least his mom still loves him!&quot;</span><span class="tok-p">);</span>
-<span class="tok-p">}</span>
-</pre></div></td></tr></table></div></code></pre>
+if (!isTimAmazing) {
+    System.out.println("At least his mom still loves him!");
+}</code></pre>
 </div>
 </div>
 <div class="sect3">
@@ -1196,36 +1025,21 @@ Range checking means we want to see if a value is within a certain range.</p>
 <div class="listingblock">
 <div class="title">Example 4.45 - Range checking using logical operators in C#.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-n">String</span><span class="tok-w"> </span><span class="tok-nf">GetLetterGrade</span><span class="tok-p">(</span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">percentage</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">    </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-m">90</span><span class="tok-w"> </span><span class="tok-o">&amp;&amp;</span><span class="tok-w"> </span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&lt;=</span><span class="tok-w"> </span><span class="tok-m">100</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;A&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">    </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-m">80</span><span class="tok-w"> </span><span class="tok-o">&amp;&amp;</span><span class="tok-w"> </span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">90</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;B&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">    </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-m">70</span><span class="tok-w"> </span><span class="tok-o">&amp;&amp;</span><span class="tok-w"> </span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">80</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;C&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">    </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-m">60</span><span class="tok-w"> </span><span class="tok-o">&amp;&amp;</span><span class="tok-w"> </span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">70</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;D&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">    </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-m">0</span><span class="tok-w"> </span><span class="tok-o">&amp;&amp;</span><span class="tok-w"> </span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">60</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;F&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">    </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Invalid percentage&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">    </span><span class="tok-p">}</span>
-<span class="tok-p">}</span>
-</pre></div></td></tr></table></div></code></pre>
+<pre class="pygments highlight"><code data-lang="csharp">public String GetLetterGrade(int percentage) {
+    if (percentage &gt;= 90 &amp;&amp; percentage &lt;= 100) {
+        return "A";
+    } else if (percentage &gt;= 80 &amp;&amp; percentage &lt; 90) {
+        return "B";
+    } else if (percentage &gt;= 70 &amp;&amp; percentage &lt; 80) {
+        return "C";
+    } else if (percentage &gt;= 60 &amp;&amp; percentage &lt; 70) {
+        return "D";
+    } else if (percentage &gt;= 0 &amp;&amp; percentage &lt; 60) {
+        return "F";
+    } else {
+        return "Invalid percentage";
+    }
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1248,32 +1062,19 @@ And since you see them often in code written by others, it&#8217;s good to know 
 <div class="listingblock">
 <div class="title">Example 4.46 - A basic <code>switch</code> statement in C#.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">switch</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">expression</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">    </span><span class="tok-k">case</span><span class="tok-w"> </span><span class="tok-n">value1</span><span class="tok-p">:</span>
-<span class="tok-w">        </span><span class="tok-c1">// Code to be executed if expression equals value1</span>
-<span class="tok-w">        </span><span class="tok-k">break</span><span class="tok-p">;</span>
-<span class="tok-w">    </span><span class="tok-k">case</span><span class="tok-w"> </span><span class="tok-n">value2</span><span class="tok-p">:</span>
-<span class="tok-w">        </span><span class="tok-c1">// Code to be executed if expression equals value2</span>
-<span class="tok-w">        </span><span class="tok-k">break</span><span class="tok-p">;</span>
-<span class="tok-w">    </span><span class="tok-k">case</span><span class="tok-w"> </span><span class="tok-n">value3</span><span class="tok-p">:</span>
-<span class="tok-w">        </span><span class="tok-c1">// Code to be executed if expression equals value3</span>
-<span class="tok-w">        </span><span class="tok-k">break</span><span class="tok-p">;</span>
-<span class="tok-w">    </span><span class="tok-k">default</span><span class="tok-p">:</span>
-<span class="tok-w">        </span><span class="tok-c1">// Code to be executed if expression doesn&#39;t match any case</span>
-<span class="tok-p">}</span>
-</pre></div></td></tr></table></div></code></pre>
+<pre class="pygments highlight"><code data-lang="csharp">switch (expression) {
+    case value1:
+        // Code to be executed if expression equals value1
+        break;
+    case value2:
+        // Code to be executed if expression equals value2
+        break;
+    case value3:
+        // Code to be executed if expression equals value3
+        break;
+    default:
+        // Code to be executed if expression doesn't match any case
+}</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -1288,36 +1089,21 @@ This can be useful in some situations, but it&#8217;s generally not what you wan
 <div class="listingblock">
 <div class="title">Example 4.47 - A <code>switch</code> statement in C#.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
-<span class="normal"> 2</span>
-<span class="normal"> 3</span>
-<span class="normal"> 4</span>
-<span class="normal"> 5</span>
-<span class="normal"> 6</span>
-<span class="normal"> 7</span>
-<span class="normal"> 8</span>
-<span class="normal"> 9</span>
-<span class="normal">10</span>
-<span class="normal">11</span>
-<span class="normal">12</span>
-<span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">TrafficInstructions</span><span class="tok-p">(</span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-n">lightColor</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">    </span><span class="tok-k">switch</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">lightColor</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">        </span><span class="tok-k">case</span><span class="tok-w"> </span><span class="tok-s">&quot;red&quot;</span><span class="tok-p">:</span>
-<span class="tok-w">            </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Stop!&quot;</span><span class="tok-p">);</span>
-<span class="tok-w">            </span><span class="tok-k">break</span><span class="tok-p">;</span>
-<span class="tok-w">        </span><span class="tok-k">case</span><span class="tok-w"> </span><span class="tok-s">&quot;yellow&quot;</span><span class="tok-p">:</span>
-<span class="tok-w">            </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Slow down!&quot;</span><span class="tok-p">);</span>
-<span class="tok-w">            </span><span class="tok-k">break</span><span class="tok-p">;</span>
-<span class="tok-w">        </span><span class="tok-k">case</span><span class="tok-w"> </span><span class="tok-s">&quot;green&quot;</span><span class="tok-p">:</span>
-<span class="tok-w">            </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Go!&quot;</span><span class="tok-p">);</span>
-<span class="tok-w">            </span><span class="tok-k">break</span><span class="tok-p">;</span>
-<span class="tok-w">        </span><span class="tok-k">default</span><span class="tok-p">:</span>
-<span class="tok-w">            </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Invalid light color.&quot;</span><span class="tok-p">);</span>
-<span class="tok-w">    </span><span class="tok-p">}</span>
-<span class="tok-p">}</span>
-</pre></div></td></tr></table></div></code></pre>
+<pre class="pygments highlight"><code data-lang="csharp">public void TrafficInstructions(string lightColor) {
+    switch (lightColor) {
+        case "red":
+            Console.WriteLine("Stop!");
+            break;
+        case "yellow":
+            Console.WriteLine("Slow down!");
+            break;
+        case "green":
+            Console.WriteLine("Go!");
+            break;
+        default:
+            Console.WriteLine("Invalid light color.");
+    }
+}</code></pre>
 </div>
 </div>
 <hr>
