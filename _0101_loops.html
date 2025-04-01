@@ -418,6 +418,88 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+pre.pygments .hll { background-color: #49483e }
+pre.pygments { background: #272822; color: #f8f8f2 }
+pre.pygments .tok-c { color: #959077 } /* Comment */
+pre.pygments .tok-err { color: #ed007e; background-color: #1e0010 } /* Error */
+pre.pygments .tok-esc { color: #f8f8f2 } /* Escape */
+pre.pygments .tok-g { color: #f8f8f2 } /* Generic */
+pre.pygments .tok-k { color: #66d9ef } /* Keyword */
+pre.pygments .tok-l { color: #ae81ff } /* Literal */
+pre.pygments .tok-n { color: #f8f8f2 } /* Name */
+pre.pygments .tok-o { color: #ff4689 } /* Operator */
+pre.pygments .tok-x { color: #f8f8f2 } /* Other */
+pre.pygments .tok-p { color: #f8f8f2 } /* Punctuation */
+pre.pygments .tok-ch { color: #959077 } /* Comment.Hashbang */
+pre.pygments .tok-cm { color: #959077 } /* Comment.Multiline */
+pre.pygments .tok-cp { color: #959077 } /* Comment.Preproc */
+pre.pygments .tok-cpf { color: #959077 } /* Comment.PreprocFile */
+pre.pygments .tok-c1 { color: #959077 } /* Comment.Single */
+pre.pygments .tok-cs { color: #959077 } /* Comment.Special */
+pre.pygments .tok-gd { color: #ff4689 } /* Generic.Deleted */
+pre.pygments .tok-ge { color: #f8f8f2; font-style: italic } /* Generic.Emph */
+pre.pygments .tok-ges { color: #f8f8f2; font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+pre.pygments .tok-gr { color: #f8f8f2 } /* Generic.Error */
+pre.pygments .tok-gh { color: #f8f8f2 } /* Generic.Heading */
+pre.pygments .tok-gi { color: #a6e22e } /* Generic.Inserted */
+pre.pygments .tok-go { color: #66d9ef } /* Generic.Output */
+pre.pygments .tok-gp { color: #ff4689; font-weight: bold } /* Generic.Prompt */
+pre.pygments .tok-gs { color: #f8f8f2; font-weight: bold } /* Generic.Strong */
+pre.pygments .tok-gu { color: #959077 } /* Generic.Subheading */
+pre.pygments .tok-gt { color: #f8f8f2 } /* Generic.Traceback */
+pre.pygments .tok-kc { color: #66d9ef } /* Keyword.Constant */
+pre.pygments .tok-kd { color: #66d9ef } /* Keyword.Declaration */
+pre.pygments .tok-kn { color: #ff4689 } /* Keyword.Namespace */
+pre.pygments .tok-kp { color: #66d9ef } /* Keyword.Pseudo */
+pre.pygments .tok-kr { color: #66d9ef } /* Keyword.Reserved */
+pre.pygments .tok-kt { color: #66d9ef } /* Keyword.Type */
+pre.pygments .tok-ld { color: #e6db74 } /* Literal.Date */
+pre.pygments .tok-m { color: #ae81ff } /* Literal.Number */
+pre.pygments .tok-s { color: #e6db74 } /* Literal.String */
+pre.pygments .tok-na { color: #a6e22e } /* Name.Attribute */
+pre.pygments .tok-nb { color: #f8f8f2 } /* Name.Builtin */
+pre.pygments .tok-nc { color: #a6e22e } /* Name.Class */
+pre.pygments .tok-no { color: #66d9ef } /* Name.Constant */
+pre.pygments .tok-nd { color: #a6e22e } /* Name.Decorator */
+pre.pygments .tok-ni { color: #f8f8f2 } /* Name.Entity */
+pre.pygments .tok-ne { color: #a6e22e } /* Name.Exception */
+pre.pygments .tok-nf { color: #a6e22e } /* Name.Function */
+pre.pygments .tok-nl { color: #f8f8f2 } /* Name.Label */
+pre.pygments .tok-nn { color: #f8f8f2 } /* Name.Namespace */
+pre.pygments .tok-nx { color: #a6e22e } /* Name.Other */
+pre.pygments .tok-py { color: #f8f8f2 } /* Name.Property */
+pre.pygments .tok-nt { color: #ff4689 } /* Name.Tag */
+pre.pygments .tok-nv { color: #f8f8f2 } /* Name.Variable */
+pre.pygments .tok-ow { color: #ff4689 } /* Operator.Word */
+pre.pygments .tok-pm { color: #f8f8f2 } /* Punctuation.Marker */
+pre.pygments .tok-w { color: #f8f8f2 } /* Text.Whitespace */
+pre.pygments .tok-mb { color: #ae81ff } /* Literal.Number.Bin */
+pre.pygments .tok-mf { color: #ae81ff } /* Literal.Number.Float */
+pre.pygments .tok-mh { color: #ae81ff } /* Literal.Number.Hex */
+pre.pygments .tok-mi { color: #ae81ff } /* Literal.Number.Integer */
+pre.pygments .tok-mo { color: #ae81ff } /* Literal.Number.Oct */
+pre.pygments .tok-sa { color: #e6db74 } /* Literal.String.Affix */
+pre.pygments .tok-sb { color: #e6db74 } /* Literal.String.Backtick */
+pre.pygments .tok-sc { color: #e6db74 } /* Literal.String.Char */
+pre.pygments .tok-dl { color: #e6db74 } /* Literal.String.Delimiter */
+pre.pygments .tok-sd { color: #e6db74 } /* Literal.String.Doc */
+pre.pygments .tok-s2 { color: #e6db74 } /* Literal.String.Double */
+pre.pygments .tok-se { color: #ae81ff } /* Literal.String.Escape */
+pre.pygments .tok-sh { color: #e6db74 } /* Literal.String.Heredoc */
+pre.pygments .tok-si { color: #e6db74 } /* Literal.String.Interpol */
+pre.pygments .tok-sx { color: #e6db74 } /* Literal.String.Other */
+pre.pygments .tok-sr { color: #e6db74 } /* Literal.String.Regex */
+pre.pygments .tok-s1 { color: #e6db74 } /* Literal.String.Single */
+pre.pygments .tok-ss { color: #e6db74 } /* Literal.String.Symbol */
+pre.pygments .tok-bp { color: #f8f8f2 } /* Name.Builtin.Pseudo */
+pre.pygments .tok-fm { color: #a6e22e } /* Name.Function.Magic */
+pre.pygments .tok-vc { color: #f8f8f2 } /* Name.Variable.Class */
+pre.pygments .tok-vg { color: #f8f8f2 } /* Name.Variable.Global */
+pre.pygments .tok-vi { color: #f8f8f2 } /* Name.Variable.Instance */
+pre.pygments .tok-vm { color: #f8f8f2 } /* Name.Variable.Magic */
+pre.pygments .tok-il { color: #ae81ff } /* Literal.Number.Integer.Long */
+</style>
 <style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
              .nav-footer{text-align: center; margin-top: auto;}
@@ -586,11 +668,16 @@ If the condition is still true, the block of code is executed again.</p>
 <div class="listingblock">
 <div class="title">Example 5.48 - A basic <code>while</code> loop</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">int count = 0;
-while (count &lt; 10) {
-    Console.WriteLine("Count is: " + count);
-    count++;
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0</span><span class="tok-p">;</span>
+<span class="tok-k">while</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Count is: &quot;</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-p">);</span>
+<span class="tok-w">    </span><span class="tok-n">count</span><span class="tok-o">++</span><span class="tok-p">;</span>
+<span class="tok-p">}</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -614,10 +701,14 @@ Infinite loops are a common mistake for new programmers, and they can cause our 
 <div class="listingblock">
 <div class="title">Example 5.49 - An infinite loop using <code>while</code></div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">int count = 0;
-while (count &lt; 10) {
-    Console.WriteLine("Count is: " + count);
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0</span><span class="tok-p">;</span>
+<span class="tok-k">while</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Count is: &quot;</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-p">);</span>
+<span class="tok-p">}</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -643,9 +734,12 @@ Your IDE will have a way to stop the program if it&#8217;s stuck in an infinite 
 <div class="listingblock">
 <div class="title">Example 5.50 - An infinite loop using a <code>while</code> statement.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">while (true) {
-    // hey, there's nothing to stop this loop!
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">while</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">true</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-c1">// hey, there&#39;s nothing to stop this loop!</span>
+<span class="tok-p">}</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -673,11 +767,16 @@ Other than that, a <code>do-while</code> loop is exactly the same as a <code>whi
 <div class="listingblock">
 <div class="title">Example 5.51 - A basic <code>do-while</code> loop in C#.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">int count = 0;
-do {
-    Console.WriteLine("Count is: " + count);
-    count++;
-} while (count &lt; 10);</code></pre>
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0</span><span class="tok-p">;</span>
+<span class="tok-k">do</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Count is: &quot;</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-p">);</span>
+<span class="tok-w">    </span><span class="tok-n">count</span><span class="tok-o">++</span><span class="tok-p">;</span>
+<span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">while</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">);</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -724,25 +823,44 @@ For example, if a program displays a menu with three options, a loop could keep 
 <div class="listingblock">
 <div class="title">Example 5.52 - Input validation with a <code>do-while</code> loop</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">public class InputValidation {
-    public static void Main() {
-        int choice;
-        string choiceString;
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">InputValidation</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">static</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">Main</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">        </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">choice</span><span class="tok-p">;</span>
+<span class="tok-w">        </span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-n">choiceString</span><span class="tok-p">;</span>
 
-        do {
-            Console.WriteLine("Choose an option:");
-            Console.WriteLine("1. Check balance");
-            Console.WriteLine("2. Deposit");
-            Console.WriteLine("3. Withdraw");
-            Console.WriteLine("4. Exit");
-            Console.Write("Your choice: ");
-            choiceString = Console.ReadLine();
-            choice = Convert.ToInt32(choiceString);
-        } while (choice &lt; 1 || choice &gt; 4);
+<span class="tok-w">        </span><span class="tok-k">do</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">            </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Choose an option:&quot;</span><span class="tok-p">);</span>
+<span class="tok-w">            </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;1. Check balance&quot;</span><span class="tok-p">);</span>
+<span class="tok-w">            </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;2. Deposit&quot;</span><span class="tok-p">);</span>
+<span class="tok-w">            </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;3. Withdraw&quot;</span><span class="tok-p">);</span>
+<span class="tok-w">            </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;4. Exit&quot;</span><span class="tok-p">);</span>
+<span class="tok-w">            </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">Write</span><span class="tok-p">(</span><span class="tok-s">&quot;Your choice: &quot;</span><span class="tok-p">);</span>
+<span class="tok-w">            </span><span class="tok-n">choiceString</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">ReadLine</span><span class="tok-p">();</span>
+<span class="tok-w">            </span><span class="tok-n">choice</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">Convert</span><span class="tok-p">.</span><span class="tok-n">ToInt32</span><span class="tok-p">(</span><span class="tok-n">choiceString</span><span class="tok-p">);</span>
+<span class="tok-w">        </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">while</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">choice</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">1</span><span class="tok-w"> </span><span class="tok-o">||</span><span class="tok-w"> </span><span class="tok-n">choice</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">4</span><span class="tok-p">);</span>
 
-        // Rest of the code...
-    }
-}</code></pre>
+<span class="tok-w">        </span><span class="tok-c1">// Rest of the code...</span>
+<span class="tok-w">    </span><span class="tok-p">}</span>
+<span class="tok-p">}</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -758,9 +876,12 @@ The syntax of a <code>for</code> loop can be a little intimidating for new coder
 <div class="listingblock">
 <div class="title">Example 5.53 - A simple <code>for</code> loop.</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="csharp">for (int count = 0; count &lt; 10; count++) {
-    Console.WriteLine("Count is: " + count);
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">for</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0</span><span class="tok-p">;</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">;</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-o">++</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Count is: &quot;</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-p">);</span>
+<span class="tok-p">}</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -902,7 +1023,7 @@ When the <code>continue</code> statement is executed, the program stops executin
 </div>
 <div id="footer">
     <div id="footer-text">
-        Tripucka Edition,&nbsp;revised&nbsp;2025-04-01&nbsp;-&nbsp;18:32:30 UTC
+        Tripucka Edition,&nbsp;revised&nbsp;2025-04-01&nbsp;-&nbsp;18:35:57 UTC
     </div>
 </div>
 </body>
