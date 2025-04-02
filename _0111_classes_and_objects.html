@@ -5,6 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Tim McMichael">
 <title>Skimpy C#: An Introduction to Programming</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -433,77 +434,88 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-pre.pygments .hll { background-color: #ffffcc }
-pre.pygments { background: #f8f8f8; }
-pre.pygments .tok-c { color: #3D7B7B; font-style: italic } /* Comment */
-pre.pygments .tok-err { border: 1px solid #FF0000 } /* Error */
-pre.pygments .tok-k { color: #008000; font-weight: bold } /* Keyword */
-pre.pygments .tok-o { color: #666666 } /* Operator */
-pre.pygments .tok-ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
-pre.pygments .tok-cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
-pre.pygments .tok-cp { color: #9C6500 } /* Comment.Preproc */
-pre.pygments .tok-cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
-pre.pygments .tok-c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
-pre.pygments .tok-cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
-pre.pygments .tok-gd { color: #A00000 } /* Generic.Deleted */
-pre.pygments .tok-ge { font-style: italic } /* Generic.Emph */
-pre.pygments .tok-ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
-pre.pygments .tok-gr { color: #E40000 } /* Generic.Error */
-pre.pygments .tok-gh { color: #000080; font-weight: bold } /* Generic.Heading */
-pre.pygments .tok-gi { color: #008400 } /* Generic.Inserted */
-pre.pygments .tok-go { color: #717171 } /* Generic.Output */
-pre.pygments .tok-gp { color: #000080; font-weight: bold } /* Generic.Prompt */
-pre.pygments .tok-gs { font-weight: bold } /* Generic.Strong */
-pre.pygments .tok-gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-pre.pygments .tok-gt { color: #0044DD } /* Generic.Traceback */
-pre.pygments .tok-kc { color: #008000; font-weight: bold } /* Keyword.Constant */
-pre.pygments .tok-kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
-pre.pygments .tok-kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
-pre.pygments .tok-kp { color: #008000 } /* Keyword.Pseudo */
-pre.pygments .tok-kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
-pre.pygments .tok-kt { color: #B00040 } /* Keyword.Type */
-pre.pygments .tok-m { color: #666666 } /* Literal.Number */
-pre.pygments .tok-s { color: #BA2121 } /* Literal.String */
-pre.pygments .tok-na { color: #687822 } /* Name.Attribute */
-pre.pygments .tok-nb { color: #008000 } /* Name.Builtin */
-pre.pygments .tok-nc { color: #0000FF; font-weight: bold } /* Name.Class */
-pre.pygments .tok-no { color: #880000 } /* Name.Constant */
-pre.pygments .tok-nd { color: #AA22FF } /* Name.Decorator */
-pre.pygments .tok-ni { color: #717171; font-weight: bold } /* Name.Entity */
-pre.pygments .tok-ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
-pre.pygments .tok-nf { color: #0000FF } /* Name.Function */
-pre.pygments .tok-nl { color: #767600 } /* Name.Label */
-pre.pygments .tok-nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
-pre.pygments .tok-nt { color: #008000; font-weight: bold } /* Name.Tag */
-pre.pygments .tok-nv { color: #19177C } /* Name.Variable */
-pre.pygments .tok-ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
-pre.pygments .tok-w { color: #bbbbbb } /* Text.Whitespace */
-pre.pygments .tok-mb { color: #666666 } /* Literal.Number.Bin */
-pre.pygments .tok-mf { color: #666666 } /* Literal.Number.Float */
-pre.pygments .tok-mh { color: #666666 } /* Literal.Number.Hex */
-pre.pygments .tok-mi { color: #666666 } /* Literal.Number.Integer */
-pre.pygments .tok-mo { color: #666666 } /* Literal.Number.Oct */
-pre.pygments .tok-sa { color: #BA2121 } /* Literal.String.Affix */
-pre.pygments .tok-sb { color: #BA2121 } /* Literal.String.Backtick */
-pre.pygments .tok-sc { color: #BA2121 } /* Literal.String.Char */
-pre.pygments .tok-dl { color: #BA2121 } /* Literal.String.Delimiter */
-pre.pygments .tok-sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
-pre.pygments .tok-s2 { color: #BA2121 } /* Literal.String.Double */
-pre.pygments .tok-se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
-pre.pygments .tok-sh { color: #BA2121 } /* Literal.String.Heredoc */
-pre.pygments .tok-si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
-pre.pygments .tok-sx { color: #008000 } /* Literal.String.Other */
-pre.pygments .tok-sr { color: #A45A77 } /* Literal.String.Regex */
-pre.pygments .tok-s1 { color: #BA2121 } /* Literal.String.Single */
-pre.pygments .tok-ss { color: #19177C } /* Literal.String.Symbol */
-pre.pygments .tok-bp { color: #008000 } /* Name.Builtin.Pseudo */
-pre.pygments .tok-fm { color: #0000FF } /* Name.Function.Magic */
-pre.pygments .tok-vc { color: #19177C } /* Name.Variable.Class */
-pre.pygments .tok-vg { color: #19177C } /* Name.Variable.Global */
-pre.pygments .tok-vi { color: #19177C } /* Name.Variable.Instance */
-pre.pygments .tok-vm { color: #19177C } /* Name.Variable.Magic */
-pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
+pre.pygments .hll { background-color: #49483e }
+pre.pygments { background: #272822; color: #f8f8f2 }
+pre.pygments .tok-c { color: #959077 } /* Comment */
+pre.pygments .tok-err { color: #ed007e; background-color: #1e0010 } /* Error */
+pre.pygments .tok-esc { color: #f8f8f2 } /* Escape */
+pre.pygments .tok-g { color: #f8f8f2 } /* Generic */
+pre.pygments .tok-k { color: #66d9ef } /* Keyword */
+pre.pygments .tok-l { color: #ae81ff } /* Literal */
+pre.pygments .tok-n { color: #f8f8f2 } /* Name */
+pre.pygments .tok-o { color: #ff4689 } /* Operator */
+pre.pygments .tok-x { color: #f8f8f2 } /* Other */
+pre.pygments .tok-p { color: #f8f8f2 } /* Punctuation */
+pre.pygments .tok-ch { color: #959077 } /* Comment.Hashbang */
+pre.pygments .tok-cm { color: #959077 } /* Comment.Multiline */
+pre.pygments .tok-cp { color: #959077 } /* Comment.Preproc */
+pre.pygments .tok-cpf { color: #959077 } /* Comment.PreprocFile */
+pre.pygments .tok-c1 { color: #959077 } /* Comment.Single */
+pre.pygments .tok-cs { color: #959077 } /* Comment.Special */
+pre.pygments .tok-gd { color: #ff4689 } /* Generic.Deleted */
+pre.pygments .tok-ge { color: #f8f8f2; font-style: italic } /* Generic.Emph */
+pre.pygments .tok-ges { color: #f8f8f2; font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+pre.pygments .tok-gr { color: #f8f8f2 } /* Generic.Error */
+pre.pygments .tok-gh { color: #f8f8f2 } /* Generic.Heading */
+pre.pygments .tok-gi { color: #a6e22e } /* Generic.Inserted */
+pre.pygments .tok-go { color: #66d9ef } /* Generic.Output */
+pre.pygments .tok-gp { color: #ff4689; font-weight: bold } /* Generic.Prompt */
+pre.pygments .tok-gs { color: #f8f8f2; font-weight: bold } /* Generic.Strong */
+pre.pygments .tok-gu { color: #959077 } /* Generic.Subheading */
+pre.pygments .tok-gt { color: #f8f8f2 } /* Generic.Traceback */
+pre.pygments .tok-kc { color: #66d9ef } /* Keyword.Constant */
+pre.pygments .tok-kd { color: #66d9ef } /* Keyword.Declaration */
+pre.pygments .tok-kn { color: #ff4689 } /* Keyword.Namespace */
+pre.pygments .tok-kp { color: #66d9ef } /* Keyword.Pseudo */
+pre.pygments .tok-kr { color: #66d9ef } /* Keyword.Reserved */
+pre.pygments .tok-kt { color: #66d9ef } /* Keyword.Type */
+pre.pygments .tok-ld { color: #e6db74 } /* Literal.Date */
+pre.pygments .tok-m { color: #ae81ff } /* Literal.Number */
+pre.pygments .tok-s { color: #e6db74 } /* Literal.String */
+pre.pygments .tok-na { color: #a6e22e } /* Name.Attribute */
+pre.pygments .tok-nb { color: #f8f8f2 } /* Name.Builtin */
+pre.pygments .tok-nc { color: #a6e22e } /* Name.Class */
+pre.pygments .tok-no { color: #66d9ef } /* Name.Constant */
+pre.pygments .tok-nd { color: #a6e22e } /* Name.Decorator */
+pre.pygments .tok-ni { color: #f8f8f2 } /* Name.Entity */
+pre.pygments .tok-ne { color: #a6e22e } /* Name.Exception */
+pre.pygments .tok-nf { color: #a6e22e } /* Name.Function */
+pre.pygments .tok-nl { color: #f8f8f2 } /* Name.Label */
+pre.pygments .tok-nn { color: #f8f8f2 } /* Name.Namespace */
+pre.pygments .tok-nx { color: #a6e22e } /* Name.Other */
+pre.pygments .tok-py { color: #f8f8f2 } /* Name.Property */
+pre.pygments .tok-nt { color: #ff4689 } /* Name.Tag */
+pre.pygments .tok-nv { color: #f8f8f2 } /* Name.Variable */
+pre.pygments .tok-ow { color: #ff4689 } /* Operator.Word */
+pre.pygments .tok-pm { color: #f8f8f2 } /* Punctuation.Marker */
+pre.pygments .tok-w { color: #f8f8f2 } /* Text.Whitespace */
+pre.pygments .tok-mb { color: #ae81ff } /* Literal.Number.Bin */
+pre.pygments .tok-mf { color: #ae81ff } /* Literal.Number.Float */
+pre.pygments .tok-mh { color: #ae81ff } /* Literal.Number.Hex */
+pre.pygments .tok-mi { color: #ae81ff } /* Literal.Number.Integer */
+pre.pygments .tok-mo { color: #ae81ff } /* Literal.Number.Oct */
+pre.pygments .tok-sa { color: #e6db74 } /* Literal.String.Affix */
+pre.pygments .tok-sb { color: #e6db74 } /* Literal.String.Backtick */
+pre.pygments .tok-sc { color: #e6db74 } /* Literal.String.Char */
+pre.pygments .tok-dl { color: #e6db74 } /* Literal.String.Delimiter */
+pre.pygments .tok-sd { color: #e6db74 } /* Literal.String.Doc */
+pre.pygments .tok-s2 { color: #e6db74 } /* Literal.String.Double */
+pre.pygments .tok-se { color: #ae81ff } /* Literal.String.Escape */
+pre.pygments .tok-sh { color: #e6db74 } /* Literal.String.Heredoc */
+pre.pygments .tok-si { color: #e6db74 } /* Literal.String.Interpol */
+pre.pygments .tok-sx { color: #e6db74 } /* Literal.String.Other */
+pre.pygments .tok-sr { color: #e6db74 } /* Literal.String.Regex */
+pre.pygments .tok-s1 { color: #e6db74 } /* Literal.String.Single */
+pre.pygments .tok-ss { color: #e6db74 } /* Literal.String.Symbol */
+pre.pygments .tok-bp { color: #f8f8f2 } /* Name.Builtin.Pseudo */
+pre.pygments .tok-fm { color: #a6e22e } /* Name.Function.Magic */
+pre.pygments .tok-vc { color: #f8f8f2 } /* Name.Variable.Class */
+pre.pygments .tok-vg { color: #f8f8f2 } /* Name.Variable.Global */
+pre.pygments .tok-vi { color: #f8f8f2 } /* Name.Variable.Instance */
+pre.pygments .tok-vm { color: #f8f8f2 } /* Name.Variable.Magic */
+pre.pygments .tok-il { color: #ae81ff } /* Literal.Number.Integer.Long */
 </style>
 <style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
@@ -511,10 +523,45 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
              .nav-footer > p > a {white-space: nowrap;}</style>
 </head>
 <body id="_0111_classes_and_objects" class="article toc2 toc-left">
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const fileName = window.location.pathname.split('/').pop(); // Get current file name
+      console.log("Current file name:", fileName);
+
+      // Update the Light Mode link dynamically
+      const lightLink = document.querySelector("#header a.light-mode");
+      if (lightLink) {
+        lightLink.href = `https://timmcmichael.github.io/skimpy-csharp/${fileName}`;
+        lightLink.textContent = `Light Mode`;
+      }
+
+      // Update the Dark Mode link dynamically
+      const darkLink = document.querySelector("#header a.dark-mode");
+      if (darkLink) {
+        darkLink.href = `https://timmcmichael.github.io/skimpy-csharp-dark/${fileName}`;
+        darkLink.textContent = `Dark Mode (experimental)`;
+      }
+    });
+</script>
+
+<div id="header">
+    <span>
+      <a class="light-mode" href="https://timmcmichael.github.io/skimpy-csharp/current-file">Light Mode</a>
+      &nbsp;|&nbsp;
+      <a class="dark-mode" href="https://timmcmichael.github.io/skimpy-csharp-dark/current-file">Dark Mode</a>
+      &nbsp;|&nbsp;
+      <a class="pdf-link" href="index.pdf" target="_blank">PDF (experimental)</a>
+
+    </span>
+</div>
 <div id="header">
 <h1>Skimpy C#: An Introduction to Programming</h1>
+<div class="details">
+<span id="author" class="author">Tim McMichael</span><br>
+<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
+</div>
 <div id="toc" class="toc2">
-<div id="toctitle">Table of Contents</div>
+<div id="toctitle">Skimpy Contents</div>
 <p><span class="toc-root"><a href="index.html">Skimpy C#: An Introduction to Programming</a></span></p><ul class="sectlevel1">
 <li><a href="_skimpy_preface.html">Skimpy Preface</a>
 </li>
@@ -592,7 +639,7 @@ pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 *</p>
 </div>
 <div class="paragraph">
-<p><em>Source code examples from this chapter and associated videos are available on {github-base}/07%Classes%20and%Objects[GitHub^].</em></p>
+<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/07%Classes%20and%Objects" target="_blank" rel="noopener">GitHub</a>.</em></p>
 </div>
 <hr>
 <div class="paragraph">
@@ -681,7 +728,7 @@ With an order, we might send it to the kitchen, print the bill, or close the bil
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 Your Canvas course includes access to <strong>Lucid (Whiteboard)</strong>, which is a free online tool you can use to create UML diagrams. If you create your account through the link in the left-hand navbar in Canvas, you&#8217;ll have access to the premium features for free.
@@ -713,7 +760,7 @@ We&#8217;ve encapsulated our personal information, and we only share it when and
 <table>
 <tr>
 <td class="icon">
-<div class="title">Important</div>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 In C#, encapsulation is not a strict requirement, and our code will still work if we don&#8217;t use it.
@@ -807,7 +854,7 @@ This means that the fields can only be accessed and changed by the methods of th
 <table>
 <tr>
 <td class="icon">
-<div class="title">Warning</div>
+<i class="fa icon-warning" title="Warning"></i>
 </td>
 <td class="content">
 Since a class will compile and run even if we leave off the <code>private</code> access modifier, it&#8217;s easy to forget to use it. But don&#8217;t worry, I&#8217;ll help you remember by taking huge points off your assignments if you don&#8217;t make your fields <code>private</code>. As I&#8217;ve mentioned, you&#8217;re not really doing OOP if you don&#8217;t encapsulate your fields, and we&#8217;re learning OOP here.
@@ -979,7 +1026,7 @@ But we really should only write setters for fields that we want to be able to ch
 <table>
 <tr>
 <td class="icon">
-<div class="title">Tip</div>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 A rule of thumb for beginners: create <strong>getters</strong> for all of your fields when you first write your class, and then add <strong>setters</strong> only as you need them. Because this is sometimes tricky for beginners to determine, I don&#8217;t deduct points for writing unnecessary setters&#8212;&#8203;but sometimes my directions will explicitly tell you not to write a setter for a field, and I do deduct for that.
@@ -1139,7 +1186,7 @@ We&#8217;ll use the <code>new</code> keyword to allocate memory, and then we&#82
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 We&#8217;ve already learned that parentheses in C# <strong>always</strong> means we&#8217;re referring to a method. A constructor is a special method called when instantiating an object.
@@ -1321,7 +1368,7 @@ In general, I ask students to create at least two instances of each class they a
 <table>
 <tr>
 <td class="icon">
-<div class="title">Important</div>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 The Lab Assignments in Canvas can be completed using what we&#8217;ve covered to this point. You might choose to complete that work now, then move onto the next section&#8212;&#8203;which you&#8217;ll need for the Programming Project.
@@ -1397,7 +1444,7 @@ We can initialize those fields to any value we want, but we should choose values
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 This constructor is called a <strong>parameterless</strong> constructor because it doesn&#8217;t have any parameters in the parentheses. It&#8217;s technically <strong>not</strong> a default constructor, because we wrote it ourselves rather than letting the compiler do it, but so many people call it a default constructor that the term is used more often than <em>parameterless constructor</em>.
@@ -1458,10 +1505,10 @@ That can include having a parameterless constructor and one or more constructors
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-To see a complete example of the <code>WeatherRecord</code> class with constructors, fields, and methods, as well as a driver class to demonstrate it, visit the_Source code examples from this chapter and associated videos are available on {github-base}/07%Classes%20and%Objects[GitHub repository for this chapter^].
+To see a complete example of the <code>WeatherRecord</code> class with constructors, fields, and methods, as well as a driver class to demonstrate it, visit the_Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/07%Classes%20and%Objects" target="_blank" rel="noopener">GitHub repository for this chapter</a>.
 </td>
 </tr>
 </table>
@@ -1585,9 +1632,9 @@ This would mean that every savings account would earn the same interest rate, wh
 </div>
 </div>
 <div id="footer">
-<div id="footer-text">
-Last updated 2025-04-02 05:40:05 UTC
-</div>
+    <div id="footer-text">
+        Tripucka Edition,&nbsp;revised&nbsp;2025-04-02&nbsp;-&nbsp;05:48:46 UTC
+    </div>
 </div>
 </body>
 </html>

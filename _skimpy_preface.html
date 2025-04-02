@@ -5,6 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Tim McMichael">
 <title>Skimpy C#: An Introduction to Programming</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -433,16 +434,52 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
 </head>
 <body id="_skimpy_preface" class="article toc2 toc-left">
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const fileName = window.location.pathname.split('/').pop(); // Get current file name
+      console.log("Current file name:", fileName);
+
+      // Update the Light Mode link dynamically
+      const lightLink = document.querySelector("#header a.light-mode");
+      if (lightLink) {
+        lightLink.href = `https://timmcmichael.github.io/skimpy-csharp/${fileName}`;
+        lightLink.textContent = `Light Mode`;
+      }
+
+      // Update the Dark Mode link dynamically
+      const darkLink = document.querySelector("#header a.dark-mode");
+      if (darkLink) {
+        darkLink.href = `https://timmcmichael.github.io/skimpy-csharp-dark/${fileName}`;
+        darkLink.textContent = `Dark Mode (experimental)`;
+      }
+    });
+</script>
+
+<div id="header">
+    <span>
+      <a class="light-mode" href="https://timmcmichael.github.io/skimpy-csharp/current-file">Light Mode</a>
+      &nbsp;|&nbsp;
+      <a class="dark-mode" href="https://timmcmichael.github.io/skimpy-csharp-dark/current-file">Dark Mode</a>
+      &nbsp;|&nbsp;
+      <a class="pdf-link" href="index.pdf" target="_blank">PDF (experimental)</a>
+
+    </span>
+</div>
 <div id="header">
 <h1>Skimpy C#: An Introduction to Programming</h1>
+<div class="details">
+<span id="author" class="author">Tim McMichael</span><br>
+<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
+</div>
 <div id="toc" class="toc2">
-<div id="toctitle">Table of Contents</div>
+<div id="toctitle">Skimpy Contents</div>
 <p><span class="toc-root"><a href="index.html">Skimpy C#: An Introduction to Programming</a></span></p><ul class="sectlevel1">
 <li><a href="_skimpy_preface.html"><span class="toc-current">Skimpy Preface</span></a>
 </li>
@@ -505,9 +542,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div id="footer">
-<div id="footer-text">
-Last updated 2025-04-02 05:40:05 UTC
-</div>
+    <div id="footer-text">
+        Tripucka Edition,&nbsp;revised&nbsp;2025-04-02&nbsp;-&nbsp;05:48:46 UTC
+    </div>
 </div>
 </body>
 </html>

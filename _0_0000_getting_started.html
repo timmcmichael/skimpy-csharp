@@ -5,6 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Tim McMichael">
 <title>Skimpy C#: An Introduction to Programming</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -433,16 +434,52 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
              .nav-footer{text-align: center; margin-top: auto;}
              .nav-footer > p > a {white-space: nowrap;}</style>
 </head>
 <body id="_0_0000_getting_started" class="article toc2 toc-left">
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const fileName = window.location.pathname.split('/').pop(); // Get current file name
+      console.log("Current file name:", fileName);
+
+      // Update the Light Mode link dynamically
+      const lightLink = document.querySelector("#header a.light-mode");
+      if (lightLink) {
+        lightLink.href = `https://timmcmichael.github.io/skimpy-csharp/${fileName}`;
+        lightLink.textContent = `Light Mode`;
+      }
+
+      // Update the Dark Mode link dynamically
+      const darkLink = document.querySelector("#header a.dark-mode");
+      if (darkLink) {
+        darkLink.href = `https://timmcmichael.github.io/skimpy-csharp-dark/${fileName}`;
+        darkLink.textContent = `Dark Mode (experimental)`;
+      }
+    });
+</script>
+
+<div id="header">
+    <span>
+      <a class="light-mode" href="https://timmcmichael.github.io/skimpy-csharp/current-file">Light Mode</a>
+      &nbsp;|&nbsp;
+      <a class="dark-mode" href="https://timmcmichael.github.io/skimpy-csharp-dark/current-file">Dark Mode</a>
+      &nbsp;|&nbsp;
+      <a class="pdf-link" href="index.pdf" target="_blank">PDF (experimental)</a>
+
+    </span>
+</div>
 <div id="header">
 <h1>Skimpy C#: An Introduction to Programming</h1>
+<div class="details">
+<span id="author" class="author">Tim McMichael</span><br>
+<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
+</div>
 <div id="toc" class="toc2">
-<div id="toctitle">Table of Contents</div>
+<div id="toctitle">Skimpy Contents</div>
 <p><span class="toc-root"><a href="index.html">Skimpy C#: An Introduction to Programming</a></span></p><ul class="sectlevel1">
 <li><a href="_skimpy_preface.html">Skimpy Preface</a>
 </li>
@@ -526,7 +563,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </div>
 <div class="paragraph">
-<p><em>Source code examples from this eBook and associated videos are available on {github-base}[GitHub^].</em></p>
+<p><em>Source code examples from this eBook and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)" target="_blank" rel="noopener">GitHub</a>.</em></p>
 </div>
 <hr>
 <div class="paragraph">
@@ -602,7 +639,7 @@ Visual Studio is an enterprise-grade IDE that&#8217;s used by professional devel
 <table>
 <tr>
 <td class="icon">
-<div class="title">Important</div>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 Microsoft has another product called <strong>Visual Studio Code</strong>, which is a different product and not the same thing as Visual Studio. We&#8217;ll look at that below.
@@ -732,7 +769,7 @@ In fact, it&#8217;s <em>so</em> lightweight that many people argue that it&#8217
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
 I&#8217;ll probably record some of my video content using Rider and some using VS Code, so you&#8217;ll see both in action. VS Code is currently my favorite IDE, but I&#8217;m learning Rider so I can opefully provide support to students who choose it.
@@ -751,7 +788,7 @@ And do yourself a favor: <strong>don&#8217;t rely on a web-based IDE for this co
 <table>
 <tr>
 <td class="icon">
-<div class="title">Tip</div>
+<i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
 You can install and use multiple IDEs on your computer, so you can try them and see which one you like best.
@@ -765,7 +802,7 @@ You can install and use multiple IDEs on your computer, so you can try them and 
 <h3 id="_installation_instructions">Installation Instructions</h3>
 <div class="paragraph">
 <p>The linked documents below provide detailed installation instructions&#8212;&#8203;but they are fairly straightforward, so even if some of the details are out of date, you should be able to figure it out.
-If that&#8217;s not the case, email me at {email}.</p>
+If that&#8217;s not the case, email me at <a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="_installing_visual_studio_community">Installing Visual Studio Community</h4>
@@ -844,9 +881,9 @@ If that&#8217;s not the case, email me at {email}.</p>
 </div>
 </div>
 <div id="footer">
-<div id="footer-text">
-Last updated 2025-04-02 05:40:05 UTC
-</div>
+    <div id="footer-text">
+        Tripucka Edition,&nbsp;revised&nbsp;2025-04-02&nbsp;-&nbsp;05:48:46 UTC
+    </div>
 </div>
 </body>
 </html>
