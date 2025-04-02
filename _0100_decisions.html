@@ -696,7 +696,7 @@ These can be assigned to variables of type <code>bool</code>:</p>
 <div class="paragraph">
 <p>Also known as <em>relational operations</em>, relational operations are expressions that compare two values.
 You will remember them from math class. <em>Is <code>x</code> greater than <code>y</code>? Is <code>a</code> less than or equal to <code>10</code>? Is <code>c</code> equal to <code>d</code>?</em>
-Relational operators, like <a href="_0010_variables_and_data_types.html#_math_calculations_">arithmetic operators</a>, are <em>binary</em> operators that require two operands.
+Relational operators, like <a href="_0010_variables_and_data_types.html#_math_calculations">arithmetic operators</a>, are <em>binary</em> operators that require two operands.
 In other words, we need two values to compare.
 In our math class, we could draw symbols that aren&#8217;t on our keyboard, like a &#8805; for "greater than or equal to."
 In C#, where we have to stick with stuff on our keyboard, we use the following symbols:</p>
@@ -803,8 +803,10 @@ In either case the program will continue executing the next line of code after t
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">age</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">20</span><span class="tok-p">;</span>
-<span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">age</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">21</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">age</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">20</span><span class="tok-p">;</span>
+<span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">age</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">21</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">    </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;You can&#39;t buy alcohol.&quot;</span><span class="tok-p">);</span>
 <span class="tok-p">}</span>
 <span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Keep that in mind when you go to the store!&quot;</span><span class="tok-p">);</span>
@@ -842,8 +844,10 @@ The syntax is simple: after the <code>if</code> block, add the keyword <code>els
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">age</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">20</span><span class="tok-p">;</span>
-<span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">age</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">21</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">age</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">20</span><span class="tok-p">;</span>
+<span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">age</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">21</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">    </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;You can&#39;t buy alcohol.&quot;</span><span class="tok-p">);</span>
 <span class="tok-p">}</span>
 <span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-p">{</span>
@@ -903,18 +907,28 @@ To handle this, we can chain multiple <code>if-else</code> statements together.<
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">WeatherRecord</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">class</span><span class="tok-w"> </span><span class="tok-n">WeatherRecord</span>
+<span class="tok-p">{</span>
 <span class="tok-w">    </span><span class="tok-c1">// Fields</span>
 <span class="tok-w">    </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">;</span>
 <span class="tok-w">    </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">highTemperature</span><span class="tok-p">;</span>
 <span class="tok-w">    </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">double</span><span class="tok-w"> </span><span class="tok-n">averageWindSpeed</span><span class="tok-p">;</span>
 
-<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-nf">GetTempDescription</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">        </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">90</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-nf">GetTempDescription</span><span class="tok-p">()</span>
+<span class="tok-p">{</span>
+<span class="tok-w">        </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">90</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">            </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Hot&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">        </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">70</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">        </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">70</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">            </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Warm&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">        </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">50</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">        </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">50</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">            </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Cool&quot;</span><span class="tok-p">;</span>
 <span class="tok-w">        </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-p">{</span>
 <span class="tok-w">            </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Cold&quot;</span><span class="tok-p">;</span>
@@ -995,8 +1009,12 @@ Nested if statements check multiple conditions in a hierarchical way: if one con
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">condition1</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">    </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">condition2</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">condition1</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">condition2</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">        </span><span class="tok-c1">// executes if both condition1 and condition2 are true</span>
 <span class="tok-w">    </span><span class="tok-p">}</span>
 <span class="tok-w">    </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-p">{</span>
@@ -1042,27 +1060,43 @@ The if-else structures within those blocks check the average wind speed and retu
 <span class="normal">24</span>
 <span class="normal">25</span>
 <span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-n">String</span><span class="tok-w"> </span><span class="tok-nf">GetFullDescription</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">        </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">90</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">            </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">averageWindSpeed</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-n">String</span><span class="tok-w"> </span><span class="tok-nf">GetFullDescription</span><span class="tok-p">()</span>
+<span class="tok-p">{</span>
+<span class="tok-w">        </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">90</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
+<span class="tok-w">            </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">averageWindSpeed</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">                </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Hot and Windy&quot;</span><span class="tok-p">;</span>
 <span class="tok-w">            </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-p">{</span>
 <span class="tok-w">                </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Hot&quot;</span><span class="tok-p">;</span>
 <span class="tok-w">            </span><span class="tok-p">}</span>
-<span class="tok-w">        </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">70</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">            </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">averageWindSpeed</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">        </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">70</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
+<span class="tok-w">            </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">averageWindSpeed</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">                </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Warm and Windy&quot;</span><span class="tok-p">;</span>
 <span class="tok-w">            </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-p">{</span>
 <span class="tok-w">                </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Warm&quot;</span><span class="tok-p">;</span>
 <span class="tok-w">            </span><span class="tok-p">}</span>
-<span class="tok-w">        </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">50</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">            </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">averageWindSpeed</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">        </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">50</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
+<span class="tok-w">            </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">averageWindSpeed</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">                </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Cool and Windy&quot;</span><span class="tok-p">;</span>
 <span class="tok-w">            </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-p">{</span>
 <span class="tok-w">                </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Cool&quot;</span><span class="tok-p">;</span>
 <span class="tok-w">            </span><span class="tok-p">}</span>
 <span class="tok-w">        </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">            </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">averageWindSpeed</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">            </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">averageWindSpeed</span><span class="tok-w"> </span><span class="tok-o">&gt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">                </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Cold and Windy&quot;</span><span class="tok-p">;</span>
 <span class="tok-w">            </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-p">{</span>
 <span class="tok-w">                </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Cold&quot;</span><span class="tok-p">;</span>
@@ -1126,7 +1160,9 @@ For example, we could check if a student is eligible for a scholarship based on 
 <div class="content">
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">gpa</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-m">3.5</span><span class="tok-w"> </span><span class="tok-o">&amp;&amp;</span><span class="tok-w"> </span><span class="tok-n">age</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">25</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">gpa</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-m">3.5</span><span class="tok-w"> </span><span class="tok-o">&amp;&amp;</span><span class="tok-w"> </span><span class="tok-n">age</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">25</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">    </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;You qualify for the scholarship!&quot;</span><span class="tok-p">);</span>
 <span class="tok-p">}</span>
 </pre></div></td></tr></table></div></code></pre>
@@ -1159,10 +1195,12 @@ Often, the logic we create using an AND operation can be implemented using neste
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">bool</span><span class="tok-w"> </span><span class="tok-n">isTimAmazing</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">false</span><span class="tok-p">;</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">bool</span><span class="tok-w"> </span><span class="tok-n">isTimAmazing</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">false</span><span class="tok-p">;</span>
 <span class="tok-kt">bool</span><span class="tok-w"> </span><span class="tok-n">isClassFun</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">true</span><span class="tok-p">;</span>
 
-<span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">isTimAmazing</span><span class="tok-w"> </span><span class="tok-o">||</span><span class="tok-w"> </span><span class="tok-n">isClassFun</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">isTimAmazing</span><span class="tok-w"> </span><span class="tok-o">||</span><span class="tok-w"> </span><span class="tok-n">isClassFun</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">    </span><span class="tok-n">System</span><span class="tok-p">.</span><span class="tok-k">out</span><span class="tok-p">.</span><span class="tok-n">println</span><span class="tok-p">(</span><span class="tok-s">&quot;You should take this class!&quot;</span><span class="tok-p">);</span>
 <span class="tok-p">}</span>
 </pre></div></td></tr></table></div></code></pre>
@@ -1174,7 +1212,8 @@ Put another way, each side of the <code>&amp;&amp;</code> or <code>||</code> ope
 The following code is a very common beginner mistake and will <strong>not</strong> compile:</p>
 </div>
 <div class="paragraph">
-<p><code>if (percentage &gt;= 80 &amp;&amp; &lt; 90) { &#8230;&#8203; }</code></p>
+<p><code>if (percentage &gt;= 80 &amp;&amp; &lt; 90)
+{ &#8230;&#8203; }</code></p>
 </div>
 <div class="paragraph">
 <p>This reads like "if the percentage is greater than or equal to 80 and less than 90," but the second part of the expression is not a complete Boolean expression.
@@ -1193,9 +1232,11 @@ If the operand is <code>false</code>, the NOT operation will evaluate to <code>t
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">bool</span><span class="tok-w"> </span><span class="tok-n">isTimAmazing</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">false</span><span class="tok-p">;</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">bool</span><span class="tok-w"> </span><span class="tok-n">isTimAmazing</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">false</span><span class="tok-p">;</span>
 
-<span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-o">!</span><span class="tok-n">isTimAmazing</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-o">!</span><span class="tok-n">isTimAmazing</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">    </span><span class="tok-n">System</span><span class="tok-p">.</span><span class="tok-k">out</span><span class="tok-p">.</span><span class="tok-n">println</span><span class="tok-p">(</span><span class="tok-s">&quot;At least his mom still loves him!&quot;</span><span class="tok-p">);</span>
 <span class="tok-p">}</span>
 </pre></div></td></tr></table></div></code></pre>
@@ -1227,16 +1268,28 @@ Range checking means we want to see if a value is within a certain range.</p>
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-n">String</span><span class="tok-w"> </span><span class="tok-nf">GetLetterGrade</span><span class="tok-p">(</span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">percentage</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">    </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-m">90</span><span class="tok-w"> </span><span class="tok-o">&amp;&amp;</span><span class="tok-w"> </span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&lt;=</span><span class="tok-w"> </span><span class="tok-m">100</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-n">String</span><span class="tok-w"> </span><span class="tok-nf">GetLetterGrade</span><span class="tok-p">(</span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">percentage</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-m">90</span><span class="tok-w"> </span><span class="tok-o">&amp;&amp;</span><span class="tok-w"> </span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&lt;=</span><span class="tok-w"> </span><span class="tok-m">100</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;A&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">    </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-m">80</span><span class="tok-w"> </span><span class="tok-o">&amp;&amp;</span><span class="tok-w"> </span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">90</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-m">80</span><span class="tok-w"> </span><span class="tok-o">&amp;&amp;</span><span class="tok-w"> </span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">90</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;B&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">    </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-m">70</span><span class="tok-w"> </span><span class="tok-o">&amp;&amp;</span><span class="tok-w"> </span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">80</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-m">70</span><span class="tok-w"> </span><span class="tok-o">&amp;&amp;</span><span class="tok-w"> </span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">80</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;C&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">    </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-m">60</span><span class="tok-w"> </span><span class="tok-o">&amp;&amp;</span><span class="tok-w"> </span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">70</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-m">60</span><span class="tok-w"> </span><span class="tok-o">&amp;&amp;</span><span class="tok-w"> </span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">70</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;D&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">    </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-m">0</span><span class="tok-w"> </span><span class="tok-o">&amp;&amp;</span><span class="tok-w"> </span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">60</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-k">if</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&gt;=</span><span class="tok-w"> </span><span class="tok-m">0</span><span class="tok-w"> </span><span class="tok-o">&amp;&amp;</span><span class="tok-w"> </span><span class="tok-n">percentage</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">60</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;F&quot;</span><span class="tok-p">;</span>
 <span class="tok-w">    </span><span class="tok-p">}</span><span class="tok-w"> </span><span class="tok-k">else</span><span class="tok-w"> </span><span class="tok-p">{</span>
 <span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-s">&quot;Invalid percentage&quot;</span><span class="tok-p">;</span>
@@ -1277,7 +1330,9 @@ And since you see them often in code written by others, it&#8217;s good to know 
 <span class="normal">10</span>
 <span class="normal">11</span>
 <span class="normal">12</span>
-<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">switch</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">expression</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">switch</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">expression</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">    </span><span class="tok-k">case</span><span class="tok-w"> </span><span class="tok-n">value1</span><span class="tok-p">:</span>
 <span class="tok-w">        </span><span class="tok-c1">// Code to be executed if expression equals value1</span>
 <span class="tok-w">        </span><span class="tok-k">break</span><span class="tok-p">;</span>
@@ -1319,8 +1374,12 @@ This can be useful in some situations, but it&#8217;s generally not what you wan
 <span class="normal">12</span>
 <span class="normal">13</span>
 <span class="normal">14</span>
-<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">TrafficInstructions</span><span class="tok-p">(</span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-n">lightColor</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">    </span><span class="tok-k">switch</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">lightColor</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">TrafficInstructions</span><span class="tok-p">(</span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-n">lightColor</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-k">switch</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">lightColor</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">        </span><span class="tok-k">case</span><span class="tok-w"> </span><span class="tok-s">&quot;red&quot;</span><span class="tok-p">:</span>
 <span class="tok-w">            </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Stop!&quot;</span><span class="tok-p">);</span>
 <span class="tok-w">            </span><span class="tok-k">break</span><span class="tok-p">;</span>
@@ -1336,6 +1395,9 @@ This can be useful in some situations, but it&#8217;s generally not what you wan
 <span class="tok-p">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>{</p>
 </div>
 <hr>
 </div>
@@ -1366,7 +1428,7 @@ This can be useful in some situations, but it&#8217;s generally not what you wan
 </div>
 <div id="footer">
     <div id="footer-text">
-        Tripucka Edition,&nbsp;revised&nbsp;2025-04-01&nbsp;-&nbsp;19:52:50 UTC
+        Tripucka Edition,&nbsp;revised&nbsp;2025-04-02&nbsp;-&nbsp;05:31:39 UTC
     </div>
 </div>
 </body>

@@ -689,8 +689,10 @@ If the condition is still true, the block of code is executed again.</p>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0</span><span class="tok-p">;</span>
-<span class="tok-k">while</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0</span><span class="tok-p">;</span>
+<span class="tok-k">while</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">    </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Count is: &quot;</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-p">);</span>
 <span class="tok-w">    </span><span class="tok-n">count</span><span class="tok-o">++</span><span class="tok-p">;</span>
 <span class="tok-p">}</span>
@@ -721,8 +723,10 @@ Infinite loops are a common mistake for new programmers, and they can cause our 
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0</span><span class="tok-p">;</span>
-<span class="tok-k">while</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0</span><span class="tok-p">;</span>
+<span class="tok-k">while</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">    </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Count is: &quot;</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-p">);</span>
 <span class="tok-p">}</span>
 </pre></div></td></tr></table></div></code></pre>
@@ -753,7 +757,9 @@ Your IDE will have a way to stop the program if it&#8217;s stuck in an infinite 
 <div class="content">
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">while</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">true</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">while</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-k">true</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">    </span><span class="tok-c1">// hey, there&#39;s nothing to stop this loop!</span>
 <span class="tok-p">}</span>
 </pre></div></td></tr></table></div></code></pre>
@@ -858,8 +864,12 @@ For example, if a program displays a menu with three options, a loop could keep 
 <span class="normal">16</span>
 <span class="normal">17</span>
 <span class="normal">18</span>
-<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">InputValidation</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">static</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">Main</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">class</span><span class="tok-w"> </span><span class="tok-n">InputValidation</span>
+<span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">static</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">Main</span><span class="tok-p">()</span>
+<span class="tok-p">{</span>
 <span class="tok-w">        </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">choice</span><span class="tok-p">;</span>
 <span class="tok-w">        </span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-n">choiceString</span><span class="tok-p">;</span>
 
@@ -895,7 +905,9 @@ The syntax of a <code>for</code> loop can be a little intimidating for new coder
 <div class="content">
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">for</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0</span><span class="tok-p">;</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">;</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-o">++</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">for</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0</span><span class="tok-p">;</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-w"> </span><span class="tok-o">&lt;</span><span class="tok-w"> </span><span class="tok-m">10</span><span class="tok-p">;</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-o">++</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">    </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">&quot;Count is: &quot;</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-n">count</span><span class="tok-p">);</span>
 <span class="tok-p">}</span>
 </pre></div></td></tr></table></div></code></pre>
@@ -1011,6 +1023,9 @@ When the <code>continue</code> statement is executed, the program stops executin
 <div class="paragraph">
 <p>===</p>
 </div>
+<div class="paragraph">
+<p>{</p>
+</div>
 <hr>
 </div>
 <div class="sect2">
@@ -1040,7 +1055,7 @@ When the <code>continue</code> statement is executed, the program stops executin
 </div>
 <div id="footer">
     <div id="footer-text">
-        Tripucka Edition,&nbsp;revised&nbsp;2025-04-01&nbsp;-&nbsp;19:52:50 UTC
+        Tripucka Edition,&nbsp;revised&nbsp;2025-04-02&nbsp;-&nbsp;05:31:39 UTC
     </div>
 </div>
 </body>

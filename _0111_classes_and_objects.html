@@ -645,19 +645,17 @@ pre.pygments .tok-il { color: #ae81ff } /* Literal.Number.Integer.Long */
 <div class="paragraph">
 <p>There are multiple ways to organize a program, and the code we&#8217;ve written to this point could be described as <em>procedural programming</em>.
 In procedural programming, we organize our code into methods that perform specific tasks, and we think of a program as a series of tasks that need to be performed in a specific order.
-This course is all about <em>object-oriented programming</em> (OOP), but I want students to have a handful of basic coding skills before we dive into OOP.
+Another popular way to think about software design is <em>object-oriented programming</em> (OOP).
 In this chapter, we&#8217;ll start our transition to OOP by learning about classes and objects, which are the basic building blocks of OOP.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_oop_basics">7.1. OOP Basics</h3>
 <div class="paragraph">
-<p>Until now, we have been organizing our programs into methods, which is a procedural programming approach.
-We&#8217;ve been thinking of a program as a collection of tasks that need to be performed in a specific order.
-There&#8217;s nothing wrong with this approach, but it can get cumbersome as a program grows in size and complexity&#8212;&#8203;and it isn&#8217;t always an intuitive way to plan our programs.</p>
+<p>There&#8217;s nothing wrong with procedural programming&#8212;&#8203;and, in fact, OOP is a form of procedural programming&#8212;&#8203;but it can get cumbersome as a program grows in size and complexity. And, it isn&#8217;t always an intuitive way to plan our programs.</p>
 </div>
 <div class="paragraph">
-<p>Now we&#8217;re ready to start our transition to object-oriented programming (OOP), which lets us think about programs the way we think about the world around us.
+<p>Object-oriented programming lets us think about programs the way we think about the world around us.
 Instead of thinking about a program as a bunch of tasks, we can think of it as a bunch of objects that interact with each other.
 As an example, the old-school video game <a href="https://en.wikipedia.org/wiki/Pac-Man"><strong>Pac-Man</strong></a> has the main character (an object) moving around a maze (another object), and avoiding four ghosts (yep, four more objects).</p>
 </div>
@@ -690,19 +688,20 @@ A class defines the <strong>attributes</strong> and <strong>behaviors</strong> o
 <div class="paragraph">
 <p>In OOP, our planning for a program starts by deciding what objects&#8212;&#8203;and therefore, what classes&#8212;&#8203;we&#8217;ll need in order to implement the functionality we want.
 To help organize our thinking, we&#8217;ll use a tool called a <strong>class diagram</strong>, which gives a visual representation of the classes and their relationships in our program.
-The format programmers use for class diagrams is called UML (Unified Modeling Language).
-The UML standards are extensive, but we&#8217;ll be using a simplified version in this course.</p>
+The format programmers use for class diagrams is called <em>Unified Modeling Language</em> (UM)).
+The UML standards are extensive, and we&#8217;ll be using a simplified version in this course.</p>
 </div>
 <div class="paragraph">
 <p>Consider a program to handle orders at a restaurant. A simple class to represent one person&#8217;s order might look like this:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example of a class diagram for a restaurant order</div>
+<div class="title">A class diagram for a restaurant order</div>
 <div class="content">
-<pre>!theme crt-green // delete for light theme
+<pre>// !theme crt-green // delete for light theme
 @startuml
 skinparam classAttributeIconSize 0
-class Order {
+class class Order
+{
    -serverName:string
    -tableNum:int
    -appetizer:string
@@ -749,7 +748,7 @@ If we have an <code>Order</code> class in a program used by a restaurant, we don
 <div class="paragraph">
 <p>To prevent this kind of tampering, whether it&#8217;s intentional or accidental, OOP relies on a concept called <strong>encapsulation</strong>.
 Encapsulation of a class means that attributes are hidden from the outside world, and only the behaviors of the class can access and change them.
-As an analogy, consider the counter at a fast food restaurant. We can&#8217;t just reach over and grab a handful of fries; we have to ask the employee behind the counter to get them for us.
+Continuing with food service analogies, consider the counter at a fast food restaurant. We can&#8217;t just reach over and grab a handful of fries; we have to ask the employee behind the counter to get them for us.
 In this analogy, the food is encapsulated and we can only access it by using a behavior, like "order food".</p>
 </div>
 <div class="paragraph">
@@ -757,11 +756,18 @@ In this analogy, the food is encapsulated and we can only access it by using a b
 When we encounter a stranger, they don&#8217;t automatically know our name and phone number; they have to ask us for that information.
 We&#8217;ve encapsulated our personal information, and we only share it when and how we choose to.</p>
 </div>
-<div class="paragraph">
-<p>In Java, encapsulation is not a strict requirement, and our code will still work if we don&#8217;t use it.
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+In C#, encapsulation is not a strict requirement, and our code will still work if we don&#8217;t use it.
 But it&#8217;s a best practice&#8212;&#8203;and an important one&#8212;&#8203;so we will encapsulate all of our classes in this course.
-In fact, I would argue that if we don&#8217;t encapsulate our classes, we&#8217;re not really doing object-oriented programming.
-And that&#8217;s what we&#8217;re here to learn.</p>
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
@@ -775,18 +781,37 @@ And that&#8217;s what we&#8217;re here to learn.</p>
 </div>
 <div class="title">Class diagram for the <code>WeatherRecord</code> class</div>
 </div>
+<div class="listingblock">
+<div class="content">
+<pre>@startuml
+skinparam classAttributeIconSize 0
+class class WeatherRecord
+{
+   -date:string
+   -highTemp:int
+   -avgWindspeed:int
+   +setDate(string):void
+   +setHighTemp(int):void
+   +setAvgWindspeed(int):void
+   +displayData():void
+}
+@enduml</pre>
+</div>
+</div>
 <div class="paragraph">
 <p>To implement this class in code, we&#8217;ll start with a class header. The class header always follows the same pattern: an <strong>access modifier</strong>, the keyword <code>class</code>, and the name of the class.
 The class header is followed by a code block, enclosed in curly braces.</p>
 </div>
 <div class="listingblock">
-<div class="title"><code>WeatherRecord.cs</code>. A class header and code block.</div>
+<div class="title">Example 7.54 - <code>WeatherRecord.cs</code>. A class header and code block.</div>
 <div class="content">
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">WeatherRecord</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">class</span><span class="tok-w"> </span><span class="tok-n">WeatherRecord</span>
+<span class="tok-p">{</span>
 
 <span class="tok-w">   </span><span class="tok-c1">// class code goes here</span>
 
@@ -806,19 +831,19 @@ The class header is followed by a code block, enclosed in curly braces.</p>
 </dd>
 <dt class="hdlist1"><strong>Class name</strong> (or <em>identifier</em>)</dt>
 <dd>
-<p>The name of the class, which should be a noun that describes the object the class represents&#8212;&#8203;and is singular, so there&#8217;s no <em>s</em> at the end. The identifier should start with a capital, with the first letter of each word capitalized (like <code>WeatherRecord</code>). This is similar to the <em>camelCase</em> naming convention we&#8217;ve been using for variables and methods; it&#8217;s called <em>PascalCase</em>.</p>
+<p>The name of the class, which should be a noun that describes the object the class represents&#8212;&#8203;and is singular, so there&#8217;s no <em>s</em> at the end. The identifier should start with a capital, with the first letter of each word capitalized (like <code>WeatherRecord</code>). This is similar to the <em>camelCase</em> naming convention we&#8217;ve been using for variables, and it&#8217;s the same convention we&#8217;ve been using for methods; it&#8217;s called <em>PascalCase</em>.</p>
 </dd>
 </dl>
 </div>
 <div class="paragraph">
 <p>The class code block is where we define the different components that make up the class, which we call the <strong>instance members</strong>.
-To begin with, we&#8217;ll focus on two types of instance members: <strong>fields</strong> and <strong>methods</strong>.</p>
+For now, we&#8217;ll focus on two types of instance members: <strong>fields</strong> and <strong>methods</strong>.</p>
 </div>
 <div class="sect3">
 <h4 id="_fields">7.3.1. Fields</h4>
 <div class="paragraph">
-<p>Fields are the implementation of the attributes of the class.
-They are also known as <strong>instance variables</strong> because they are similar to the variables we&#8217;ve been using in our programs, but their scope is the object created from the class, not the method where they&#8217;re defined.
+<p><strong>Fields</strong> are the implementation of the <em>attributes</em> of the class.
+They are also known as <strong>instance variables</strong> because they are similar to the variables we&#8217;ve been using in our programs, but their <a href="_0011_methods.html#_variable_scope">scope</a> is the object created from the class, not the method where they&#8217;re defined.
 A field is unique to the object; if we make two objects from our <code>WeatherRecord</code> class, each object will have its own date, high temperature, and average temperature.</p>
 </div>
 <div class="paragraph">
@@ -838,13 +863,15 @@ Since a class will compile and run even if we leave off the <code>private</code>
 </table>
 </div>
 <div class="listingblock">
-<div class="title"><code>WeatherRecord.cs</code>. Fields added to the <code>WeatherRecord</code> class.</div>
+<div class="title">Example 7.55 - <code>WeatherRecord.cs</code>. Fields added to the <code>WeatherRecord</code> class.</div>
 <div class="content">
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">WeatherRecord</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">class</span><span class="tok-w"> </span><span class="tok-n">WeatherRecord</span>
+<span class="tok-p">{</span>
 <span class="tok-w">   </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">;</span>
 <span class="tok-w">   </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">highTemp</span><span class="tok-p">;</span>
 <span class="tok-w">   </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">avgTemp</span><span class="tok-p">;</span>
@@ -866,11 +893,11 @@ Since a class will compile and run even if we leave off the <code>private</code>
 </div>
 </div>
 <div class="paragraph">
-<p>You might remember from <a href="#variable_scope">the section on variable scope in Chapter 0011</a> that using global variables is terrible, and every time we create a global variable, a puppy loses its favorite toy.
+<p>You might remember from <a href="_0011_methods.html#_variable_scope">the section on variable scope in Chapter 0011</a> that using global variables is terrible, and every time we create a global variable, a puppy loses its favorite toy.
 And these fields look an awful lot like global variables.
-But fields in a class are <strong>not</strong> global variables; they&#8217;re <strong>instance</strong> variables, and they&#8217;re a good thing.
-The fields are <strong>encapsulated</strong>, so they can only be accessed and changed by the methods of the class&#8212;&#8203;which is a good thing.
-And the fields are unique to each object, so we can have multiple objects with different values for the fields&#8212;&#8203;which is also a good thing.
+But fields in a class are <strong>not</strong> global variables; they&#8217;re <strong>instance</strong> variables, and that&#8217;s a good thing.
+The fields are <strong>encapsulated</strong>, so they can only be accessed and changed by the methods of the class&#8212;&#8203;which is also good thing.
+And the fields are unique to each object, so we can have multiple objects with different values for the fields&#8212;&#8203;which is yet another a good thing.
 And so no puppies' toys will be harmed as long as we use <strong>private</strong> fields correctly.</p>
 </div>
 </div>
@@ -884,7 +911,7 @@ These <em>nonstatic</em> methods are called <strong>instance methods</strong>, a
 </div>
 <div class="paragraph">
 <p>Though there are exceptions, most of these instance methods will be <code>public</code>, so they can be accessed from other classes.
-Remember, the foundation of encapsulation is having <code>private</code> fields and public methods to permit interactions with that data.</p>
+Remember, the foundation of encapsulation is having <code>private</code> fields and <code>public</code> methods to permit interactions with that data.</p>
 </div>
 <div class="paragraph">
 <p>In broad terms, we can categorize instance methods into two types: <strong>accessor</strong> methods and <strong>mutator</strong> methods.</p>
@@ -898,13 +925,15 @@ Java naming conventions specify that accessor methods should start with <code>ge
 Because of that convention, another name for accessor methods is <strong>getters</strong>.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example of an accessor method (or "getter")</div>
+<div class="title">Example 7.56 - An accessor method (or "getter")</div>
 <div class="content">
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-nf">getHighTemperature</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-nf">getHighTemperature</span><span class="tok-p">()</span>
+<span class="tok-p">{</span>
 <span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-n">highTemperature</span><span class="tok-p">;</span>
-<span class="tok-w">    </span><span class="tok-p">}</span>
+<span class="tok-p">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -916,7 +945,7 @@ Because of that convention, another name for accessor methods is <strong>getters
 But read-only access usually does no harm, so often we&#8217;ll have getters for all of our fields.</p>
 </div>
 <div class="listingblock">
-<div class="title"><code>WeatherRecord.cs</code>. Getters added to the <code>WeatherRecord</code> class.</div>
+<div class="title">Example 7.57 - <code>WeatherRecord.cs</code>. Getters added to the <code>WeatherRecord</code> class.</div>
 <div class="content">
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -935,20 +964,28 @@ But read-only access usually does no harm, so often we&#8217;ll have getters for
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">WeatherRecord</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">class</span><span class="tok-w"> </span><span class="tok-n">WeatherRecord</span>
+<span class="tok-p">{</span>
 <span class="tok-w">   </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">;</span>
 <span class="tok-w">   </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">highTemp</span><span class="tok-p">;</span>
 <span class="tok-w">   </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">avgTemp</span><span class="tok-p">;</span>
 
-<span class="tok-w">   </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-nf">getDate</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">   </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-nf">getDate</span><span class="tok-p">()</span>
+<span class="tok-w">   </span><span class="tok-p">{</span>
 <span class="tok-w">      </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">;</span>
 <span class="tok-w">   </span><span class="tok-p">}</span>
 
-<span class="tok-w">   </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-nf">getHighTemp</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">   </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-nf">getHighTemp</span><span class="tok-p">()</span>
+<span class="tok-w">   </span><span class="tok-p">{</span>
 <span class="tok-w">      </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-n">highTemp</span><span class="tok-p">;</span>
 <span class="tok-w">   </span><span class="tok-p">}</span>
 
-<span class="tok-w">   </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-nf">getAvgTemp</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">   </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-nf">getAvgTemp</span><span class="tok-p">()</span>
+<span class="tok-w">   </span><span class="tok-p">{</span>
 <span class="tok-w">      </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-n">avgTemp</span><span class="tok-p">;</span>
 <span class="tok-w">   </span><span class="tok-p">}</span>
 
@@ -969,9 +1006,11 @@ The naming convention for setters is to start with <code>set</code> and then the
 <div class="content">
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">setHighTemperature</span><span class="tok-p">(</span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">temp</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">        </span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">temp</span><span class="tok-p">;</span>
-<span class="tok-w">    </span><span class="tok-p">}</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">setHighTemperature</span><span class="tok-p">(</span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">temp</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">temp</span><span class="tok-p">;</span>
+<span class="tok-p">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
@@ -990,19 +1029,19 @@ But we really should only write setters for fields that we want to be able to ch
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-As a rule of thumb for beginners, create <strong>getters</strong> for all of your fields when you first write your class, and then add <strong>setters</strong> only as you need them. Because this is sometimes tricky for beginners to determine, I don&#8217;t deduct points for writing unnecessary setters&#8212;&#8203;but sometimes my directions will explicitly tell you not to write a setter for a field, and I do deduct for that.
+A rule of thumb for beginners: create <strong>getters</strong> for all of your fields when you first write your class, and then add <strong>setters</strong> only as you need them. Because this is sometimes tricky for beginners to determine, I don&#8217;t deduct points for writing unnecessary setters&#8212;&#8203;but sometimes my directions will explicitly tell you not to write a setter for a field, and I do deduct for that.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
 <p>If you&#8217;re paaying attention to what we&#8217;re doing here, you might be thinking that these setters really just give public access to the fields, which seems to go against the whole idea of encapsulation.
-That&#8217;s true for now, but only because we don&#8217;t know enough Java yet to do anything about it.
-As we learn more about Java, we&#8217;ll be able to write more complex methods that can control <strong>how</strong> fields are changed&#8212;&#8203;for example, by checking the new value to make sure it&#8217;s valid and won&#8217;t break anything.
-But for now, this is just another one of those frustrating rules that you just have to follow until you know enough to understand it.</p>
+That&#8217;s true for now, but only because we&#8217;re starting with some basic examples.
+As we get the hang of this OOP stuff, we&#8217;ll write more complex methods that can control <strong>how</strong> fields are changed&#8212;&#8203;for example, by using <code>if</code> statements checkto check that a new value is valid and won&#8217;t break anything.
+But for now, this is just another one of those frustrating rules that you just have to follow because your teacher is unreasonable.</p>
 </div>
 <div class="listingblock">
-<div class="title"><code>WeatherRecord.cs</code>. Setters added to the <code>WeatherRecord</code> class, and comments identifying the parts.</div>
+<div class="title">Example 7.59 - <code>WeatherRecord.cs</code>. Setters added to the <code>WeatherRecord</code> class, and comments identifying the parts.</div>
 <div class="content">
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1035,35 +1074,49 @@ But for now, this is just another one of those frustrating rules that you just h
 <span class="normal">29</span>
 <span class="normal">30</span>
 <span class="normal">31</span>
-<span class="normal">32</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">WeatherRecord</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">class</span><span class="tok-w"> </span><span class="tok-n">WeatherRecord</span>
+<span class="tok-p">{</span>
 <span class="tok-w">    </span><span class="tok-c1">// Fields</span>
 <span class="tok-w">    </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">;</span>
 <span class="tok-w">    </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">highTemperature</span><span class="tok-p">;</span>
 <span class="tok-w">    </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-kt">double</span><span class="tok-w"> </span><span class="tok-n">averageWindSpeed</span><span class="tok-p">;</span>
 
 <span class="tok-w">    </span><span class="tok-c1">// Getters</span>
-<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-nf">getDate</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-nf">getDate</span><span class="tok-p">()</span>
+<span class="tok-w">    </span><span class="tok-p">{</span>
 <span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">;</span>
 <span class="tok-w">    </span><span class="tok-p">}</span>
 
-<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-nf">getHighTemperature</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-nf">getHighTemperature</span><span class="tok-p">()</span>
+<span class="tok-w">    </span><span class="tok-p">{</span>
 <span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-n">highTemperature</span><span class="tok-p">;</span>
 <span class="tok-w">    </span><span class="tok-p">}</span>
 
-<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">double</span><span class="tok-w"> </span><span class="tok-nf">getAverageWindSpeed</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-kt">double</span><span class="tok-w"> </span><span class="tok-nf">getAverageWindSpeed</span><span class="tok-p">()</span>
+<span class="tok-w">    </span><span class="tok-p">{</span>
 <span class="tok-w">        </span><span class="tok-k">return</span><span class="tok-w"> </span><span class="tok-n">averageWindSpeed</span><span class="tok-p">;</span>
 <span class="tok-w">    </span><span class="tok-p">}</span>
 
 <span class="tok-w">    </span><span class="tok-c1">// Setters and Mutators</span>
-<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">setDate</span><span class="tok-p">(</span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">setDate</span><span class="tok-p">(</span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">)</span>
+<span class="tok-w">    </span><span class="tok-p">{</span>
 <span class="tok-w">        </span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">date</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">;</span>
 <span class="tok-w">    </span><span class="tok-p">}</span>
 
-<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">setHighTemperature</span><span class="tok-p">(</span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">highTemperature</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">setHighTemperature</span><span class="tok-p">(</span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">highTemperature</span><span class="tok-p">)</span>
+<span class="tok-w">    </span><span class="tok-p">{</span>
 <span class="tok-w">        </span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">highTemperature</span><span class="tok-p">;</span>
 <span class="tok-w">    </span><span class="tok-p">}</span>
 
-<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">setAverageWindSpeed</span><span class="tok-p">(</span><span class="tok-kt">double</span><span class="tok-w"> </span><span class="tok-n">averageWindSpeed</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">setAverageWindSpeed</span><span class="tok-p">(</span><span class="tok-kt">double</span><span class="tok-w"> </span><span class="tok-n">averageWindSpeed</span><span class="tok-p">)</span>
+<span class="tok-w">    </span><span class="tok-p">{</span>
 <span class="tok-w">        </span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">averageWindSpeed</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">averageWindSpeed</span><span class="tok-p">;</span>
 <span class="tok-w">    </span><span class="tok-p">}</span>
 <span class="tok-p">}</span>
@@ -1102,14 +1155,14 @@ And creating an instance is called <strong>instantiating</strong> a class.</p>
 The declaration is still a <em>data type</em> and an _identifier, but in this case the data type is the name of the class:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example of a declaration statement for an object.</div>
+<div class="title">Example 7.60 - A declaration statement for an object.</div>
 <div class="content">
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-n">WeatherRecord</span><span class="tok-w"> </span><span class="tok-n">day1</span><span class="tok-p">;</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This creates a variable called <code>day1</code> that will point to&#8212;&#8203;or <em>reference</em>--the memory location where our object will be stored.
+<p>This creates a variable called <code>day1</code> that will point to (or <em>reference</em>) the memory location where our object will be stored.
 The identifier follows the same rules we learned for primitive variables: a descriptive name typed in camelCase (with a lowercase first letter).
 In this case, the <code>day1</code> object is going to maintain the record for the first day of our weather tracking.</p>
 </div>
@@ -1118,7 +1171,7 @@ In this case, the <code>day1</code> object is going to maintain the record for t
 We&#8217;ll use the <code>new</code> keyword to allocate memory, and then we&#8217;ll call a <strong>constructor</strong>.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example of an assignment statement for a newly declared object.</div>
+<div class="title">Example 7.61 - An assignment statement for a newly declared object.</div>
 <div class="content">
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-n">WeatherRecord</span><span class="tok-w"> </span><span class="tok-n">day1</span><span class="tok-p">;</span>
@@ -1127,7 +1180,7 @@ We&#8217;ll use the <code>new</code> keyword to allocate memory, and then we&#82
 </div>
 </div>
 <div class="paragraph">
-<p>We&#8217;re soon going to spend a lot of time learning about constructors, but here are the takeaways for now: the identifier is exactly the same as the class name, and it&#8217;s followed by parentheses.</p>
+<p>We&#8217;re soon going to spend time learning about constructors, but here are the takeaways for now: the identifier is exactly the same as the class name, and it&#8217;s followed by parentheses.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1136,7 +1189,7 @@ We&#8217;ll use the <code>new</code> keyword to allocate memory, and then we&#82
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-We&#8217;ve already learned that parentheses in Java <strong>always</strong> means we&#8217;re referring to a method. A constructor is a special method called when instantiating an object.
+We&#8217;ve already learned that parentheses in C# <strong>always</strong> means we&#8217;re referring to a method. A constructor is a special method called when instantiating an object.
 </td>
 </tr>
 </table>
@@ -1144,14 +1197,18 @@ We&#8217;ve already learned that parentheses in Java <strong>always</strong> mea
 <div class="paragraph">
 <p>Just like with variables, we often combine those two statements into one line of code:</p>
 </div>
-<div class="paragraph">
-<p><code>WeatherRecord day1 = new WeatherRecord();</code></p>
+<div class="listingblock">
+<div class="title">Example 7.62 - A combined declaration and instantiation statement.</div>
+<div class="content">
+<pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-n">WeatherRecord</span><span class="tok-w"> </span><span class="tok-n">day1</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">new</span><span class="tok-w"> </span><span class="tok-n">WeatherRecord</span><span class="tok-p">();</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p>Now that we have an object, we can call its instance methods using <em>dot notation</em>, which means we put the object name (<strong>not</strong> the class name!), followed by a dot, followed by the method call:</p>
 </div>
 <div class="listingblock">
-<div class="title">Instance method calls using dot notation.</div>
+<div class="title">Example 7.63 - Instance method calls using dot notation.</div>
 <div class="content">
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1170,7 +1227,7 @@ This is a good test of the <em>set</em> and <em>get</em> methods for the <code>h
 To see why it&#8217;s necessary, consider the following example.</p>
 </div>
 <div class="listingblock">
-<div class="title">An instance method call using dot notation with multiple objects.</div>
+<div class="title">Example 7.64 - Instance method calls on multiple objects.</div>
 <div class="content">
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1184,18 +1241,17 @@ To see why it&#8217;s necessary, consider the following example.</p>
 </div>
 <div class="paragraph">
 <p>If we left off the <code>day1.</code> part of the call, the compiler would not know which <code>setHighTemperature()</code> method to use, <code>day1</code> or <code>day2</code>.
-Even when we only have one instance, the compiler needs to know where to find that method, so the dot notation is required every time we call an instance method.</p>
+And even when we only have one instance, the compiler needs to know where to find that method, so the dot notation is required every time we call an instance method.</p>
 </div>
 <div class="sect4">
 <h5 id="_object_classes_vs_driver_classes">Object Classes vs. Driver Classes</h5>
 <div class="paragraph">
 <p>Ok, time for another convention that seems only intended to be nitpicky and pointless, but is important and is expected on assignments in this course.
-OOP nerds value keeping parts of our programs compartmentalized, and that includes separating the class definition and the code that uses the class.
-A class definition goes in its own file, which must have a filename exactly match the name of the class (with <em>.cs</em> as an extension)--and that one&#8217;s not a convention, that&#8217;s a syntax rule for the compiler.
+OOP nerds value keeping the different parts of our programs compartmentalized, and that includes separating the class definition from the code that uses the class.
 A class we define for use as object can be called an <strong>object class</strong> or a <strong>user-defined class</strong>.</p>
 </div>
 <div class="paragraph">
-<p>The code that uses the <em>object class</em> should be in its own file, and is often called a <strong>driver class</strong>.
+<p>The code that uses the <em>object class</em> should be in its own class, and is often called a <strong>driver class</strong>.
 The driver class contains the <code>Main()</code> method, which is the entry point for the program.
 A driver class actually goes by several different names.
 Some people call it a <em>main class</em> because, well, it&#8217;s the class with the <code>Main()</code> method; I don&#8217;t hear that term a lot, but it is out there.
@@ -1205,12 +1261,12 @@ And in those cases, we often see "test" or "demo"; so a driver class for our <co
 <div class="paragraph">
 <p>The point here is that, if we&#8217;ve created an object class called <code>WeatherRecord</code>, we&#8217;re not going to put our <code>Main()</code> method in that same class/file.
 We&#8217;re going to make a separate class&#8212;&#8203;a driver, or demo class, or test class.
-I don&#8217;t much care what term you use, as long as it&#8217;s a separate class and file.</p>
+I don&#8217;t much care what term you use, as long as it&#8217;s a separate class.</p>
 </div>
 <div class="paragraph">
 <p>Your pitchforks are already sharpened, but here&#8217;s the part where you light your torches.
 <strong>All of your input and output should be in the driver class.</strong>
-That is, you generally can&#8217;t have any <code>print()</code> or <code>println()</code> statements, any dialog popups (if you know how to use <code>JOptionPane</code> or similar), or any <code>Scanner</code> input calls in your object classes.
+That is, you generally can&#8217;t have any <code>Write()</code>, <code>WriteLine()</code>, or ReadLine() statements in your object classes.
 My examples always demonstrate this <em>separation of concerns</em>, so you&#8217;ll have plenty of examples of what I mean.</p>
 </div>
 <div class="sidebarblock">
@@ -1218,7 +1274,7 @@ My examples always demonstrate this <em>separation of concerns</em>, so you&#821
 <div class="title">Interesting!</div>
 <div class="paragraph">
 <p>I asked an AI platform to give me an image of an angry mob with pitchforks and torches (coming after me because I make them separate their input and output), and the AI spit out this <a href="chapter07/images/creepy_mob.png" target="_blank" rel="noopener">nightmare fuel</a>.
-I decided it was too creepy to display in the text, but this crime against nature should be preserved for posterity. If a mob like that comes for me, I&#8217;ll let them put <code>print()</code> statements wherever they want!</p>
+I decided it was too creepy to display in the text, but this crime against nature should be preserved for posterity. If a mob like that comes for me, I&#8217;ll let them put <code>Write()</code> statements wherever they want!</p>
 </div>
 </div>
 </div>
@@ -1233,7 +1289,7 @@ I decided it was too creepy to display in the text, but this crime against natur
 Sorry, I can&#8217;t do much better than that for now.</p>
 </div>
 <div class="listingblock">
-<div class="title"><code>WeatherRecordDemo.cs</code>. A driver class to demonstrate the <code>WeatherRecord</code> class.</div>
+<div class="title">Example 7.65 - <code>WeatherRecordDemo.cs</code>. A driver class to demonstrate the <code>WeatherRecord</code> class.</div>
 <div class="content">
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1261,8 +1317,12 @@ Sorry, I can&#8217;t do much better than that for now.</p>
 <span class="normal">24</span>
 <span class="normal">25</span>
 <span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">WeatherRecordDemo</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">static</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">Main</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">class</span><span class="tok-w"> </span><span class="tok-n">WeatherRecordDemo</span>
+<span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">static</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">Main</span><span class="tok-p">()</span>
+<span class="tok-w">    </span><span class="tok-p">{</span>
 <span class="tok-w">        </span><span class="tok-c1">// Instantiate two objects</span>
 <span class="tok-w">        </span><span class="tok-n">WeatherRecord</span><span class="tok-w"> </span><span class="tok-n">day1</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">new</span><span class="tok-w"> </span><span class="tok-n">WeatherRecord</span><span class="tok-p">();</span>
 <span class="tok-w">        </span><span class="tok-n">WeatherRecord</span><span class="tok-w"> </span><span class="tok-n">day2</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-k">new</span><span class="tok-w"> </span><span class="tok-n">WeatherRecord</span><span class="tok-p">();</span>
@@ -1300,25 +1360,7 @@ In general, I ask students to create at least two instances of each class they a
 <div class="content">
 <div class="title">Time To Watch!</div>
 <div class="paragraph">
-<p>Implementing and Using a Class in Java</p>
-</div>
-<div class="videoblock">
-<div class="content">
-<iframe src="https://www.youtube.com/embed/E0HFACqWgP4?rel=0&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP" frameborder="0" allowfullscreen></iframe>
-</div>
-</div>
-<div class="paragraph">
-<p>Files from video:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/07%Classes%20and%Objects/CellCustomer.cs" target="_blank" rel="noopener"><code>CellCustomer.cs</code></a></p>
-</li>
-<li>
-<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/07%Classes%20and%Objects/CellCustomerDemo.cs" target="_blank" rel="noopener"><code>CellCustomerDemo.cs</code></a></p>
-</li>
-</ul>
+<p>Implementing and Using a Class in C# [COMING SOON!]</p>
 </div>
 </div>
 </div>
@@ -1350,20 +1392,21 @@ The Lab Assignments in Canvas can be completed using what we&#8217;ve covered to
 A constructor runs when an object is instantiated, and it&#8217;s used to set up the object with any initial values or behaviors.
 A constructor&#8217;s primary job is to initialize the fields of the object&#8212;&#8203;to give each instance variable a value.
 If we don&#8217;t write a constructor, the compiler will create one for us; it&#8217;s called a default constructor, and it will set all fields to their default values.
-For example, numeric fields like <code>int</code> and <code>double</code> will be set to <code>zero, and `string</code> fields will be set to <code>null</code>.
+For example, numeric fields like <code>int</code> and <code>double</code> will be set to zero, and <code>string</code> fields will be set to <code>null</code>.
 We&#8217;ve been using setters to change those initial values to what we want, but we can also write our own constructors to set those values when the object is created.</p>
 </div>
 <div class="paragraph">
 <p>Constructors are a special kind of method, so their syntax is a little different from other methods.
-A constructor is always public, it has no return type (not even <code>void</code>), and its name is the same as the class name.
-A definition for a constructor for the <code>WeatherRecord</code> class would look like this:</p>
+A constructor is always public, it has no return type (not even <code>void</code>), and its name is the same as the class name.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example of a constructor for the <code>WeatherRecord</code> class.</div>
+<div class="title">Example 7.66 - A constructor definition for the <code>WeatherRecord</code> class.</div>
 <div class="content">
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
-<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-nf">WeatherRecord</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-nf">WeatherRecord</span><span class="tok-p">()</span>
+<span class="tok-p">{</span>
 <span class="tok-w">    </span><span class="tok-c1">// code to initialize fields goes here</span>
 <span class="tok-p">}</span>
 </pre></div></td></tr></table></div></code></pre>
@@ -1374,22 +1417,24 @@ A definition for a constructor for the <code>WeatherRecord</code> class would lo
 As a beginner, our rule of thumb is to just make a simple assignment statement for each field.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example of a constructor that initializes fields.</div>
+<div class="title">Example 7.67 - A constructor that initializes fields.</div>
 <div class="content">
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-nf">WeatherRecord</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
-<span class="tok-w">    </span><span class="tok-n">date</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-s">&quot;2025-01-01&quot;</span><span class="tok-p">;</span>
-<span class="tok-w">    </span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0</span><span class="tok-p">;</span>
-<span class="tok-w">    </span><span class="tok-n">averageWindSpeed</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0.0</span><span class="tok-p">;</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-nf">WeatherRecord</span><span class="tok-p">()</span>
+<span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">date</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-s">&quot;2025-01-01&quot;</span><span class="tok-p">;</span>
+<span class="tok-w">    </span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0</span><span class="tok-p">;</span>
+<span class="tok-w">    </span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">averageWindSpeed</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0.0</span><span class="tok-p">;</span>
 <span class="tok-p">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Since our WeatherRecord class has three fields, we&#8217;ve got three assignment statements in our constructor.
+<p>Since our <code>WeatherRecord</code> class has three fields, we&#8217;ve got three assignment statements in our constructor.
 We can initialize those fields to any value we want, but we should choose values that make sense for the object; whatever we put there will be the default values that each object gets when it is instantiated.</p>
 </div>
 <div class="paragraph">
@@ -1413,13 +1458,15 @@ This is useful when we want to set the initial values of the fields to something
 We add parameters to our constructor just like we do with any other method, by listing the data type and identifier in the parentheses.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example of a constructor with parameters.</div>
+<div class="title">Example 7.68 - A constructor with parameters.</div>
 <div class="content">
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-nf">WeatherRecord</span><span class="tok-p">(</span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">)</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-nf">WeatherRecord</span><span class="tok-p">(</span><span class="tok-kt">string</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
 <span class="tok-w">    </span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">date</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">date</span><span class="tok-p">;</span>
 <span class="tok-w">    </span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">highTemperature</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0</span><span class="tok-p">;</span>
 <span class="tok-w">    </span><span class="tok-k">this</span><span class="tok-p">.</span><span class="tok-n">averageWindSpeed</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0.0</span><span class="tok-p">;</span>
@@ -1443,7 +1490,7 @@ We add parameters to our constructor just like we do with any other method, by l
 </li>
 <li>
 <p>The parameter has the same name as the field: <code>date</code>. This is a common practice, but it&#8217;s potentially confusing.
-And it also violates guidance I gave you when we learned about <a href="#variable_scope">variable scope</a>.</p>
+And it also violates guidance I gave you when we learned about <a href="_0011_methods.html#_variable_scope">variable scope</a>.</p>
 <div class="paragraph">
 <p>In this case, the parameter is a <em>local variable</em> to the constructor, and it&#8217;s <em>shadowing</em> the field. Our assignment statement needs to be carefully written: <code>this.date</code> refers to the field, and <code>date</code> refers to the parameter.</p>
 </div>
@@ -1451,7 +1498,7 @@ And it also violates guidance I gave you when we learned about <a href="#variabl
 </ol>
 </div>
 <div class="paragraph">
-<p>We can also <a href="#overloading">overload</a> constructors, which means we can have multiple constructors with different parameters&#8212;&#8203;just like we can with any other method.
+<p>We can also <a href="_0011_methods.html#_overloading_a_method">overload</a> constructors, which means we can have multiple constructors with different parameters&#8212;&#8203;just like we can with any other method.
 That can include having a parameterless constructor and one or more constructors with parameters, or having multiple constructors with different numbers of parameters.</p>
 </div>
 <div class="admonitionblock note">
@@ -1461,7 +1508,7 @@ That can include having a parameterless constructor and one or more constructors
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-To see a complete example of the <code>WeatherRecord</code> class with constructors, fields, and methods, as well as a driver class to demonstrate it, visit the_Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/4bf0da6df6f4fe3e3a0ccd477b4455df400cffb6/OOP%20with%20Java%20(CIS150AB)/04%20Classes%20and%20Objects" target="_blank" rel="noopener">GitHub repository for this chapter</a>.
+To see a complete example of the <code>WeatherRecord</code> class with constructors, fields, and methods, as well as a driver class to demonstrate it, visit the_Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/07%Classes%20and%Objects" target="_blank" rel="noopener">GitHub repository for this chapter</a>.
 </td>
 </tr>
 </table>
@@ -1470,45 +1517,26 @@ To see a complete example of the <code>WeatherRecord</code> class with construct
 <div class="content">
 <div class="title">Time To Watch!</div>
 <div class="paragraph">
-<p>Constructors in Java</p>
-</div>
-<div class="videoblock">
-<div class="content">
-<iframe src="https://www.youtube.com/embed/zHxssPU1_Hw?rel=0&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP" frameborder="0" allowfullscreen></iframe>
-</div>
-</div>
-<div class="paragraph">
-<p><a href="https://youtu.be/zHxssPU1_Hw" class="bare">https://youtu.be/zHxssPU1_Hw</a></p>
-</div>
-<div class="paragraph">
-<p>Files from video:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/07%Classes%20and%Objects/MobileCustomer.cs" target="_blank" rel="noopener"><code>MobileCustomer.cs</code></a></p>
-</li>
-<li>
-<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/07%Classes%20and%Objects/MobileCustomerDemo.cs" target="_blank" rel="noopener"><code>MobileCustomerDemo.cs</code></a></p>
-</li>
-</ul>
+<p>Constructors in C# [COMING SOON!]</p>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_constructors_and_encapsulation">7.4.1. Constructors and Encapsulation</h4>
 <div class="paragraph">
-<p>Constructors allow us to be stricter with our encapsulation since now we don&#8217;t have to have setters to put data into our objects. We can provide a constructor to accept all the data the object needs, decide if we give access to change a field after the object has been instantiated.</p>
+<p>Constructors allow us to be stricter with our encapsulation since now we don&#8217;t have to have setters to put data into our objects.
+We can provide a constructor to accept all the data the object needs, decide if we give access to change a field after the object has been instantiated.</p>
 </div>
 <div class="paragraph">
-<p>For example, if we&#8217;re making a bank account object, we&#8217;d need to provide an account number when we create the account, but we probably shouldn&#8217;t allow the account number to be changed after the account is created. In that case, our constructor would accept the account number, but we wouldn&#8217;t provide a setter for the account number.</p>
+<p>For example, if we&#8217;re making a bank account object, we&#8217;d need to provide an account number when we create the account, but we probably shouldn&#8217;t allow the account number to be changed after the account is created.
+In that case, our constructor would accept the account number, but we wouldn&#8217;t provide a setter for the account number.</p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_static_constants_and_methods">7.5. <code>static</code> Constants and Methods</h3>
 <div class="paragraph">
-<p>Since our first <code>Hello World</code> program, we&#8217;ve been using the <code>static</code> keyword to create methods&#8212;&#8203;beginning with the <code>Main()</code> method that is the starting point for every Java program.
+<p>Since our first "Hello World" program, we&#8217;ve been using the <code>static</code> keyword to create methods&#8212;&#8203;beginning with the <code>Main()</code> method that is the starting point for every Java program.
 However, we haven&#8217;t had enough context to understand what that keyword means.</p>
 </div>
 <div class="paragraph">
@@ -1522,41 +1550,30 @@ Instance members are defined without using the <code>static</code> keyword, so w
 Put another way, a class member is shared by all objects created from the class, and it can be accessed without creating an object.</p>
 </div>
 <div class="paragraph">
-<p><code>System</code> is a class that includes the print() and println() methods we&#8217;ve been using, and those methods are <code>static</code>.
-Since they&#8217;re <code>static</code>, we can call them without creating a <code>System</code> object:</p>
+<p><code>Console</code> is a class that includes the Write() and WriteLine() methods we&#8217;ve been using, and those methods are <code>static</code>.
+Since they&#8217;re <code>static</code>, we can call them without creating a <code>Console</code> object:</p>
 </div>
 <div class="paragraph">
 <p><code>Console.WriteLine("Hello, World!");</code></p>
 </div>
 <div class="paragraph">
-<p>If <code>println()</code> were an instance method, we&#8217;d have to create a <code>System</code> object before we could call it:</p>
+<p>If <code>WriteLine()</code> were an instance method, we&#8217;d have to create a <code>Console</code> object before we could call it:</p>
 </div>
 <div class="paragraph">
-<p><code>System mySystem = new System();</code>
-<code>mySystem.println("Hello, World!");</code></p>
+<p><code>Console myConsole = new Console();</code>
+<code>myConsole.WriteLine("Hello, World!");</code></p>
 </div>
 <div class="paragraph">
-<p>That would be a pain, so we&#8217;re glad that <code>println()</code> is <code>static</code>.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The <code>print()</code> and <code>println()</code> are slightly more complicated than that, since they&#8217;re actually <em>instance methods</em> of the <code>PrintStream</code> class, which is a class that <code>System.out</code> is an instance of. But for our purposes, we can think of them as <code>static</code> methods of the <code>System</code> class. You don&#8217;t need to know that right now, but if I don&#8217;t mention it then somebody will claim I&#8217;m an idiot. I probably <em>am</em> an idiot, but not for this reason.
-</td>
-</tr>
-</table>
+<p>That would be a pain, so we&#8217;re glad that <code>WriteLine()</code> is <code>static</code>.</p>
 </div>
 <div class="paragraph">
-<p>Throughout our learning, we&#8217;ll learn more about using <code>static</code> in our programs and classes, but an important one to known about for now is the <code>static</code> constant.
+<p>As our skills develop, we&#8217;ll learn more about using <code>static</code> in our programs and classes, but an important one to known about for now is the <code>static</code> constant.
 When we put a <code>static</code> constant in an object class (which would also use the keyword <code>final</code>), we&#8217;re creating a value that is shared by all objects created from the class.
-If we have a savings account class, a common example when learning OOP, we might have a <code>static final double INTEREST_RATE</code> constant. This would mean that every savings account would earn the same interest rate, which is often how banks work.</p>
+If we have a savings account class, a common example when learning OOP, we might have a <code>const double INTEREST_RATE</code> constant.
+This would mean that every savings account would earn the same interest rate, which is often how banks work.</p>
 </div>
 <div class="listingblock">
-<div class="title"><code>SavingsAccount.cs</code>. A class with a <code>static</code> constant.</div>
+<div class="title">Example 7.69 - <code>SavingsAccount.cs</code>. A class with a <code>static</code> constant.</div>
 <div class="content">
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
 <span class="normal"> 2</span>
@@ -1567,18 +1584,25 @@ If we have a savings account class, a common example when learning OOP, we might
 <span class="normal"> 7</span>
 <span class="normal"> 8</span>
 <span class="normal"> 9</span>
-<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">SavingsAccount</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">class</span><span class="tok-w"> </span><span class="tok-nc">class</span><span class="tok-w"> </span><span class="tok-n">SavingsAccount</span>
+<span class="tok-p">{</span>
 <span class="tok-w">    </span><span class="tok-k">private</span><span class="tok-w"> </span><span class="tok-k">static</span><span class="tok-w"> </span><span class="tok-n">final</span><span class="tok-w"> </span><span class="tok-kt">double</span><span class="tok-w"> </span><span class="tok-n">INTEREST_RATE</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">0.02</span><span class="tok-p">;</span>
 
 <span class="tok-w">    </span><span class="tok-c1">// other fields and methods go here. See the repository for the complete code.</span>
 
-<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">addInterest</span><span class="tok-p">()</span><span class="tok-w"> </span><span class="tok-p">{</span>
+<span class="tok-w">    </span><span class="tok-k">public</span><span class="tok-w"> </span><span class="tok-k">void</span><span class="tok-w"> </span><span class="tok-nf">addInterest</span><span class="tok-p">()</span>
+<span class="tok-p">{</span>
 <span class="tok-w">        </span><span class="tok-n">balance</span><span class="tok-w"> </span><span class="tok-o">+=</span><span class="tok-w"> </span><span class="tok-n">balance</span><span class="tok-w"> </span><span class="tok-o">*</span><span class="tok-w"> </span><span class="tok-n">INTEREST_RATE</span><span class="tok-p">;</span>
 <span class="tok-w">    </span><span class="tok-p">}</span>
 
 <span class="tok-p">}</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p>{</p>
 </div>
 <hr>
 </div>
@@ -1609,7 +1633,7 @@ If we have a savings account class, a common example when learning OOP, we might
 </div>
 <div id="footer">
     <div id="footer-text">
-        Tripucka Edition,&nbsp;revised&nbsp;2025-04-01&nbsp;-&nbsp;19:52:50 UTC
+        Tripucka Edition,&nbsp;revised&nbsp;2025-04-02&nbsp;-&nbsp;05:31:39 UTC
     </div>
 </div>
 </body>
