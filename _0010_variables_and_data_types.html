@@ -5,7 +5,6 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.23">
-<meta name="author" content="Tim McMichael">
 <title>Skimpy C#: An Introduction to Programming</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
@@ -434,88 +433,77 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-pre.pygments .hll { background-color: #49483e }
-pre.pygments { background: #272822; color: #f8f8f2 }
-pre.pygments .tok-c { color: #959077 } /* Comment */
-pre.pygments .tok-err { color: #ed007e; background-color: #1e0010 } /* Error */
-pre.pygments .tok-esc { color: #f8f8f2 } /* Escape */
-pre.pygments .tok-g { color: #f8f8f2 } /* Generic */
-pre.pygments .tok-k { color: #66d9ef } /* Keyword */
-pre.pygments .tok-l { color: #ae81ff } /* Literal */
-pre.pygments .tok-n { color: #f8f8f2 } /* Name */
-pre.pygments .tok-o { color: #ff4689 } /* Operator */
-pre.pygments .tok-x { color: #f8f8f2 } /* Other */
-pre.pygments .tok-p { color: #f8f8f2 } /* Punctuation */
-pre.pygments .tok-ch { color: #959077 } /* Comment.Hashbang */
-pre.pygments .tok-cm { color: #959077 } /* Comment.Multiline */
-pre.pygments .tok-cp { color: #959077 } /* Comment.Preproc */
-pre.pygments .tok-cpf { color: #959077 } /* Comment.PreprocFile */
-pre.pygments .tok-c1 { color: #959077 } /* Comment.Single */
-pre.pygments .tok-cs { color: #959077 } /* Comment.Special */
-pre.pygments .tok-gd { color: #ff4689 } /* Generic.Deleted */
-pre.pygments .tok-ge { color: #f8f8f2; font-style: italic } /* Generic.Emph */
-pre.pygments .tok-ges { color: #f8f8f2; font-weight: bold; font-style: italic } /* Generic.EmphStrong */
-pre.pygments .tok-gr { color: #f8f8f2 } /* Generic.Error */
-pre.pygments .tok-gh { color: #f8f8f2 } /* Generic.Heading */
-pre.pygments .tok-gi { color: #a6e22e } /* Generic.Inserted */
-pre.pygments .tok-go { color: #66d9ef } /* Generic.Output */
-pre.pygments .tok-gp { color: #ff4689; font-weight: bold } /* Generic.Prompt */
-pre.pygments .tok-gs { color: #f8f8f2; font-weight: bold } /* Generic.Strong */
-pre.pygments .tok-gu { color: #959077 } /* Generic.Subheading */
-pre.pygments .tok-gt { color: #f8f8f2 } /* Generic.Traceback */
-pre.pygments .tok-kc { color: #66d9ef } /* Keyword.Constant */
-pre.pygments .tok-kd { color: #66d9ef } /* Keyword.Declaration */
-pre.pygments .tok-kn { color: #ff4689 } /* Keyword.Namespace */
-pre.pygments .tok-kp { color: #66d9ef } /* Keyword.Pseudo */
-pre.pygments .tok-kr { color: #66d9ef } /* Keyword.Reserved */
-pre.pygments .tok-kt { color: #66d9ef } /* Keyword.Type */
-pre.pygments .tok-ld { color: #e6db74 } /* Literal.Date */
-pre.pygments .tok-m { color: #ae81ff } /* Literal.Number */
-pre.pygments .tok-s { color: #e6db74 } /* Literal.String */
-pre.pygments .tok-na { color: #a6e22e } /* Name.Attribute */
-pre.pygments .tok-nb { color: #f8f8f2 } /* Name.Builtin */
-pre.pygments .tok-nc { color: #a6e22e } /* Name.Class */
-pre.pygments .tok-no { color: #66d9ef } /* Name.Constant */
-pre.pygments .tok-nd { color: #a6e22e } /* Name.Decorator */
-pre.pygments .tok-ni { color: #f8f8f2 } /* Name.Entity */
-pre.pygments .tok-ne { color: #a6e22e } /* Name.Exception */
-pre.pygments .tok-nf { color: #a6e22e } /* Name.Function */
-pre.pygments .tok-nl { color: #f8f8f2 } /* Name.Label */
-pre.pygments .tok-nn { color: #f8f8f2 } /* Name.Namespace */
-pre.pygments .tok-nx { color: #a6e22e } /* Name.Other */
-pre.pygments .tok-py { color: #f8f8f2 } /* Name.Property */
-pre.pygments .tok-nt { color: #ff4689 } /* Name.Tag */
-pre.pygments .tok-nv { color: #f8f8f2 } /* Name.Variable */
-pre.pygments .tok-ow { color: #ff4689 } /* Operator.Word */
-pre.pygments .tok-pm { color: #f8f8f2 } /* Punctuation.Marker */
-pre.pygments .tok-w { color: #f8f8f2 } /* Text.Whitespace */
-pre.pygments .tok-mb { color: #ae81ff } /* Literal.Number.Bin */
-pre.pygments .tok-mf { color: #ae81ff } /* Literal.Number.Float */
-pre.pygments .tok-mh { color: #ae81ff } /* Literal.Number.Hex */
-pre.pygments .tok-mi { color: #ae81ff } /* Literal.Number.Integer */
-pre.pygments .tok-mo { color: #ae81ff } /* Literal.Number.Oct */
-pre.pygments .tok-sa { color: #e6db74 } /* Literal.String.Affix */
-pre.pygments .tok-sb { color: #e6db74 } /* Literal.String.Backtick */
-pre.pygments .tok-sc { color: #e6db74 } /* Literal.String.Char */
-pre.pygments .tok-dl { color: #e6db74 } /* Literal.String.Delimiter */
-pre.pygments .tok-sd { color: #e6db74 } /* Literal.String.Doc */
-pre.pygments .tok-s2 { color: #e6db74 } /* Literal.String.Double */
-pre.pygments .tok-se { color: #ae81ff } /* Literal.String.Escape */
-pre.pygments .tok-sh { color: #e6db74 } /* Literal.String.Heredoc */
-pre.pygments .tok-si { color: #e6db74 } /* Literal.String.Interpol */
-pre.pygments .tok-sx { color: #e6db74 } /* Literal.String.Other */
-pre.pygments .tok-sr { color: #e6db74 } /* Literal.String.Regex */
-pre.pygments .tok-s1 { color: #e6db74 } /* Literal.String.Single */
-pre.pygments .tok-ss { color: #e6db74 } /* Literal.String.Symbol */
-pre.pygments .tok-bp { color: #f8f8f2 } /* Name.Builtin.Pseudo */
-pre.pygments .tok-fm { color: #a6e22e } /* Name.Function.Magic */
-pre.pygments .tok-vc { color: #f8f8f2 } /* Name.Variable.Class */
-pre.pygments .tok-vg { color: #f8f8f2 } /* Name.Variable.Global */
-pre.pygments .tok-vi { color: #f8f8f2 } /* Name.Variable.Instance */
-pre.pygments .tok-vm { color: #f8f8f2 } /* Name.Variable.Magic */
-pre.pygments .tok-il { color: #ae81ff } /* Literal.Number.Integer.Long */
+pre.pygments .hll { background-color: #ffffcc }
+pre.pygments { background: #f8f8f8; }
+pre.pygments .tok-c { color: #3D7B7B; font-style: italic } /* Comment */
+pre.pygments .tok-err { border: 1px solid #FF0000 } /* Error */
+pre.pygments .tok-k { color: #008000; font-weight: bold } /* Keyword */
+pre.pygments .tok-o { color: #666666 } /* Operator */
+pre.pygments .tok-ch { color: #3D7B7B; font-style: italic } /* Comment.Hashbang */
+pre.pygments .tok-cm { color: #3D7B7B; font-style: italic } /* Comment.Multiline */
+pre.pygments .tok-cp { color: #9C6500 } /* Comment.Preproc */
+pre.pygments .tok-cpf { color: #3D7B7B; font-style: italic } /* Comment.PreprocFile */
+pre.pygments .tok-c1 { color: #3D7B7B; font-style: italic } /* Comment.Single */
+pre.pygments .tok-cs { color: #3D7B7B; font-style: italic } /* Comment.Special */
+pre.pygments .tok-gd { color: #A00000 } /* Generic.Deleted */
+pre.pygments .tok-ge { font-style: italic } /* Generic.Emph */
+pre.pygments .tok-ges { font-weight: bold; font-style: italic } /* Generic.EmphStrong */
+pre.pygments .tok-gr { color: #E40000 } /* Generic.Error */
+pre.pygments .tok-gh { color: #000080; font-weight: bold } /* Generic.Heading */
+pre.pygments .tok-gi { color: #008400 } /* Generic.Inserted */
+pre.pygments .tok-go { color: #717171 } /* Generic.Output */
+pre.pygments .tok-gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+pre.pygments .tok-gs { font-weight: bold } /* Generic.Strong */
+pre.pygments .tok-gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+pre.pygments .tok-gt { color: #0044DD } /* Generic.Traceback */
+pre.pygments .tok-kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+pre.pygments .tok-kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+pre.pygments .tok-kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+pre.pygments .tok-kp { color: #008000 } /* Keyword.Pseudo */
+pre.pygments .tok-kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+pre.pygments .tok-kt { color: #B00040 } /* Keyword.Type */
+pre.pygments .tok-m { color: #666666 } /* Literal.Number */
+pre.pygments .tok-s { color: #BA2121 } /* Literal.String */
+pre.pygments .tok-na { color: #687822 } /* Name.Attribute */
+pre.pygments .tok-nb { color: #008000 } /* Name.Builtin */
+pre.pygments .tok-nc { color: #0000FF; font-weight: bold } /* Name.Class */
+pre.pygments .tok-no { color: #880000 } /* Name.Constant */
+pre.pygments .tok-nd { color: #AA22FF } /* Name.Decorator */
+pre.pygments .tok-ni { color: #717171; font-weight: bold } /* Name.Entity */
+pre.pygments .tok-ne { color: #CB3F38; font-weight: bold } /* Name.Exception */
+pre.pygments .tok-nf { color: #0000FF } /* Name.Function */
+pre.pygments .tok-nl { color: #767600 } /* Name.Label */
+pre.pygments .tok-nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+pre.pygments .tok-nt { color: #008000; font-weight: bold } /* Name.Tag */
+pre.pygments .tok-nv { color: #19177C } /* Name.Variable */
+pre.pygments .tok-ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+pre.pygments .tok-w { color: #bbbbbb } /* Text.Whitespace */
+pre.pygments .tok-mb { color: #666666 } /* Literal.Number.Bin */
+pre.pygments .tok-mf { color: #666666 } /* Literal.Number.Float */
+pre.pygments .tok-mh { color: #666666 } /* Literal.Number.Hex */
+pre.pygments .tok-mi { color: #666666 } /* Literal.Number.Integer */
+pre.pygments .tok-mo { color: #666666 } /* Literal.Number.Oct */
+pre.pygments .tok-sa { color: #BA2121 } /* Literal.String.Affix */
+pre.pygments .tok-sb { color: #BA2121 } /* Literal.String.Backtick */
+pre.pygments .tok-sc { color: #BA2121 } /* Literal.String.Char */
+pre.pygments .tok-dl { color: #BA2121 } /* Literal.String.Delimiter */
+pre.pygments .tok-sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+pre.pygments .tok-s2 { color: #BA2121 } /* Literal.String.Double */
+pre.pygments .tok-se { color: #AA5D1F; font-weight: bold } /* Literal.String.Escape */
+pre.pygments .tok-sh { color: #BA2121 } /* Literal.String.Heredoc */
+pre.pygments .tok-si { color: #A45A77; font-weight: bold } /* Literal.String.Interpol */
+pre.pygments .tok-sx { color: #008000 } /* Literal.String.Other */
+pre.pygments .tok-sr { color: #A45A77 } /* Literal.String.Regex */
+pre.pygments .tok-s1 { color: #BA2121 } /* Literal.String.Single */
+pre.pygments .tok-ss { color: #19177C } /* Literal.String.Symbol */
+pre.pygments .tok-bp { color: #008000 } /* Name.Builtin.Pseudo */
+pre.pygments .tok-fm { color: #0000FF } /* Name.Function.Magic */
+pre.pygments .tok-vc { color: #19177C } /* Name.Variable.Class */
+pre.pygments .tok-vg { color: #19177C } /* Name.Variable.Global */
+pre.pygments .tok-vi { color: #19177C } /* Name.Variable.Instance */
+pre.pygments .tok-vm { color: #19177C } /* Name.Variable.Magic */
+pre.pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
 </style>
 <style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
                        font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
@@ -523,45 +511,10 @@ pre.pygments .tok-il { color: #ae81ff } /* Literal.Number.Integer.Long */
              .nav-footer > p > a {white-space: nowrap;}</style>
 </head>
 <body id="_0010_variables_and_data_types" class="article toc2 toc-left">
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const fileName = window.location.pathname.split('/').pop(); // Get current file name
-      console.log("Current file name:", fileName);
-
-      // Update the Light Mode link dynamically
-      const lightLink = document.querySelector("#header a.light-mode");
-      if (lightLink) {
-        lightLink.href = `https://timmcmichael.github.io/skimpy-csharp/${fileName}`;
-        lightLink.textContent = `Light Mode`;
-      }
-
-      // Update the Dark Mode link dynamically
-      const darkLink = document.querySelector("#header a.dark-mode");
-      if (darkLink) {
-        darkLink.href = `https://timmcmichael.github.io/skimpy-csharp-dark/${fileName}`;
-        darkLink.textContent = `Dark Mode (experimental)`;
-      }
-    });
-</script>
-
-<div id="header">
-    <span>
-      <a class="light-mode" href="https://timmcmichael.github.io/skimpy-csharp/current-file">Light Mode</a>
-      &nbsp;|&nbsp;
-      <a class="dark-mode" href="https://timmcmichael.github.io/skimpy-csharp-dark/current-file">Dark Mode</a>
-      &nbsp;|&nbsp;
-      <a class="pdf-link" href="index.pdf" target="_blank">PDF (experimental)</a>
-
-    </span>
-</div>
 <div id="header">
 <h1>Skimpy C#: An Introduction to Programming</h1>
-<div class="details">
-<span id="author" class="author">Tim McMichael</span><br>
-<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
-</div>
 <div id="toc" class="toc2">
-<div id="toctitle">Skimpy Contents</div>
+<div id="toctitle">Table of Contents</div>
 <p><span class="toc-root"><a href="index.html">Skimpy C#: An Introduction to Programming</a></span></p><ul class="sectlevel1">
 <li><a href="_skimpy_preface.html">Skimpy Preface</a>
 </li>
@@ -647,7 +600,7 @@ pre.pygments .tok-il { color: #ae81ff } /* Literal.Number.Integer.Long */
 *</p>
 </div>
 <div class="paragraph">
-<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/02%20Variables" target="_blank" rel="noopener">GitHub</a>.</em></p>
+<p><em>Source code examples from this chapter and associated videos are available on {github-base}/02%20Variables[GitHub^].</em></p>
 </div>
 <hr>
 <div class="paragraph">
@@ -687,7 +640,7 @@ In computer programming, a piece of information is called <strong>data</strong>.
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">Note</div>
 </td>
 <td class="content">
 The string literal in our <code>Hello World</code> code is just one kind of constant. We&#8217;ll learn about others later.
@@ -748,7 +701,7 @@ Placing data in that variable is referred to as <strong>assigning</strong> a val
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">Note</div>
 </td>
 <td class="content">
 If you have programming experience in Python or JavaScript, the idea of a data type might be new to you. In those languages, the interpreter determines the data type for you&#8212;&#8203;so you don&#8217;t have to specify it. It&#8217;s one reason I prefer to teach beginners using C# or Java, which teaches you how data types work.
@@ -836,18 +789,17 @@ It&#8217;s used for financial calculations and other situations where precision 
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">myAge</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">21</span><span class="tok-p">;</span>
-<span class="tok-kt">float</span><span class="tok-w"> </span><span class="tok-n">myGPA</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">3.75f</span><span class="tok-p">;</span><span class="tok-w"> </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span class="tok-kt">float</span><span class="tok-w"> </span><span class="tok-n">myGPA</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">3.75f</span><span class="tok-p">;</span><span class="tok-w"> </span><b class="conum">(1)</b>
 <span class="tok-kt">double</span><span class="tok-w"> </span><span class="tok-n">myFriendsGPA</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">3.54</span><span class="tok-p">;</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The <code>f</code> suffix denotes that the value 3.75 is a <code>float</code> rather than a <code>double</code>.</td>
-</tr>
-</table>
+<ol>
+<li>
+<p>The <code>f</code> suffix denotes that the value 3.75 is a <code>float</code> rather than a <code>double</code>.</p>
+</li>
+</ol>
 </div>
 <div class="sect3">
 <h4 id="_who_cares_about_variable_size">2.2.1. Who Cares About Variable Size?</h4>
@@ -923,7 +875,7 @@ Char literals are created by putting a character in <strong>single quotes</stron
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">Note</div>
 </td>
 <td class="content">
 Some people pronounce the <code>char</code> data type like the word "chart" without the "t". And some people pronounce it like the word "care". Either is okay.
@@ -935,7 +887,7 @@ Some people pronounce the <code>char</code> data type like the word "chart" with
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">Note</div>
 </td>
 <td class="content">
 Also, I pronounce it "char" like "chart" without the "t" and firmly believe that only a sociopath would say it like the word "care".
@@ -979,10 +931,10 @@ That data type is called <code>string</code>, because it strings together a bunc
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">Note</div>
 </td>
 <td class="content">
-Always remember that, in C#, single quotes <kbd>'</kbd> mean a <code>char</code> and double quotes <kbd>"</kbd> mean a <code>string</code>. It&#8217;s easy to get them mixed up&#8212;&#8203;especially if you&#8217;re used to Python, where they are interchangeable&#8212;&#8203;but your code won&#8217;t compile if you mix them up.
+Always remember that, in C#, single quotes kbd:['] mean a <code>char</code> and double quotes kbd:["] mean a <code>string</code>. It&#8217;s easy to get them mixed up&#8212;&#8203;especially if you&#8217;re used to Python, where they are interchangeable&#8212;&#8203;but your code won&#8217;t compile if you mix them up.
 </td>
 </tr>
 </table>
@@ -1187,22 +1139,20 @@ Each operator acts on the value to either side:</p>
 <div class="title">Example 2.16 - Simple arithmetic operations in C#</div>
 <div class="content">
 <pre class="pygments highlight"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
-<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">sum</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">5</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-m">7</span><span class="tok-p">;</span><span class="tok-w"> </span><i class="conum" data-value="1"></i><b>(1)</b>
-<span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">difference</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">sum</span><span class="tok-w"> </span><span class="tok-o">-</span><span class="tok-w"> </span><span class="tok-m">2</span><span class="tok-p">;</span><span class="tok-w"> </span><i class="conum" data-value="2"></i><b>(2)</b>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">sum</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">5</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-m">7</span><span class="tok-p">;</span><span class="tok-w"> </span><b class="conum">(1)</b>
+<span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">difference</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">sum</span><span class="tok-w"> </span><span class="tok-o">-</span><span class="tok-w"> </span><span class="tok-m">2</span><span class="tok-p">;</span><span class="tok-w"> </span><b class="conum">(2)</b>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The value of <code>sum</code> will be 12</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>The value of <code>difference</code> will be 10 (i.e., 10 - 2)</td>
-</tr>
-</table>
+<ol>
+<li>
+<p>The value of <code>sum</code> will be 12</p>
+</li>
+<li>
+<p>The value of <code>difference</code> will be 10 (i.e., 10 - 2)</p>
+</li>
+</ol>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -1237,26 +1187,23 @@ We call this <em>operator precedence</em>, and here are the guidlines:</p>
 <div class="listingblock">
 <div class="title">Example 2.17 - Operator precedence in C#</div>
 <div class="content">
-<pre class="pygments highlight"><code data-lang="c#"><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">result1</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">17</span><span class="tok-w"> </span><span class="tok-o">-</span><span class="tok-w"> </span><span class="tok-m">4</span><span class="tok-w"> </span><span class="tok-o">*</span><span class="tok-w"> </span><span class="tok-m">6</span><span class="tok-w"> </span><span class="tok-o">/</span><span class="tok-w"> </span><span class="tok-m">3</span><span class="tok-p">;</span><span class="tok-w"> </span><i class="conum" data-value="1"></i><b>(1)</b>
-<span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">result2</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">17</span><span class="tok-w"> </span><span class="tok-o">-</span><span class="tok-w"> </span><span class="tok-m">4</span><span class="tok-w"> </span><span class="tok-o">/</span><span class="tok-w"> </span><span class="tok-m">2</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-m">2</span><span class="tok-p">;</span><span class="tok-w"> </span><i class="conum" data-value="2"></i><b>(2)</b>
-<span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">result3</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">17</span><span class="tok-w"> </span><span class="tok-o">-</span><span class="tok-w"> </span><span class="tok-m">4</span><span class="tok-w"> </span><span class="tok-o">/</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-m">2</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-m">2</span><span class="tok-p">);</span><span class="tok-w"> </span><i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+<pre class="pygments highlight"><code data-lang="c#"><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">result1</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">17</span><span class="tok-w"> </span><span class="tok-o">-</span><span class="tok-w"> </span><span class="tok-m">4</span><span class="tok-w"> </span><span class="tok-o">*</span><span class="tok-w"> </span><span class="tok-m">6</span><span class="tok-w"> </span><span class="tok-o">/</span><span class="tok-w"> </span><span class="tok-m">3</span><span class="tok-p">;</span><span class="tok-w"> </span><b class="conum">(1)</b>
+<span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">result2</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">17</span><span class="tok-w"> </span><span class="tok-o">-</span><span class="tok-w"> </span><span class="tok-m">4</span><span class="tok-w"> </span><span class="tok-o">/</span><span class="tok-w"> </span><span class="tok-m">2</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-m">2</span><span class="tok-p">;</span><span class="tok-w"> </span><b class="conum">(2)</b>
+<span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">result3</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-m">17</span><span class="tok-w"> </span><span class="tok-o">-</span><span class="tok-w"> </span><span class="tok-m">4</span><span class="tok-w"> </span><span class="tok-o">/</span><span class="tok-w"> </span><span class="tok-p">(</span><span class="tok-m">2</span><span class="tok-w"> </span><span class="tok-o">+</span><span class="tok-w"> </span><span class="tok-m">2</span><span class="tok-p">);</span><span class="tok-w"> </span><b class="conum">(3)</b></code></pre>
 </div>
 </div>
 <div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td><code>result1</code> is 9: <code>4 * 6</code> is 24, then <code>24 / 3</code> is 8, and then <code>17 - 8</code> is 9.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td><code>result2</code> is 17: <code>4 / 2</code> is 2, then <code>17 - 2</code> is 15, and then <code>15 + 2</code> is 17.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td><code>result3</code> is 16: <code>(2 + 2)</code> is 4, then <code>4 / 4</code> is 1, and then <code>17 - 1</code> is 16.</td>
-</tr>
-</table>
+<ol>
+<li>
+<p><code>result1</code> is 9: <code>4 * 6</code> is 24, then <code>24 / 3</code> is 8, and then <code>17 - 8</code> is 9.</p>
+</li>
+<li>
+<p><code>result2</code> is 17: <code>4 / 2</code> is 2, then <code>17 - 2</code> is 15, and then <code>15 + 2</code> is 17.</p>
+</li>
+<li>
+<p><code>result3</code> is 16: <code>(2 + 2)</code> is 4, then <code>4 / 4</code> is 1, and then <code>17 - 1</code> is 16.</p>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect3">
@@ -1323,7 +1270,7 @@ If we&#8217;re counting down the number of days until our next birthday, we coul
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">Note</div>
 </td>
 <td class="content">
 There are two forms to the increment and decrement operators: <strong>prefix</strong> and <strong>postfix</strong>. These examples use the postfix form, putting the operator after the variable name, whereas a prefix form would have the operator before the variable name: <code>++age</code>. There&#8217;s a subtle difference in how postfix and prefix operations work, but for now you can use them interchangeably. I mention it here only because you might see code examples online using the prefix form.
@@ -1365,19 +1312,18 @@ For input, we&#8217;ll use <code>Console.ReadLine</code> (and, occasionally, <co
 <span class="normal">4</span>
 <span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><span class="tok-kt">int</span><span class="tok-w"> </span><span class="tok-n">age</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-o">-</span><span class="tok-m">1</span><span class="tok-p">;</span>
 <span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">Write</span><span class="tok-p">(</span><span class="tok-s">&quot;Enter your age: &quot;</span><span class="tok-p">);</span>
-<span class="tok-n">age</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">ReadLine</span><span class="tok-p">();</span><span class="tok-w"> </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span class="tok-n">age</span><span class="tok-w"> </span><span class="tok-o">=</span><span class="tok-w"> </span><span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">ReadLine</span><span class="tok-p">();</span><span class="tok-w"> </span><b class="conum">(1)</b>
 <span class="tok-n">age</span><span class="tok-o">++</span><span class="tok-p">;</span>
 <span class="tok-n">Console</span><span class="tok-p">.</span><span class="tok-n">WriteLine</span><span class="tok-p">(</span><span class="tok-s">$&quot;Next year you will be {age}&quot;</span><span class="tok-p">);</span>
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>This code will not compile because <code>Console.ReadLine</code> returns a <code>string</code>, but we&#8217;re trying to assign it to an <code>int</code>.</td>
-</tr>
-</table>
+<ol>
+<li>
+<p>This code will not compile because <code>Console.ReadLine</code> returns a <code>string</code>, but we&#8217;re trying to assign it to an <code>int</code>.</p>
+</li>
+</ol>
 </div>
 <div class="sect3">
 <h4 id="_converting_data_types">2.9.1. Converting Data Types</h4>
@@ -1406,7 +1352,7 @@ The two we&#8217;ll use most are:</p>
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-note" title="Note"></i>
+<div class="title">Note</div>
 </td>
 <td class="content">
 The 32 in <code>ToInt32</code> is the number of bits used to store the number, and that&#8217;s the size of the <code>int</code> data type. There are methods to convert to 16-bit and 64-bit integers as well, though we won&#8217;t be using them.
@@ -1476,9 +1422,9 @@ The 32 in <code>ToInt32</code> is the number of bits used to store the number, a
 </div>
 </div>
 <div id="footer">
-    <div id="footer-text">
-        Tripucka Edition,&nbsp;revised&nbsp;2025-04-02&nbsp;-&nbsp;05:34:05 UTC
-    </div>
+<div id="footer-text">
+Last updated 2025-04-02 05:40:05 UTC
+</div>
 </div>
 </body>
 </html>
