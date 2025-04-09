@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Tim McMichael">
+<title>Skimpy C#: An Introduction to Programming</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                       font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+             .nav-footer{text-align: center; margin-top: auto;}
+             .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="_computers_and_coding" class="article toc2 toc-left">
+<head>
+    <link id="theme-link" rel="stylesheet" href="css/architect-light.css">
+  </head>
+<div id="header">
+    <button id="theme-toggle">Toggle Dark/Light Mode</button>
+</div>
+<div id="header">
+<h1>Skimpy C#: An Introduction to Programming</h1>
+<div class="details">
+<span id="author" class="author"><a href="https://timmcmichael.github.io/" target=" blank" rel="noopener">Tim McMichael</a></span><br>
+<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Skimpy Contents</div>
+<p><span class="toc-root"><a href="index.html">Skimpy C#: An Introduction to Programming</a></span></p><ul class="sectlevel1">
+<li><a href="_skimpy_preface.html">Skimpy Preface</a>
+</li>
+<li><a href="_how_to_use_this_book.html">How to Use This Book</a>
+</li>
+<li><a href="_related_resources.html">Related Resources</a>
+</li>
+<li><a href="_getting_started.html">Getting Started</a>
+</li>
+<li><a href="_computers_and_coding.html"><span class="toc-current">1. Computers and Coding</span></a>
+<ul class="sectlevel2">
+<li><a href="_computers_and_coding.html#_whats_the_point_2">What&#8217;s the Point?</a>
+</li>
+<li><a href="_computers_and_coding.html#_programming_languages">1.1. Programming Languages</a>
+</li>
+<li><a href="_computers_and_coding.html#_c_and_net">1.2. C# and .NET</a>
+</li>
+<li><a href="_computers_and_coding.html#_first_c_program">1.3. First C# Program</a>
+</li>
+<li><a href="_computers_and_coding.html#_basic_output">1.4. Basic Output</a>
+</li>
+<li><a href="_computers_and_coding.html#_code_comments">1.5. Code Comments</a>
+</li>
+<li><a href="_computers_and_coding.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_2">Check Yourself Before You Wreck Yourself (on the assignments)</a>
+</li>
+</ul>
+</li>
+<li><a href="_variables_and_data_types.html">2. Variables and Data Types</a>
+</li>
+<li><a href="_methods.html">3. Methods</a>
+</li>
+<li><a href="_decisions.html">4. Decisions</a>
+</li>
+<li><a href="_loops.html">5. Loops</a>
+</li>
+<li><a href="_debugging_and_generative_ai.html">6. Debugging and Generative AI</a>
+</li>
+<li><a href="_classes_and_objects.html">7. Classes and Objects</a>
+</li>
+<li><a href="_arrays.html">8. Arrays</a>
+</li>
+<li><a href="_software_development_life_cycle.html">9. Software Development Life Cycle</a>
+</li>
+<li><a href="_graphical_user_interfaces.html">10. Graphical User Interfaces</a>
+</li>
+<li><a href="_stuff_thats_tacked_on_the_end.html">Stuff That&#8217;s Tacked on the End</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_computers_and_coding">1. Computers and Coding</h2>
+<div class="sectionbody">
+<div class="paragraph subtitle">
+<p><span title='This is "Chapter One" in binary (base 2)'>Chapter 0001 <sub>2</sub></span></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Help Make These Materials Better!</div>
+<div class="paragraph">
+<p>I am actively working to complete and revise this eBook and the accompanying videos. Please consider using the following link to provide feedback and notify me of typos, mistakes, and suggestions for either the eBook or videos:</p>
+</div>
+<div class="paragraph">
+<p><mark>This is the working draft of a <strong>very incomplete</strong> eBook. Content will change as chapters are developed and refined. Check back later for a more complete version.</mark></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_whats_the_point_2">What&#8217;s the Point?</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Understand the role of programming languages</p>
+</li>
+<li>
+<p>Use <code>Write()</code> and <code>WriteLine()</code> to produce text output</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/01%20Computers%20and%20Coding" target="_blank" rel="noopener">GitHub</a>.</em></p>
+</div>
+<div class="paragraph">
+<p><em>Note: This material is nearly identical to the corresponding material in <a href="https://timmcmichael.github.io/skimpy-oop/">Skimpy OOP</a>, the eBook for CIS150AB. If you&#8217;ve gone through that material before, be sure to at least read the section <a href="_computers_and_coding.html#_c_and_net">C# and .NET</a> before you move on to the next chapter.</em></p>
+</div>
+<hr>
+<div class="paragraph">
+<p>A computer is basically a device that executes a set of commands&#8212;&#8203;and does so very quickly.
+Because the guts of a computer (a CPU) are kinda like a bunch of light switches&#8212;&#8203;and I mean a <strong>BUNCH</strong> of light switches&#8212;&#8203;it can only deal with zeros and ones: a switch that is off is "zero," and a switch that&#8217;s on is "one."</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Never before has the concept of a modern computer been so recklessly simplified. I feel shame.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>All of the information a computer handles ultimately has to be represented by some combination of 1s and 0s, which we call a <strong>binary</strong> (or "base-two") number system.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Interesting!</div>
+<div class="paragraph">
+<p>The chapters of this eBook are subtitled using binary to show basic examples of the numbering system: 0001 is, well, 1 in decimal.
+And 0100 is 4 in decimal. We won&#8217;t get into binary numbers, but it&#8217;s not very complicated and is kind of interesting if you&#8217;re a nerd.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Imagine that your BFF is in your programming class, but that cruel professor won&#8217;t let you sit together.
+When the professor turns his back, you can use your fingers to send a quick message to your BFF.
+Holding up your index finger might mean, "meet me in the library after class;" two fingers could mean, "send me a copy of your homework."
+As long as you agree on what each number means, you could pass along commands or information&#8212;&#8203;it would be like your own little language.</p>
+</div>
+<div class="paragraph">
+<p>If you&#8217;re a sports fan, I have a better analogy.
+A quarterback and a coach could have a language based completely on numbers.
+The coach tells the QB "22" and the QB knows which play to run, because they&#8217;ve agreed on what instruction (play) the number 22 means&#8212;&#8203;and there are football teams that do exactly this.</p>
+</div>
+<div class="paragraph">
+<p>Sending that number to the quarterback as a binary number would be a lot less efficient because the coach would have to say "10110" (which is the binary representation of twenty two) and the QB would have to know binary numbers,or have them written on his wrist-band thing as a cheatsheet.</p>
+</div>
+<div class="paragraph">
+<p>Want to take the analogy one step further?
+A player standing on the sideline with their helmet on could represent a 1, and a player with their helmet off could represent a 0.
+Now the coach could just line up five players and tell the 2nd and 5th ones to take their helmets off.
+The QB could look over, see the pattern of helmets (10110) and run play 22.</p>
+</div>
+<div class="paragraph">
+<p>Okay, that would be the nerdiest football team in history.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Learn More</div>
+<div class="paragraph">
+<p>The amazing <a href="https://code.org">code.org</a> project has a playlist of great, short videos on how computers work&#8212;&#8203;including binary numbers&#8212;&#8203;if you want to know a little more without going too crazy:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-">How Computers Work</a></p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>And how is any of that relevant?
+Let&#8217;s see&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Remember that a computer can execute commands super fast.
+Each command, or <strong>instruction</strong> (like a football play), is represented by a number&#8212;&#8203;a binary number, since that&#8217;s the number system the computer uses.
+The collection of instructions the computer understands is called <strong>machine language</strong>.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Interesting!</div>
+<div class="paragraph">
+<p>Just like people in different cultures use different languages, different CPU types use different languages. There are lots of different machine languages out there.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>You could give the computer a set of instructions (aka, a program) if you just looked up the binary number for each instruction you wanted to use.
+Of course, even a simple program requires a lot of instructions, so you&#8217;re going to be looking up a <strong>lot</strong> of stuff.</p>
+</div>
+<div class="paragraph">
+<p>Few people actually <em>want</em> to do that, so the rest of us use programming languages instead.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_programming_languages">1.1. Programming Languages</h3>
+<div class="paragraph">
+<p>A programming language is something that&#8217;s easier for humans to use than machine language, but is capable of being accurately translated to machine language.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+There are many, many programming languages. <a href="https://en.wikipedia.org/wiki/List_of_programming_languages">Seriously, there are a lot</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The instructions you write using a programming language are called <strong>source code</strong>.
+Translating source code file to a machine language file that can be executed is called <strong>compiling</strong>, and is done by an application called a compiler.
+When the computer runs the program, it&#8217;s using the machine language translation created by the compiler.
+Clicking on the icon to open Microsoft Word runs a file that&#8217;s been compiled from source code.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Time To Watch!</div>
+<div class="paragraph">
+<p>Coding and Compiling</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/yR939VDXPaM?rel=0&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Some programming languages don&#8217;t get translated ahead of time&#8212;&#8203;they get translated "on the fly," as the program is running.
+That&#8217;s called <strong>interpreting</strong> instead of compiling, but it&#8217;s conceptually the same thing.</p>
+</div>
+<div class="paragraph">
+<p>The C and C++ programming languages are examples of compiled languages, and Python is an example of an interpreted language.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_c_and_net">1.2. C# and .NET</h3>
+<div class="paragraph">
+<p>The language we&#8217;ll be learning is called C#, which we pronounce "see sharp."
+The name seems a little weird, but it&#8217;s a bit of a joke.
+The language is similar to the C programming language, but the developers thought of themselves as improving on C and raising it to a new level.
+In musical notation, a "sharp" raises a note by a half-step, so the name C# is suggesting that C# is a "half-step" above C.</p>
+</div>
+<div class="paragraph">
+<p>As mentioned above, C is a compiled language.
+C# is an interesting case, because it&#8217;s both compiled <strong>and</strong> interpreted.</p>
+</div>
+<div class="paragraph">
+<p>It relies on a collection of tools called the <strong>Microsoft .NET Framework</strong>, or just ".NET"--and we pronounce that "dot net."
+.NET includes a compiler translates our our source code into an intermediate language called <strong>Common Intermediate Language (CIL)</strong>.
+To execute the program, we use the <strong>Common Language Runtime (CLR)</strong> to interpret that CIL file as it executes.
+So. Many. Acronyms!</p>
+</div>
+<div class="paragraph">
+<p>There are a handful of reasons for this approach, but the most important one for us is that it makes C# a <strong>cross-platform</strong> language.
+A compiled language only works on a computer that "speaks" the same machine language, but if you compile your program to an intermediate language like CIL, it&#8217;ll run on any computer that has .NET (and the CLR)--and that will interpret the intermediate code as it executes.
+So, Microsoft provides versions of .NET for Windows, macOS, and Linux, and the C# programs we create can run on any of them.
+This "write once, run anywhere" ability contributes greatly to C#'s popularity.</p>
+</div>
+<div class="paragraph">
+<p>Hopefully, this explains why we needed to install the .NET SDK in order to get started with C# programming.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In addition to the compiler and runtime, .NET includes a handful of other technologies that can been confusing. <strong>ASP.NET</strong> is used to develop web applications, <strong>.NET Core</strong> is a version of .NET that&#8217;s more lightweight and cross-platform, and <strong>Xamarin</strong> is used to develop mobile applications. Since we&#8217;re cross-platform here, we&#8217;ll be using <strong>.NET Core</strong> to execute our code and not worrying about the other stuff.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Because it&#8217;s based on the C language, C# has a lot in common with other C-based languages, like Java and JavaScript.
+If you have experience with Java, you&#8217;re going to find that C# is very similar&#8212;&#8203;almost identical, for the rudimentary stuff we&#8217;ll be doing.
+And if you&#8217;re new to programming, you&#8217;ll find that the skills you learn here will translate well to other languages&#8212;&#8203;especially other C-based languages.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_first_c_program">1.3. First C# Program</h3>
+<div class="paragraph">
+<p>Enough of that, let&#8217;s write some code!</p>
+</div>
+<div class="paragraph">
+<p>Even a simple C# program is a little bit complicated for a beginner, but in recent versions of C#, it&#8217;s gotten a lot easier.
+Like Java (for those of you familiar with that), programs have to be organized in a specific way and include a lot of "boilerplate" code just to get started.
+But in 2020, C# added a feature called <strong>top-level statements</strong> that allows us to write a program with just a few lines of code, which is a big improvement for a beginner.</p>
+</div>
+<div class="paragraph">
+<p>We do want to look at both the old way&#8212;&#8203;which I&#8217;ll refer to as a <em>traditional</em> program&#8212;&#8203;and top-level statements, because so many of the examples you&#8217;ll see online are written traditionally, and I want you to be able to understand them.
+And, as our programs become more complex, that traditional approach will keep our code organized and easier to understand.</p>
+</div>
+<div class="paragraph">
+<p>Either way, there&#8217;s an important naming convention for our programs.
+Since we can&#8217;t uses spaces in names, we start with a capital letter and then capitalize the first letter of each word after that.
+So, if we want to name our program "My Amazing App," we would write it as <code>MyAmazingApp</code>.
+More on this later.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Time To Watch!</div>
+<div class="paragraph">
+<p>Starting with C# in Visual Studio Community</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/-karIUkQv9s?rel=0&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP&index=4" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>Starting with C# in Visual Studio Code</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/H7DSUaLG1BE?rel=0&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP&index=4" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>Starting with C# in Rider</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/RM279ivIroE?rel=0&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP&index=4" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p>Files from videos:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/01%20Computers%20and%20Coding/FirstProgram.cs" target="_blank" rel="noopener"><code>FirstProgram.cs</code></a></p>
+</li>
+<li>
+<p>Completed code: <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/01%20Computers%20and%20Coding/SongLyrics.cs" target="_blank" rel="noopener"><code>SongLyrics.cs</code></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="top_level_statements" class="paragraph">
+<p>Take a look at the code for a traditional "Hello World" program; we&#8217;ll learn what all of these pieces are as we go, but we should at least identify them now.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 1.1 - <code>TraditionalHelloWorld.cs</code> - Hello World program in C#, the traditional way</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">TraditionalHelloWorld</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2">[] args)</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;Hello, World!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And here&#8217;s the same program using top-level statements.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 1.2 - <code>HelloWorld.cs</code> - Hello World program in C#, using top-level statements</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">&quot;Hello, World!&quot;</span><span style="color: #f8f8f2">);</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The compiler produces the same CIL file from both programs, so they are functionally identical.
+But obviously, the top-level statements version is a lot easier to understand.
+Don&#8217;t worry, before we&#8217;re done, you&#8217;ll understand and use all of the pieces in the traditional program.</p>
+</div>
+<div class="paragraph">
+<p>But for now, we&#8217;re off and running!</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Since <code>Write</code> and <code>WriteLine</code> don&#8217;t exist in the file we created, we have to tell the compiler where to find them. We do that by prefixing the method name with <code>Console.</code>--more on this in future chapters!
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_basic_output">1.4. Basic Output</h3>
+<div class="paragraph">
+<p>The first programs we create in C# are <em>console</em> programs&#8212;&#8203;they are text-based programs that can&#8217;t really display any graphics.
+To start with, we&#8217;ll use two basic ways to output text to the console: <code>Console.Write()</code> and <code>Console.WriteLine()</code> statements.
+<code>Write</code> outputs whatever text is in the parentheses, and we&#8217;ll need to put that text in quotation marks:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">Console.Write(</span><span style="color: #e6db74">&quot;Michael Stipe&quot;</span><span style="color: #f8f8f2">);</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This line of code outputs <strong>Michael Stipe</strong> to the console window.
+After <code>Write()</code> outputs the text in parentheses, the cursor remains at the end of the output.
+This is just like if we type something in a word processor but don&#8217;t hit enter; the next time we start typing, the characters resume on the same line.
+In the same way, the next output statement will continue on the same line in the console.</p>
+</div>
+<div class="paragraph">
+<p>A <code>WriteLine()</code> statement works exactly the same way, but it advances the cursor to the next line when it&#8217;s finished.
+Basically, it hits <em>enter</em>, and the next output statement will begin on a new line.</p>
+</div>
+<div class="paragraph">
+<p>To understand the difference between <code>Write()</code> and <code>WriteLine()</code>, consider this program.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 1.3 - <code>OutputExample.cs</code> - Simple console output in C#</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">Console.Write(</span><span style="color: #e6db74">&quot;In the words of Michael Stipe,&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">&quot;Don&#39;t go back to Rockville...&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">&quot;...and waste another year.&quot;</span><span style="color: #f8f8f2">);</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The program produces the following output:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>In the words of Michael Stipe,Don't go back to Rockville...
+...and waste another year.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After the <code>Write()</code> statement executes, the cursor is still sitting right after the comma following <strong>Stipe</strong>, so when the next line of code outputs <strong><em>Don&#8217;t go back to Rockville&#8230;&#8203;</em></strong>, that output just gets jammed onto the end.
+Notice that it doesn&#8217;t even add a space; if we want a space there, we have to include it within our quotation marks.</p>
+</div>
+<div class="paragraph">
+<p>Because <strong><em>Don&#8217;t go back to Rockville&#8230;&#8203;</em></strong> is in a <code>WriteLine()</code> statement, the cursor advances and <strong><em>&#8230;&#8203;and waste another year.</em></strong> is on a new line.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ll use <code>Write()</code> and <code>WriteLine()</code> in every program we write for quite a while, so it&#8217;s important to take time to experiment with them on our own to make sure we understand how they work.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_code_comments">1.5. Code Comments</h3>
+<div class="paragraph">
+<p>The C# compiler goes through our source code file line by line, translating all of the code into something that we can execute (unless it finds something it doesn&#8217;t understand, which causes it to stop and output an error message).
+If there&#8217;s something in our source code we don&#8217;t want the compiler to process, we can identify it as a <em>code comment</em> and the compiler will ignore it.
+Code comments are generally used to provide information for any humans who might be looking at the code.
+And since it&#8217;s ignored by the compiler, it can be written however we want; so our code comments should be written in plain human language (English, if you&#8217;re submitting it to me).
+To indicate a comment, use two slashes:</p>
+</div>
+<div class="paragraph">
+<p><code>// This is a comment!</code></p>
+</div>
+<div class="paragraph">
+<p>Once the compiler sees two slashes, it just ignores the rest of the line.
+We can add a comment onto the end of a line of code:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 1.4 - Inline comment placed at the end of a line of code</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">&quot;Hello World&quot;</span><span style="color: #f8f8f2">); </span><span style="color: #959077">// this line outputs text to the console</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>WriteLine()</code> statement still gets processed and will execute when we run our program, but everything after the slashes gets ignored.</p>
+</div>
+<div class="paragraph">
+<p>To make a comment that takes up multiple lines, start the comment block with <code>/*</code> (that&#8217;s a slash and an asterisk) and end it with <code>*/</code> (asterisk and a slash).
+When the compiler sees <code>/*</code> it will ignore everything until it finds <code>*/</code>, and then it will resume processing as usual.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 1.5 - Multi-line comment block</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">9</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #959077">/*</span>
+<span style="color: #959077">This program shows the difference between Write() and WriteLine().</span>
+<span style="color: #959077">It is referring to an old R.E.M. song.</span>
+
+<span style="color: #959077">Everything in this comment block will be ignored.</span>
+<span style="color: #959077">*/</span>
+<span style="color: #f8f8f2">Console.Write(</span><span style="color: #e6db74">&quot;In the words of Michael Stipe,&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">&quot;Don&#39;t go back to Rockville...&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">&quot;...and waste another year.&quot;</span><span style="color: #f8f8f2">);</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In general, code comments are used to explain or provide context for our code.
+Programming often involves going back to old code to make updates or corrections.
+Maybe it&#8217;s been a long time and we might not remember what the code is supposed to do, or maybe it&#8217;s someone different looking at the code and trying to figure it out.
+So code comments should be descriptive, especially when code might be confusing.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Code comments don&#8217;t cost anything, so use lots of them!
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>We often add a multiline comment block at the top of a file to provide information about the overall program or class.</p>
+</div>
+<div class="sect3">
+<h4 id="_commenting_out_code">1.5.1. "Commenting Out" Code</h4>
+<div class="paragraph">
+<p>Coding is all about trial and error, and programmers spend a lot of time writing code in different ways until they get it working the way they want.
+In a process like that, it&#8217;s not unusual to delete something only to regret it and wish we could have that old code back.</p>
+</div>
+<div class="paragraph">
+<p>Code commenting gives us a life hack to help prevent that regret.
+Instead of deleting code that&#8217;s not working the way we want, we can just mark it as a comment.
+As far as the compiler is concerned, we&#8217;ve deleted the code.
+But if we want to see or use the code again down the road, it&#8217;s still there.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Almost all IDEs have a keyboard shortcut for commenting out code&#8212;&#8203;and in most, it&#8217;s the same shortcut. Highlight a section of code and press <span class="keyseq"><kbd>Alt</kbd>+<kbd>/</kbd></span> on Windows or <span class="keyseq"><kbd>⌘</kbd>+<kbd>/</kbd></span> on macOS, and many IDEs will add <code>//</code> at the start of each line. Highlighting a comment and pressing the shortcut again will usually "uncomment" it and remove the slashes. If that doesn&#8217;t work, check the IDE&#8217;s documentation to see if there&#8217;s a different shortcut.
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_check_yourself_before_you_wreck_yourself_on_the_assignments_2">Check Yourself Before You Wreck Yourself (on the assignments)</h3>
+<div class="sect3">
+<h4 id="_can_you_answer_these_questions_2">Can you answer these questions?</h4>
+<div class="sidebarblock">
+<div class="content">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>What is the primary role of a programming language in the context of computer programming?</p>
+</li>
+<li>
+<p>Explain the difference between compiled and interpreted programming languages. Provide an example of each.</p>
+</li>
+<li>
+<p>What are the key steps in the software development process as outlined in the chapter? Why is it important to follow these steps?</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><em>Sample answers provided in <a href="_computers_and_coding.html">Stuff That&#8217;s Tacked On The End</a></em>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph nav-footer">
+<p>← Previous: <a href="_getting_started.html">Getting Started</a> | ↑ Up: <a href="index.html">Skimpy C#: An Introduction to Programming</a> | Next: <a href="_variables_and_data_types.html">Variables and Data Types</a> →</p>
+</div>
+</div>
+<div id="footer">
+    <div id="footer-text">
+        Tripucka Edition,&nbsp;revised&nbsp;2025-04-09&nbsp;-&nbsp;03:18:23 UTC
+        <p xmlns:cc="http://creativecommons.org/ns#">This work is licensed under <a
+                href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
+                rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+    </div>
+    <script>
+        // Theme toggle functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggle = document.getElementById("theme-toggle");
+            const themeLink = document.getElementById("theme-link");
+
+            if (!themeToggle || !themeLink) return; // Exit if elements are not found
+
+            // Check if the user has a preferred theme set in localStorage
+            const currentTheme = localStorage.getItem("theme");
+
+            if (currentTheme) {
+                themeLink.href = currentTheme === "dark" ? "css/architech-dark.css" : "css/architech-light.css";
+            }
+
+            // Set the button text based on the current theme
+            themeToggle.textContent = currentTheme === "dark" ? "Light mode" : "Dark mode";
+
+            // Toggle the theme
+            themeToggle.addEventListener("click", () => {
+                const newTheme = themeLink.href.includes("architech-light.css") ? "css/architech-dark.css" : "css/architech-light.css";
+                themeLink.href = newTheme;
+
+                // Save the user's theme preference to localStorage
+                const themeName = newTheme === "css/architech-dark.css" ? "dark" : "light";
+                localStorage.setItem("theme", themeName);
+
+                // Update the button text based on the new theme
+                themeToggle.textContent = themeName === "dark" ? "Light mode" : "Dark mode";
+
+            });
+        });
+    </script>
+
+</div>
+</body>
+</html>

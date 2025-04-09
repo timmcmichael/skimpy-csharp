@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Tim McMichael">
+<title>Skimpy C#: An Introduction to Programming</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<link rel="stylesheet" href="./asciidoctor.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                       font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+             .nav-footer{text-align: center; margin-top: auto;}
+             .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="_how_to_use_this_book" class="article toc2 toc-left">
+<head>
+    <link id="theme-link" rel="stylesheet" href="css/architect-light.css">
+  </head>
+<div id="header">
+    <button id="theme-toggle">Toggle Dark/Light Mode</button>
+</div>
+<div id="header">
+<h1>Skimpy C#: An Introduction to Programming</h1>
+<div class="details">
+<span id="author" class="author"><a href="https://timmcmichael.github.io/" target=" blank" rel="noopener">Tim McMichael</a></span><br>
+<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Skimpy Contents</div>
+<p><span class="toc-root"><a href="index.html">Skimpy C#: An Introduction to Programming</a></span></p><ul class="sectlevel1">
+<li><a href="_skimpy_preface.html">Skimpy Preface</a>
+</li>
+<li><a href="_how_to_use_this_book.html"><span class="toc-current">How to Use This Book</span></a>
+</li>
+<li><a href="_related_resources.html">Related Resources</a>
+</li>
+<li><a href="_getting_started.html">Getting Started</a>
+</li>
+<li><a href="_computers_and_coding.html">1. Computers and Coding</a>
+</li>
+<li><a href="_variables_and_data_types.html">2. Variables and Data Types</a>
+</li>
+<li><a href="_methods.html">3. Methods</a>
+</li>
+<li><a href="_decisions.html">4. Decisions</a>
+</li>
+<li><a href="_loops.html">5. Loops</a>
+</li>
+<li><a href="_debugging_and_generative_ai.html">6. Debugging and Generative AI</a>
+</li>
+<li><a href="_classes_and_objects.html">7. Classes and Objects</a>
+</li>
+<li><a href="_arrays.html">8. Arrays</a>
+</li>
+<li><a href="_software_development_life_cycle.html">9. Software Development Life Cycle</a>
+</li>
+<li><a href="_graphical_user_interfaces.html">10. Graphical User Interfaces</a>
+</li>
+<li><a href="_stuff_thats_tacked_on_the_end.html">Stuff That&#8217;s Tacked on the End</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_how_to_use_this_book">How to Use This Book</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Before starting a chapter, review the relevant information on the "overview" page in Canvas.
+Then, start reading the chapter in this eBook.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>When you see <strong>Time to Watch</strong>, just watch the embedded (or hyperlinked) YouTube video. Quizzes in Canvas may include questions about the video content.</p>
+</li>
+<li>
+<p>After the video, continue reading the chapter.</p>
+</li>
+<li>
+<p>Each chapter begins with <strong>What&#8217;s the Point?</strong>, which gives you an idea of what you should be able to do after reading the chapter.</p>
+</li>
+<li>
+<p>At the end of each chapter, <strong>Check Yourself Before You Wreck Yourself (on the assignments)</strong> provides a few questions to help you review the material.</p>
+</li>
+<li>
+<p>You can find sample answers to these questions at the very end of the eBook, in the <a href="_stuff_thats_tacked_on_the_end.html">Stuff That&#8217;s Tacked on the End</a> section.</p>
+</li>
+<li>
+<p>A few sections of the book are identified as <strong>optional</strong>. These sections are not required for the course assignments or quizzes, but they might be interesting or helpful to you.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph nav-footer">
+<p>← Previous: <a href="_skimpy_preface.html">Skimpy Preface</a> | ↑ Up: <a href="index.html">Skimpy C#: An Introduction to Programming</a> | Next: <a href="_related_resources.html">Related Resources</a> →</p>
+</div>
+</div>
+<div id="footer">
+    <div id="footer-text">
+        Tripucka Edition,&nbsp;revised&nbsp;2025-04-09&nbsp;-&nbsp;03:18:23 UTC
+        <p xmlns:cc="http://creativecommons.org/ns#">This work is licensed under <a
+                href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
+                rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+    </div>
+    <script>
+        // Theme toggle functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggle = document.getElementById("theme-toggle");
+            const themeLink = document.getElementById("theme-link");
+
+            if (!themeToggle || !themeLink) return; // Exit if elements are not found
+
+            // Check if the user has a preferred theme set in localStorage
+            const currentTheme = localStorage.getItem("theme");
+
+            if (currentTheme) {
+                themeLink.href = currentTheme === "dark" ? "css/architech-dark.css" : "css/architech-light.css";
+            }
+
+            // Set the button text based on the current theme
+            themeToggle.textContent = currentTheme === "dark" ? "Light mode" : "Dark mode";
+
+            // Toggle the theme
+            themeToggle.addEventListener("click", () => {
+                const newTheme = themeLink.href.includes("architech-light.css") ? "css/architech-dark.css" : "css/architech-light.css";
+                themeLink.href = newTheme;
+
+                // Save the user's theme preference to localStorage
+                const themeName = newTheme === "css/architech-dark.css" ? "dark" : "light";
+                localStorage.setItem("theme", themeName);
+
+                // Update the button text based on the new theme
+                themeToggle.textContent = themeName === "dark" ? "Light mode" : "Dark mode";
+
+            });
+        });
+    </script>
+
+</div>
+</body>
+</html>
