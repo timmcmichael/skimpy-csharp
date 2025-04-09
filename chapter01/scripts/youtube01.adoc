@@ -1,0 +1,80 @@
+1B - Starting with C# in Visual Studio
+If you're going to use Visual Studio for your C# programming, this video shows you how to create your first project and use the IDE to write and test your code.
+
+If you're using JetBrains Rider or Visual Studio Code, there are different videos in the playlist.
+
+0:00 Intro to Solutions and Projects
+01:30 Creating a Solution
+05:00 Visual Studio UI
+06:18 First Program
+09:56 Code Comments
+11:13 Second Program (and Top-Level Statements)
+----
+This video is part of my course materials for my C#: Level 1 class (CIS162AD) at EMCC, and it's intended to accompany a free eBook: https://timmcmichael.github.io/skimpy-csharp/index.html
+
+Playlist: https://www.youtube.com/playlist?list=PL_Lc2HVYD16Y-vLXkIgggjYrSdF5DEFnU
+Files from my videos: https://github.com/timmcmichael/EMCCTimFiles 
+
+GitHub landing page: https://timmcmichael.github.io/
+
+#csharp #coding #beginner #visualstudio #helloworld #emcc #cis162ad
+
+----------------
+
+1C - Starting with C# in VS Code
+If you're going to use VS Code (NOT Visual Studio Community) for your C# programming, this video shows you how to create your first project and use the IDE to write and test your code.
+
+If you're using Visual Studio Community or JetBrains Rider, there are different videos in the playlist.
+
+0:00 Intro to Solutions and Projects
+01:56 Creating a Solution
+05:29 First Program
+08:56 Code Comments
+11:06 Second Program (and Top-Level Statements)
+
+----
+This video is part of my course materials for my C#: Level 1 class (CIS162AD) at EMCC, and it's intended to accompany a free eBook: https://timmcmichael.github.io/skimpy-csharp/index.html
+
+Playlist: https://www.youtube.com/playlist?list=PL_Lc2HVYD16Y-vLXkIgggjYrSdF5DEFnU
+Files from my videos: https://github.com/timmcmichael/EMCCTimFiles 
+
+GitHub landing page: https://timmcmichael.github.io/
+
+#csharp #coding #beginner #visualstudio #helloworld #emcc #cis162ad
+
+----------------
+
+1D - Starting with C# in JetBrains Rider
+If you're going to use JetBrains Rider for your C# programming, this video shows you how to create your first project and use the IDE to write and test your code.
+
+If you're using Visual Studio Community or Visual Studio code, there are different videos in the playlist.
+
+0:00 Intro to Solutions and Projects
+02:00 Creating a Solution
+05:00 Visual Studio UI
+06:18 First Program
+09:56 Code Comments
+11:13 Second Program (and Top-Level Statements)
+
+----
+This video is part of my course materials for my C#: Level 1 class (CIS162AD) at EMCC, and it's intended to accompany a free eBook: https://timmcmichael.github.io/skimpy-csharp/index.html
+
+Playlist: https://www.youtube.com/playlist?list=PL_Lc2HVYD16Y-vLXkIgggjYrSdF5DEFnU
+Files from my videos: https://github.com/timmcmichael/EMCCTimFiles 
+
+GitHub landing page: https://timmcmichael.github.io/
+
+#csharp #coding #beginner #visualstudio #helloworld #emcc #cis162ad
+
+
+
+
+
+
+------------------
+
+1B - Submitting a C# Project
+
+This video shows how you'll need to submit your C# assignments. Please watch, since doing it wrong means not getting points.
+
+#cis162ad #csharp #emcc

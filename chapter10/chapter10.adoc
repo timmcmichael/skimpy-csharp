@@ -1,0 +1,147 @@
+:github-folder: 10%20GUIs
+:chapter-number: 10
+:source-counter: 0
+:imagesdir: ../images/chapter{chapter-number}
+
+== Graphical User Interfaces
+[.subtitle]
+pass:[<span title='This is "Chapter Ten" in binary (base 2)'>Chapter 1010 <sub>2</sub></span>]
+
+include::../_includes/feedback.adoc[]
+
+:sectnums!:
+// TODO: Add chapter objectives
+=== What's the Point?
+
+* 
+* 
+
+
+_Source code examples from this chapter and associated videos are available on {github-base}/{github-folder}[GitHub^]._
+
+:sectnums:
+'''
+
+// TODO: GUI Content
+
+
+// TODO: Copied from Java, not translater yet
+=== Graphical User Interfaces
+
+Until now, we've been creating _console applications_, in which the entire user interface is text-based. 
+Though many utility applications are text-based, those are generally used by "power users," software developers, and system administrators.
+End users are used to applications that rely graphical elements to interact with the user.
+This is called a _graphical user interface_, which is abbreviated as _GUI_ and pronounced "gooey."
+
+GUIs on desktop and laptop computers have elements like windows, buttons, text fields, and checkboxes, and the user interacts using a mouse or touchpad.
+These GUI elements are called _widgets_ or _controls_. Mobile applications have similar widgets, but they are designed for touchscreens and are generally more simplified than desktop applications.
+
+.Time To Watch!
+****
+Intro to GUIs
+
+// https://youtu.be/ghe5TA1qA28
+
+video::ghe5TA1qA28[youtube, list={playlist}]
+
+****
+
+// TODO: Forms vs MAUI, etc.
+=== The Swing Library 
+
+The code required to create and display a functioning GUI is complex and far beyond our current skills, but we can use pre-built GUI widgets written by other developers.
+These are typically bundled into _libraries_, or _frameworks_, that we can use in our own programs.
+The two most common GUI frameworks for Java are called _Swing_ and _JavaFX_; we'll use Swing in this course because it's a little simpler for beginners and does not require any additional installations.
+
+NOTE: JavaFX is newer and more powerful than Swing, but it's also more complex and has a steeper learning curve. The concepts learned in Swing will transfer to JavaFX, so learning Swing is a great place to start.
+
+To use Swing classes, we simply need to add an `import` statement at the top of our Java file:
+
+`import javax.swing.*;`
+
+We'll begin by instantiating a `JFrame` object, which is the main window of our application.
+We can use setters on the `JFrame` object to set attributes like the title and size of the window; we'll also want to set the attribute that determines what happens when the user closes the window.
+We can then add other widgets to the frame, like buttons, text fields, and labels.
+Finally, we'll set the frame to be visible, which will cause the window to appear on the screen.
+
+:sectnums!:
+// TODO: Add chapter objectives
+=== What's the Point?
+
+* 
+* 
+
+
+_Source code examples from this chapter and associated videos are available on {github-base}/{github-folder}[GitHub^]._
+
+:sectnums:
+'''
+
+// Intro paragraph or content
+
+// === Topic 1
+
+
+
+// .Time To Watch!
+// ****
+// Title of Youtube video
+
+// video::PR6u4KvAkas[youtube, list={playlist}]
+// Files from video:
+
+// * Starter code: {github-base}/github-folder}/HelloWorld.cs[`HelloWorld.cs`^]
+// * Completed code: {github-base}/github-folder}/HelloWorld.cs[`HelloWorld.cs`^]
+// ****
+
+
+// [caption="Example {chapter-number}.{counter:source-counter} - "]
+// .`OutputExample.cs` - Simple console output in C#
+// [source,csharp,linenums]
+// ----
+// Console.Write("In the words of Michael Stipe,");
+// Console.WriteLine("Don't go back to Rockville...");
+// Console.WriteLine("...and waste another year.");
+// ----
+
+// .Class diagram for the `Car` class
+// // Image rendered at plantuml.com with the following code:
+// [plantuml, format=svg]
+// ----
+// @startuml
+// skinparam classAttributeIconSize 0
+// class Car 
+{
+//   - make:String
+//   - model:String
+//   +void start()
+//   +void stop()
+// }
+// @enduml
+// ----
+
+// IMPORTANT: The Lab Assignments in Canvas can be completed using what we've covered to this point. You might choose to complete that work now, then move onto the next section--which you'll need for the Programming Project.
+
+// .Interesting!
+// ****
+// This is something // interesting!
+// ****
+
+
+
+'''
+
+:sectnums!:
+=== Check Yourself Before You Wreck Yourself (on the assignments)
+
+==== Can you answer these questions?
+
+****
+1. 
+
+2. 
+
+3. 
+****
+:sectnums:
+// TODO: _Sample answers provided in <<_inheritance_,Stuff That's Tacked On The End>>_.

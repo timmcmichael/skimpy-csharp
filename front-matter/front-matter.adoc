@@ -1,0 +1,47 @@
+[preface]
+
+== Skimpy Preface
+
+// TODO: Add a real preface
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.
+
+Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam.
+
+Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque. Aliquam faucibus, elit ut dictum aliquet, felis nisl adipiscing sapien, sed malesuada diam lacus eget erat.
+
+:sectnums!:
+== How to Use This Book
+
+Before starting a chapter, review the relevant information on the "overview" page in Canvas.
+Then, start reading the chapter in this eBook.
+
+* When you see *Time to Watch*, just watch the embedded (or hyperlinked) YouTube video. Quizzes in Canvas may include questions about the video content.
+* After the video, continue reading the chapter.
+* Each chapter begins with *What's the Point?*, which gives you an idea of what you should be able to do after reading the chapter.
+* At the end of each chapter, *Check Yourself Before You Wreck Yourself (on the assignments)* provides a few questions to help you review the material.
+* You can find sample answers to these questions at the very end of the eBook, in the <<_stuff_thats_tacked_on_the_end>> section.
+* A few sections of the book are identified as *optional*. These sections are not required for the course assignments or quizzes, but they might be interesting or helpful to you.
+
+== Related Resources
+
+In general, this book includes resources within each chapter. The following links collect those resources so you can find them when necessary.
+
+GitHub landing page: https://timmcmichael.github.io[https://timmcmichael.github.io^]
+
+YouTube channel: {youtube-channel}
+
+Course YouTube playlist: https://www.youtube.com/playlist?list={playlist}[{playlist-title}^]
+
+=== Source code files:
+
+The source code files shown in the eBook and videos are available on GitHub; a link at the beginning of each chapter will take you to the appropriate folder in the repository.
+If you have trouble finding something (or using the GitHub site), please contact me at {email} or in Canvas.
+
+* GitHub Repository: {github-base}[{github-base}^]
+
+:sectnums:

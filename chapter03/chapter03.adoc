@@ -1,0 +1,659 @@
+:chapter-number: 3
+:source-counter: 0
+:github-folder: 03%20Methods
+:imagesdir: ../images/chapter{chapter-number}
+
+== Methods
+[.subtitle]
+pass:[<span title='This is "Chapter Three" in binary (base 2)'>Chapter 0011 <sub>2</sub></span>]
+
+include::../_includes/feedback.adoc[]
+
+:sectnums!:
+// TODO: Add chapter objectives
+//TODO: Optional parameters?
+=== What's the Point?
+
+* 
+* 
+
+
+_Source code examples from this chapter and associated videos are available on {github-base}/{github-folder}[GitHub^]._
+
+:sectnums:
+'''
+
+
+As our programs begin to get larger and more complex, it will be important to keep our code organized. 
+Each program we write is contained within a _class_, and classes are the basic building block of an OOP program; we'll explore them in more detail in <<_0111_classes_and_objects>>.
+Within a class or program, we can organize code in *methods*.
+A method is a collection of statements that work together to complete a single task.
+Consider the assembly instructions for building a LEGO set. 
+
+[caption="Figure {chapter-number}.{counter:image-counter} - "]
+.LEGO blocks
+image::LEGO.png[A few LEGO blocks, width=300]
+
+It might take dozens of small steps to complete the set, but taken together, the instructions execute a single task: building the set.
+A method is conceptually the same. 
+
+If you've worked with other programming languages, you may know methods by a different name. 
+In Python, we use _functions_, and in other languages we use _procedures_ or _subroutines_. 
+All of those terms pretty much mean the same thing, but in C# they're called methods.
+(And really, they're generally called methods whenever we're using object-oriented programming, so even in Python we sometimes call them methods.)
+
+There are a variety of reasons to break our code into methods, but an important advantage for now is *reusability*. 
+Once we create a method, we can use it as often as we'd like.
+That means we don't have to type the same code over and over.
+In turn, that improves our code's *maintainability*. 
+If we have to perform some calculation ten times in our program and have written out that calculation all ten times, a change to the calculation means updating it in all ten places.
+But if we put that calculation in a method and use that method ten times, we can just update the method and our changes will automatically be used all ten times.
+We'll see additional advantages to methods as we learn more about programming.
+
+Once we define a method, we *invoke* the method each time we want it to execute.
+We also say that we _call_ a method, which sounds a little cooler than _invoke_ but means the same thing.
+
+=== Defining Our Own Methods
+
+We've been defining a method from the start--or, more likely, the compiler has been defining one for us.
+The .NET runtime--which takes the compiler version of our code and executes it--looks for a method called `Main`, and that's where it starts running the code.
+If we're using <<_first_c_program,top-level statements>>, the compiler creates that `Main` method for us; if we're using the traditional approach, we've defined `Main` in our code.
+
+We've also been calling (_invoking_) methods from the start.
+To output text, we've been calling the `WriteLine()` and `Write()` methods.
+
+TIP: In C#, parentheses *always* indicate a method, whether or not there is anything inside of the parentheses. Anytime you see parentheses in C# code, you're looking at either a method definition or a method call.
+
+A method definition includes a method header followed by a code block.
+
+[caption="Example {chapter-number}.{counter:source-counter} - "]
+.A method definition in C#
+[source,csharp,linenums]
+----
+public void DisplayBandName()
+{
+    Console.WriteLine("The Temptations");
+}
+----
+
+- The `public` keyword is an _access modifier_. Defining the method as `public` makes it possible to call the method from anywhere. More on this later, but for now all of our methods will be `public`.
+- The `static` keyword basically means that the method belongs to the class and not an object. That will make more sense in the next chapter, but for now our methods will be `static`.
+- The `void` keyword indicates that this method will not return anything. This is called the method's _return type_, and we'll learn about this shortly.
+- `DisplayBandName` is the identifier for the method, in the same way variables have identifiers. Like variable identifiers, new words within the name get captialized; however, method names also have a capital first letter. This naming style is called _Pascal case_ (while variables use _camel case_). And as with variables, make the name descriptive. The convention is that the name of a method should describe what it does; usually, that means the identifier is (or includes) a verb, like "display" in this example.
+- The parentheses indicate to the compiler that this is a method, as opposed to a variable or some other fancy thing. You'll see what we can put in the parentheses shortly.
+
+.Time To Watch!
+****
+Defining and Calling Methods in C# [COMING SOON!]
+
+video::hAxUD7xV7h8[youtube, list={playlist}]
+
+// Files from video:
+
+// *
+
+****
+
+=== Variable Scope
+
+As we begin organizing our code into different methods and (when we learn <<_0111_classes_and_objects,object-oriented programming basics>>) classes, we'll need to understand how data is compartmentalized within a program.
+Whenever we create a class or method--and other structures we'll learn as we go--we use curly braces to define the boundaries and indenting to help make those boundaries clear.
+These braces form _code blocks_.
+
+The outermost code block is our class--again, that's created by the compiler if we're using top-level statements.
+Although there are a few things that can go outside the class, like when we need to import outside code to use, the class code block contains all of the components of our program.
+
+In some cases we can place one block inside another, as such as putting a method inside a class.
+This is called _nesting_ blocks, and a nested block must be completely enclosed; in other words, a method can't be partly in a class and partly out of it.
+
+And some kinds of blocks can't be nested. 
+A method can be nested inside a class, but a method cannot be nested inside another method.
+Many IDEs, including https://visualstudio.microsoft.com/[Visual Studio^], https://code.visualstudio.com[Visual Studio Code^], and https://www.jetbrains.com/rider[JetBrains Rider^] use color coding to make code blocks more clear.
+
+[caption="Figure {chapter-number}.{counter:image-counter} - "]
+.Nested blocks in with Visual Studio Code's color coding.
+image::NestedCodeBlocks.png[A screenshot of Java source code with blocks indicated by bracketing]
+
+A variable can only be used or accessed inside the block in which it was declared, or within a block nested within that block; this is the variable's `scope`.
+When we refer to a variable, the compiler checks within that code block, or scope, to see if the variable has been declared.
+If it doesn't find a variable with that identifier within the current scope, it will move out to the enclosing code block (if it is nested within a class, for example) and check there. 
+If the variable is still not found, the compiler stops and produces an error.
+
+Basically, referring to a variable that is declared in a different scope is the same as referring to a variable we never declared at all.
+Trying to use a variable in a different code block is referred to as an _out of scope_ reference.
+
+[caption="Example {chapter-number}.{counter:source-counter} - "]
+.Code with an out-of-scope variable reference.
+[source,java]
+----
+public class ScopeExample 
+{
+
+    public static void Main()
+{
+        int favoriteNumber = 7;
+        Console.WriteLine(favoriteNumber); <.>
+
+        OutputNumber();
+    }
+
+    public static void OutputNumber()
+{
+        Console.WriteLine(favoriteNumber); <.>
+    }
+}
+----
+<.> This is a valid, or _in scope_, reference because `favoriteNumber` is declared within `Main()`.
+<.> This is an invalid _out of scope_ reference because `favoriteNumber` can only be accessed within `Main()`.
+
+==== Variable Shadowing
+
+When we first started using variables, we learned that we can't make two variables with the same name, but it's a little more nuanced than that.
+We can't make two variables with the same name _and scope_.
+Java *will* allow us to declare a variable with the same name in a different scope, which is called _variable shadowing_.
+Shadowing is a *very* bad practice, because it often leads to confusion about which variable is in scope (though we'll see an exception down the road).
+
+The example below can be confusing to beginners and to people who are reading the code quickly.
+When `OutputNumber()` is called, another variable named `favoriteNumber` is created and assigned the value `18`. 
+After that is output, an assignment statement changes that value to `10`. 
+Then, program execution returns to `Main()`, where a `WriteLine()` statement outputs `favoriteNumber` again.
+However, _this_ `favoriteNumber` wasn't changed to 10--the other one was.
+
+[caption="Example {chapter-number}.{counter:source-counter} - "]
+.Variable shadowing, which we should avoid.
+[source,csharp,linenums]
+----
+public class ShadowingExample 
+{
+
+    public static void Main(String[] args)
+{
+        int favoriteNumber = 7;
+        Console.WriteLine(favoriteNumber); <.>
+
+        OutputNumber();
+
+        Console.WriteLine(favoriteNumber); <.>
+    }
+
+    public static void OutputNumber()
+{
+        int favoriteNumber = 18;
+        Console.WriteLine(favoriteNumber); <.>
+        favoriteNumber = 10;
+    }
+}
+----
+<.> This outputs `7`
+<.> This outputs `18`, because it refers to the variable declared in `outputNumber()`
+<.> This still outputs `7` because the change to `10` is made to the `favoriteNumber` within the `outputNumber()` method.
+
+
+==== Global Variables
+
+As you can see, variable scope has a big impact on how our code runs.
+Beginning programmers sometimes try to avoid scope issues by declaring their variables within the class code block, which makes them accessible to any block nested within the class--inclusing all of the methods the class encloses.
+This kind of class-level variable is sometimes called a _global variable_, and the use of global variables is generally discouraged.
+
+[caption="Example {chapter-number}.{counter:source-counter} - "]
+.Use of a global variable, which we should avoid.
+[source,csharp,linenums]
+----
+public class GlobalVariableExample 
+{
+    static int favoriteNumber = 7; <.>
+
+    public static void Main()
+{
+        Console.WriteLine(favoriteNumber);
+
+        OutputNumber();
+
+        Console.WriteLine(favoriteNumber);
+    }
+
+    public static void OutputNumber()
+{
+        Console.WriteLine(favoriteNumber);
+        favoriteNumber = 18; <.>
+    }
+}
+----
+<.> Declaration at the class level. Note that global variables must be `static`.
+<.> This changes the value of `favoriteNumber` to 18 for all methods in the program.
+
+Instead, we'll declare all of our variables within our methods; these are called _local variables_.
+
+WARNING: The use of global or class-level variables in code that you turn in for an assignment in my class is very heavily penalized. As much as possible, I try to reinforce best practices--and that means minimizing the use of global variables.
+
+Of course, this presents a problem.
+What if we need access to a variable in another method?
+The best practice is to pass that variable value to the method as needed, and for the method to pass back a value when necessary.
+
+NOTE: In the chapter on <<_0111_classes_and_objects,classes and objects>>, we will start using variables that look a lot like the global variables I just said we shouldn't use. To be clear, those _instance variables_ behave differently and serve a different purpose. They are _global variables_ as described here.
+
+=== Passing Data to Methods
+
+Sometimes a method needs some information in order to carry out its purpose.
+For example, the `print()` method needs to know what it's supposed to print.
+To provide information to a method, we _pass_ the information in as *arguments*.
+So, the `String` we want to output is passed to the `print()` method as an argument, and arguments are always placed inside the parentheses:
+
+[source,csharp,linenums]
+----
+Console.Write("Hello World");
+----
+
+In this example, "Hello World" is an argument.
+
+We establish what information a method needs as part of the method definition.
+Within the method we're defining, those pieces of information are called *parameters*.
+A parameter is a variable that exists in the method and receives the argument, and it's declared inside the parentheses in our method definition.
+The methods we've defined so far didn't need any outside information, so we haven't been putting anything in the parentheses--but now let's see an example with a parameter.
+
+[caption="Example {chapter-number}.{counter:source-counter} - "]
+.Method definition with a parameter, and a call with an argument.
+[source,java]
+----
+public class ParameterExample 
+{
+
+    public static void Main()
+{
+        OutputGreeting("Tim"); <.>
+    }
+
+    public static void OutputGreeting(String name)
+{ <.>
+        Console.WriteLine("Hello, " + name + "!");
+    }
+
+}
+----
+
+<.> "Tim" is the argument.
+<.> `name` is the parameter.
+
+In the above example, "Tim" is passed to the `OutputGreeting()` method as an argument.
+Within that method, the parameter `name` stores the argument, so when this code runs, `name` is equal to "Tim".
+
+TIP: The actual value passed in when we call a method is referred to as an _argument_. The variable that receives that value within the method is referred to as a _parameter_. Though some people use the terms interchangeably, I'll keep them separate.
+
+.Time To Watch!
+****
+Passing Data to a Method in C# [COMING SOON!] 
+
+// video::DNJjyKykPvE[youtube, list={playlist}]
+// File from video:
+
+// * Starter code: 
+
+// * Completed code: 
+****
+
+
+=== Returning Values
+
+The methods we've seen to this point are basically commands--they simply perform a task, and then when they're done, program execution just goes back to the method that called it and resumes there.
+But we can also create methods that are like questions--they execute a chunk of code, but when they are finished they give back an answer.
+
+
+Consider the two methods below.
+
+[caption="Example {chapter-number}.{counter:source-counter} - "]
+.A method that outputs a value and a method that returns a value.
+[source,csharp,linenums]
+----
+public static void OutputFavNum()
+{ <.>
+    int favNum = 10 - 3;
+    Console.Write(favNum);
+}
+
+public static int GetFavNum()
+{ <.>
+    int favNum = 10 - 3;
+    return favNum;
+}
+----
+
+<.> This specifies a return type of `void`
+<.> This specifies a return type of `int`
+
+The first method is a command to print out a favorite number, so it does not return anything. 
+The `void` in the method header is the return type, and _void_ basically means nothing; this method returns nothing.
+The second method is asking to get a favorite number, so it is going to give back an `int`. The return type is specified as `int`.
+The `return` statement sends the `favNum` value back to the method that called `GetFavNum()`.
+
+IMPORTANT: If a method has a return type of anything other than `void`, it will only compile if it has a `return` statement followed by a value--either literal or variable--of the specified type.
+
+This means that methods themselves essentially have data types.
+`OutputFavNum()` has a data type of `void`. 
+`GetFavNum()` has a data type of `int`.
+Since methods have types, we can use them in statements just as we'd use a literal or variable of that type. 
+For example, the following line of code is valid:
+
+`int answer = 18 + GetFavNum();`
+
+This evaluated the same way as any other assignment statement. It starts on the right and finds that method call, so it will execute `getFavNum()` and plug the returned value into the operation, resulting in `18 + 7` and ultimately evaluating to `25`, which is then assigned to `answer`.
+
+A `return` statement in a `void` method stops execution of the method and returns to the calling method.
+
+[caption="Example {chapter-number}.{counter:source-counter} - "]
+.Invalid use of a `return` statement before the end of a method.
+[source,csharp,linenums]
+----
+public static void ShortCircuit()
+{
+   Console.Write(“This line of code runs...”);
+   return;
+   Console.Write(“This can never run!”);
+}
+----
+
+The second Write() statement won't execute because the return statement ends the method. The compiler doesn't like these kinds of _unreachable statements_, though, so it will not compile.
+
+`return` statements in `void` methods will have some uses for us later on.
+
+NOTE: C# offer a clever thing called a _tuple_ that lets us return multiple values from one method. But that's beyond what we'll be doing, so as far as we're concerned a method can only return one piece of data, and it can only have one return type.
+
+==== Returning vs. Outputting
+
+Generally speaking, it's better to return values from a method rather than outputting values.
+There are a few reasons for this, but consider an obvious one. 
+If we use a `Write()` method, our code is limited to only working in a console application. 
+That's fine for now, because it's the only kind of application we know how to make!
+But what if we want to use that same code in a web application, or a mobile app? 
+That `Write()` statement won't work--rather, the user will never see the result, because they won't have a console window.
+
+Consider this code:
+
+// TODO: Add captions to the rest of the examples in this chapter
+
+[caption="Example {chapter-number}.{counter:source-counter} - "]
+.Improperly outputting a value rather than returning it.
+[source,csharp,linenums]
+----
+public class BadOutput 
+{
+    public static void Main()
+{
+        KingOfSoul();
+    }
+
+    public static void KingOfSoul()
+{
+        Console.WriteLine("Sam Cooke");
+    }
+
+}
+----
+
+If the `KingOfSoul()` method knows who the King of Soul is, how do we print that out if we can't perform the output inside the method?
+The solution is to return the String and perform the output in `Main()`.
+
+[caption="Example {chapter-number}.{counter:source-counter} - "]
+.Returning a value back to `Main()` to be output.
+[source,csharp,linenums]
+----
+public class GoodOutput 
+{
+    public static void Main()
+{
+        Console.WriteLine(KingOfSoul());
+    }
+
+    public static String KingOfSoul()
+{
+        return "Sam Cooke";
+    }
+
+}
+----
+
+This is another example of something that seems annoying, like it's just extra work.
+When we're learning new things, we sometimes have to accept the wisdom of people who are experienced--and recognize that eventually we'll see the point.
+We're all about learning good habits and best practices around here, so we'll almost always return values rather than printing them.
+
+There are times when we want a method whose sole purpose is to produce some output. 
+In that case, we should give it an appropriate identifier.
+Notice that those kinds of methods in my examples have _print_ or _output_ in the name.
+
+On assignments, I rarely want students to create methods that produce output, and when I do I always make that explicit in my directions. 
+When I refer to _returning_ something, I mean just that. 
+The rule of thumb is, *all input and output statements should be in the `Main()` method* and data should be passed around as necessary.
+
+TIP: I strongly penalize input and output statements outside of the `Main()` method because I'm trying to build habits that will serve you well as you learn more about programming.
+
+
+//TODO: Record video on returning data
+.Time To Watch!
+****
+Returning Data from a Method in C# [COMING SOON!]
+
+// video::JI0e0vVONmM[youtube, list={playlist}]
+// File from video:
+
+// * Completed code: {github-base}/{github-folder}/AreaOfOvalFinished.cs[`AreaOfOval.cs`^]
+****
+
+IMPORTANT: The Lab Assignments in Canvas can be completed using what we've covered to this point. You might choose to complete that work now, then move onto the next section--which you'll need for the Programming Project.
+
+=== Overloading a Method
+
+Sometimes the task, action, or calculation that a method produces has different ways of operating depending on the circumstances.
+
+Consider a method that calculates the average age of two people:
+
+[caption="Example {chapter-number}.{counter:source-counter} - "]
+.The `AverageAge()` method, which calculates the average of two ages.
+[source,csharp,linenums]
+----
+public static double AverageAge(int age1, int age2)
+{
+    return (double) (age1 + age2) / 2;
+}
+----
+
+This is a pretty straightforward method. 
+Notice that the return statement uses <<_converting_data_types,casting>> with `(double)` to ensure that the result is not truncated.
+
+If we want to calculate an average age of 3 people, we could almost use the same method. 
+We want a method that still calculates the average age, but takes three arguments and divides by 3, instead of 2.
+
+To create another version of a method that operates a little differently, we can use _method overloading_. 
+To overload a method, we write a new method with the same identifier, but with a different set of parameters. 
+An overload for our `averageAge()` method could look like this:
+
+[caption="Example {chapter-number}.{counter:source-counter} - "]
+.Overloading `AverageAge()` to calculate the average of three ages.
+[source,csharp,linenums]
+----
+public static double AverageAge(int age1, int age2, int age3)
+{
+        return (double) (age1 + age2 + age3) / 3;
+    }
+----
+
+Note that the method identifier is exactly the same, but this version accepts three `int` arguments instead of two.
+That difference allows the compiler to easily determine which implementation of the method is being called: if there are two `int`s in the parenthesis, it calls the first implementation, and if there are three `int`s, it calls the second implementation. 
+When we're using the method, we can call whichever best suits our needs at the time.
+
+The compiler can also easily distinguish overloaded methods if the _types_ of the parameters are different.
+An implementation that accepts `double`s is valid:
+
+[caption="Example {chapter-number}.{counter:source-counter} - "]
+.Overloading `AverageAge()` to calculate the average of three ages, using `double` values.
+[source,csharp,linenums]
+----
+    public static double AverageAge(double age1, double age2, double age3)
+{
+        return (double) (age1 + age2 + age3) / 3;
+    }
+----
+
+If the compiler sees a call to `AverageAge()` with three `double` values, it will invoke this last version.
+
+==== Incorrect Overloading
+Overloaded methods *must* have differences in the number and/or types of the parameters. 
+The _names_ of those parameters doesn't differentiate them, so different names is not enough to make a valid overload.
+
+[caption="Example {chapter-number}.{counter:source-counter} - "]
+.An invalid attempt to overload a method.
+[source,csharp,linenums]
+----
+public class BadOverloading 
+{
+    public static void Main()
+{
+        Console.WriteLine(area(15, 10)); <.>
+    }
+
+    // Calculates area of a rectangle
+    public static double Area(double length, double width)
+{
+        return length * width;
+    }
+
+    // Calculates area of an oval
+    public static double Area(double smallRadius,
+            double bigRadius)
+{
+        double area = 3.14 * smallRadius * bigRadius;
+        return area;
+    }
+
+}
+----
+
+<.> The compiler can't tell if we want the area implementation of a rectangle of the implementation for an oval.
+
+The term we use to describe a method's identifier and parameter list (the number, order and types of parameters) is a _method signature_. 
+The method signature must be unique so the compiler can identify which method code to run.
+
+[caption="Example {chapter-number}.{counter:source-counter} - "]
+.Testing three overloaded implementations of `AverageAge()`.
+[source, csharp]
+----
+public class AverageAge 
+{
+    public static void Main()
+{
+        Console.WriteLine(averageAge(1.25, 1.5, .5)); // <.>
+        Console.WriteLine(averageAge(10, 20)); // <.>
+        Console.WriteLine(averageAge(10, 20, 25)); // <.>
+    }
+
+    public static double AverageAge(int age1, int age2)
+{
+        return (double) (age1 + age2) / 2;
+    }
+
+    public static double AverageAge(int age1, int age2, int age3)
+{
+        return (double) (age1 + age2 + age3) / 3;
+    }
+
+    public static double AverageAge(double age1, double age2, double age3)
+{
+        return (double) (age1 + age2 + age3) / 3;
+    }
+
+}
+----
+
+<.> The compiler sees three `double` values, so it calls the third implementation.
+<.> The compiler sees two `int` values, so it calls the first implementation.
+<.> The compiler sees three `int` values, so it calls the second implementation.
+
+
+=== Solution Walkthrough
+
+In "solution walkthrough" videos, I give a problem/prompt that is similar to the kinds of work I assign, and then I record myself writing a solution. It's not absolutely mandatory to watch this video, but students report that these videos are particularly helpful.
+
+
+
+// TODO: Check and/or re-record solution walkthrough:
+// TODO: Add video to playlist
+// TODO: Add solution file(s) for this chapter
+//  https://youtu.be/2p2J7G8pz3U
+
+.Time To Watch!
+****
+Methods with Parameters and Returns
+
+video::f08bKXVqxZk[youtube, list={playlist}]
+https://www.youtube.com/watch?v=2p2J7G8pz3U&list={playlist}
+Solution file from video:
+// TODO: Link solution file
+// * Completed code:{github-base}/{github-folder}/Percentages.java[`Percentages.cs`^]
+****
+
+// Intro paragraph or content
+
+// === Topic 1
+
+
+
+// .Time To Watch!
+// ****
+// Title of Youtube video
+
+// video::PR6u4KvAkas[youtube, list={playlist}]
+// Files from video:
+
+// * Starter code: {github-base}/github-folder}/HelloWorld.cs[`HelloWorld.cs`^]
+// * Completed code: {github-base}/github-folder}/HelloWorld.cs[`HelloWorld.cs`^]
+// ****
+
+
+// [caption="Example {chapter-number}.{counter:source-counter} - "]
+// .`OutputExample.cs` - Simple console output in C#
+// [source,csharp,linenums]
+// ----
+// Console.Write("In the words of Michael Stipe,");
+// Console.WriteLine("Don't go back to Rockville...");
+// Console.WriteLine("...and waste another year.");
+// ----
+
+// .Class diagram for the `Car` class
+// // Image rendered at plantuml.com with the following code:
+// [plantuml, format=svg]
+// ----
+// @startuml
+// skinparam classAttributeIconSize 0
+// class Car 
+{
+//   - make:String
+//   - model:String
+//   +void start()
+//   +void stop()
+// }
+// @enduml
+// ----
+
+// IMPORTANT: The Lab Assignments in Canvas can be completed using what we've covered to this point. You might choose to complete that work now, then move onto the next section--which you'll need for the Programming Project.
+
+// .Interesting!
+// ****
+// This is something // interesting!
+// ****
+
+
+
+'''
+
+:sectnums!:
+=== Check Yourself Before You Wreck Yourself (on the assignments)
+
+==== Can you answer these questions?
+
+****
+1. 
+
+2. 
+
+3. 
+****
+:sectnums:
+// TODO: _Sample answers provided in <<_inheritance,Stuff That's Tacked On The End>>_.

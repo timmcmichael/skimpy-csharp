@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Tim McMichael">
+<title>Skimpy C#: An Introduction to Programming</title>
+<link rel="stylesheet" href="./css/architech-light.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                       font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+             .nav-footer{text-align: center; margin-top: auto;}
+             .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="_methods" class="article toc2 toc-left">
+<head>
+    <link id="theme-link" rel="stylesheet" href="css/architect-light.css">
+  </head>
+<div id="header">
+    <button id="theme-toggle">Toggle Dark/Light Mode</button>
+</div>
+<div id="header">
+<h1>Skimpy C#: An Introduction to Programming</h1>
+<div class="details">
+<span id="author" class="author"><a href="https://timmcmichael.github.io/" target=" blank" rel="noopener">Tim McMichael</a></span><br>
+<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Skimpy Contents</div>
+<p><span class="toc-root"><a href="index.html">Skimpy C#: An Introduction to Programming</a></span></p><ul class="sectlevel1">
+<li><a href="_skimpy_preface.html">Skimpy Preface</a>
+</li>
+<li><a href="_how_to_use_this_book.html">How to Use This Book</a>
+</li>
+<li><a href="_related_resources.html">Related Resources</a>
+</li>
+<li><a href="_getting_started.html">Getting Started</a>
+</li>
+<li><a href="_computers_and_coding.html">1. Computers and Coding</a>
+</li>
+<li><a href="_variables_and_data_types.html">2. Variables and Data Types</a>
+</li>
+<li><a href="_methods.html"><span class="toc-current">3. Methods</span></a>
+<ul class="sectlevel2">
+<li><a href="_methods.html#_whats_the_point_4">What&#8217;s the Point?</a>
+</li>
+<li><a href="_methods.html#_defining_our_own_methods">3.1. Defining Our Own Methods</a>
+</li>
+<li><a href="_methods.html#_variable_scope">3.2. Variable Scope</a>
+</li>
+<li><a href="_methods.html#_passing_data_to_methods">3.3. Passing Data to Methods</a>
+</li>
+<li><a href="_methods.html#_returning_values">3.4. Returning Values</a>
+</li>
+<li><a href="_methods.html#_overloading_a_method">3.5. Overloading a Method</a>
+</li>
+<li><a href="_methods.html#_solution_walkthrough">3.6. Solution Walkthrough</a>
+</li>
+<li><a href="_methods.html#_check_yourself_before_you_wreck_yourself_on_the_assignments_4">Check Yourself Before You Wreck Yourself (on the assignments)</a>
+</li>
+</ul>
+</li>
+<li><a href="_decisions.html">4. Decisions</a>
+</li>
+<li><a href="_loops.html">5. Loops</a>
+</li>
+<li><a href="_debugging_and_generative_ai.html">6. Debugging and Generative AI</a>
+</li>
+<li><a href="_classes_and_objects.html">7. Classes and Objects</a>
+</li>
+<li><a href="_arrays.html">8. Arrays</a>
+</li>
+<li><a href="_software_development_life_cycle.html">9. Software Development Life Cycle</a>
+</li>
+<li><a href="_graphical_user_interfaces.html">10. Graphical User Interfaces</a>
+</li>
+<li><a href="_stuff_thats_tacked_on_the_end.html">Stuff That&#8217;s Tacked on the End</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_methods">3. Methods</h2>
+<div class="sectionbody">
+<div class="paragraph subtitle">
+<p><span title='This is "Chapter Three" in binary (base 2)'>Chapter 0011 <sub>2</sub></span></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Help Make These Materials Better!</div>
+<div class="paragraph">
+<p>I am actively working to complete and revise this eBook and the accompanying videos. Please consider using the following link to provide feedback and notify me of typos, mistakes, and suggestions for either the eBook or videos:</p>
+</div>
+<div class="paragraph">
+<p><mark>This is the working draft of a <strong>very incomplete</strong> eBook. Content will change as chapters are developed and refined. Check back later for a more complete version.</mark></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_whats_the_point_4">What&#8217;s the Point?</h3>
+<div class="paragraph">
+<p>*
+*</p>
+</div>
+<div class="paragraph">
+<p><em>Source code examples from this chapter and associated videos are available on <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/03%20Methods" target="_blank" rel="noopener">GitHub</a>.</em></p>
+</div>
+<hr>
+<div class="paragraph">
+<p>As our programs begin to get larger and more complex, it will be important to keep our code organized.
+Each program we write is contained within a <em>class</em>, and classes are the basic building block of an OOP program; we&#8217;ll explore them in more detail in <a href="#_0111_classes_and_objects">[_0111_classes_and_objects]</a>.
+Within a class or program, we can organize code in <strong>methods</strong>.
+A method is a collection of statements that work together to complete a single task.
+Consider the assembly instructions for building a LEGO set.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/chapter3/LEGO.png" alt="A few LEGO blocks" width="300">
+</div>
+<div class="title">Figure 3.4 - LEGO blocks</div>
+</div>
+<div class="paragraph">
+<p>It might take dozens of small steps to complete the set, but taken together, the instructions execute a single task: building the set.
+A method is conceptually the same.</p>
+</div>
+<div class="paragraph">
+<p>If you&#8217;ve worked with other programming languages, you may know methods by a different name.
+In Python, we use <em>functions</em>, and in other languages we use <em>procedures</em> or <em>subroutines</em>.
+All of those terms pretty much mean the same thing, but in C# they&#8217;re called methods.
+(And really, they&#8217;re generally called methods whenever we&#8217;re using object-oriented programming, so even in Python we sometimes call them methods.)</p>
+</div>
+<div class="paragraph">
+<p>There are a variety of reasons to break our code into methods, but an important advantage for now is <strong>reusability</strong>.
+Once we create a method, we can use it as often as we&#8217;d like.
+That means we don&#8217;t have to type the same code over and over.
+In turn, that improves our code&#8217;s <strong>maintainability</strong>.
+If we have to perform some calculation ten times in our program and have written out that calculation all ten times, a change to the calculation means updating it in all ten places.
+But if we put that calculation in a method and use that method ten times, we can just update the method and our changes will automatically be used all ten times.
+We&#8217;ll see additional advantages to methods as we learn more about programming.</p>
+</div>
+<div class="paragraph">
+<p>Once we define a method, we <strong>invoke</strong> the method each time we want it to execute.
+We also say that we <em>call</em> a method, which sounds a little cooler than <em>invoke</em> but means the same thing.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_defining_our_own_methods">3.1. Defining Our Own Methods</h3>
+<div class="paragraph">
+<p>We&#8217;ve been defining a method from the start&#8212;&#8203;or, more likely, the compiler has been defining one for us.
+The .NET runtime&#8212;&#8203;which takes the compiler version of our code and executes it&#8212;&#8203;looks for a method called <code>Main</code>, and that&#8217;s where it starts running the code.
+If we&#8217;re using <a href="_computers_and_coding.html#_first_c_program">top-level statements</a>, the compiler creates that <code>Main</code> method for us; if we&#8217;re using the traditional approach, we&#8217;ve defined <code>Main</code> in our code.</p>
+</div>
+<div class="paragraph">
+<p>We&#8217;ve also been calling (<em>invoking</em>) methods from the start.
+To output text, we&#8217;ve been calling the <code>WriteLine()</code> and <code>Write()</code> methods.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+In C#, parentheses <strong>always</strong> indicate a method, whether or not there is anything inside of the parentheses. Anytime you see parentheses in C# code, you&#8217;re looking at either a method definition or a method call.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A method definition includes a method header followed by a code block.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 3.1 - A method definition in C#</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">DisplayBandName</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    Console.WriteLine(</span><span style="color: #e6db74">&quot;The Temptations&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>public</code> keyword is an <em>access modifier</em>. Defining the method as <code>public</code> makes it possible to call the method from anywhere. More on this later, but for now all of our methods will be <code>public</code>.</p>
+</li>
+<li>
+<p>The <code>static</code> keyword basically means that the method belongs to the class and not an object. That will make more sense in the next chapter, but for now our methods will be <code>static</code>.</p>
+</li>
+<li>
+<p>The <code>void</code> keyword indicates that this method will not return anything. This is called the method&#8217;s <em>return type</em>, and we&#8217;ll learn about this shortly.</p>
+</li>
+<li>
+<p><code>DisplayBandName</code> is the identifier for the method, in the same way variables have identifiers. Like variable identifiers, new words within the name get captialized; however, method names also have a capital first letter. This naming style is called <em>Pascal case</em> (while variables use <em>camel case</em>). And as with variables, make the name descriptive. The convention is that the name of a method should describe what it does; usually, that means the identifier is (or includes) a verb, like "display" in this example.</p>
+</li>
+<li>
+<p>The parentheses indicate to the compiler that this is a method, as opposed to a variable or some other fancy thing. You&#8217;ll see what we can put in the parentheses shortly.</p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Time To Watch!</div>
+<div class="paragraph">
+<p>Defining and Calling Methods in C# [COMING SOON!]</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/hAxUD7xV7h8?rel=0&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_variable_scope">3.2. Variable Scope</h3>
+<div class="paragraph">
+<p>As we begin organizing our code into different methods and (when we learn <a href="#_0111_classes_and_objects">object-oriented programming basics</a>) classes, we&#8217;ll need to understand how data is compartmentalized within a program.
+Whenever we create a class or method&#8212;&#8203;and other structures we&#8217;ll learn as we go&#8212;&#8203;we use curly braces to define the boundaries and indenting to help make those boundaries clear.
+These braces form <em>code blocks</em>.</p>
+</div>
+<div class="paragraph">
+<p>The outermost code block is our class&#8212;&#8203;again, that&#8217;s created by the compiler if we&#8217;re using top-level statements.
+Although there are a few things that can go outside the class, like when we need to import outside code to use, the class code block contains all of the components of our program.</p>
+</div>
+<div class="paragraph">
+<p>In some cases we can place one block inside another, as such as putting a method inside a class.
+This is called <em>nesting</em> blocks, and a nested block must be completely enclosed; in other words, a method can&#8217;t be partly in a class and partly out of it.</p>
+</div>
+<div class="paragraph">
+<p>And some kinds of blocks can&#8217;t be nested.
+A method can be nested inside a class, but a method cannot be nested inside another method.
+Many IDEs, including <a href="https://visualstudio.microsoft.com/" target="_blank" rel="noopener">Visual Studio</a>, <a href="https://code.visualstudio.com" target="_blank" rel="noopener">Visual Studio Code</a>, and <a href="https://www.jetbrains.com/rider" target="_blank" rel="noopener">JetBrains Rider</a> use color coding to make code blocks more clear.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/chapter3/NestedCodeBlocks.png" alt="A screenshot of Java source code with blocks indicated by bracketing">
+</div>
+<div class="title">Figure 3.5 - Nested blocks in with Visual Studio Code&#8217;s color coding.</div>
+</div>
+<div class="paragraph">
+<p>A variable can only be used or accessed inside the block in which it was declared, or within a block nested within that block; this is the variable&#8217;s <code>scope</code>.
+When we refer to a variable, the compiler checks within that code block, or scope, to see if the variable has been declared.
+If it doesn&#8217;t find a variable with that identifier within the current scope, it will move out to the enclosing code block (if it is nested within a class, for example) and check there.
+If the variable is still not found, the compiler stops and produces an error.</p>
+</div>
+<div class="paragraph">
+<p>Basically, referring to a variable that is declared in a different scope is the same as referring to a variable we never declared at all.
+Trying to use a variable in a different code block is referred to as an <em>out of scope</em> reference.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 3.2 - Code with an out-of-scope variable reference.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">ScopeExample</span>
+<span style="color: #f8f8f2">{</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> favoriteNumber </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">7</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">        Console.</span><span style="color: #a6e22e">WriteLine</span><span style="color: #f8f8f2">(favoriteNumber); </span><i class="conum" data-value="1"></i><b>(1)</b>
+
+<span style="color: #f8f8f2">        OutputNumber();</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">OutputNumber</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        Console.</span><span style="color: #a6e22e">WriteLine</span><span style="color: #f8f8f2">(favoriteNumber); </span><i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This is a valid, or <em>in scope</em>, reference because <code>favoriteNumber</code> is declared within <code>Main()</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>This is an invalid <em>out of scope</em> reference because <code>favoriteNumber</code> can only be accessed within <code>Main()</code>.</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_variable_shadowing">3.2.1. Variable Shadowing</h4>
+<div class="paragraph">
+<p>When we first started using variables, we learned that we can&#8217;t make two variables with the same name, but it&#8217;s a little more nuanced than that.
+We can&#8217;t make two variables with the same name <em>and scope</em>.
+Java <strong>will</strong> allow us to declare a variable with the same name in a different scope, which is called <em>variable shadowing</em>.
+Shadowing is a <strong>very</strong> bad practice, because it often leads to confusion about which variable is in scope (though we&#8217;ll see an exception down the road).</p>
+</div>
+<div class="paragraph">
+<p>The example below can be confusing to beginners and to people who are reading the code quickly.
+When <code>OutputNumber()</code> is called, another variable named <code>favoriteNumber</code> is created and assigned the value <code>18</code>.
+After that is output, an assignment statement changes that value to <code>10</code>.
+Then, program execution returns to <code>Main()</code>, where a <code>WriteLine()</code> statement outputs <code>favoriteNumber</code> again.
+However, <em>this</em> <code>favoriteNumber</code> wasn&#8217;t changed to 10&#8212;&#8203;the other one was.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 3.3 - Variable shadowing, which we should avoid.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">ShadowingExample</span>
+<span style="color: #f8f8f2">{</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">(String[] args)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> favoriteNumber </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">7</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">        Console.WriteLine(favoriteNumber); </span><i class="conum" data-value="1"></i><b>(1)</b>
+
+<span style="color: #f8f8f2">        OutputNumber();</span>
+
+<span style="color: #f8f8f2">        Console.WriteLine(favoriteNumber); </span><i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">OutputNumber</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> favoriteNumber </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">18</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">        Console.WriteLine(favoriteNumber); </span><i class="conum" data-value="3"></i><b>(3)</b>
+<span style="color: #f8f8f2">        favoriteNumber </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This outputs <code>7</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>This outputs <code>18</code>, because it refers to the variable declared in <code>outputNumber()</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>This still outputs <code>7</code> because the change to <code>10</code> is made to the <code>favoriteNumber</code> within the <code>outputNumber()</code> method.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_global_variables">3.2.2. Global Variables</h4>
+<div class="paragraph">
+<p>As you can see, variable scope has a big impact on how our code runs.
+Beginning programmers sometimes try to avoid scope issues by declaring their variables within the class code block, which makes them accessible to any block nested within the class&#8212;&#8203;inclusing all of the methods the class encloses.
+This kind of class-level variable is sometimes called a <em>global variable</em>, and the use of global variables is generally discouraged.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 3.4 - Use of a global variable, which we should avoid.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">GlobalVariableExample</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> favoriteNumber </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">7</span><span style="color: #f8f8f2">; </span><i class="conum" data-value="1"></i><b>(1)</b>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        Console.WriteLine(favoriteNumber);</span>
+
+<span style="color: #f8f8f2">        OutputNumber();</span>
+
+<span style="color: #f8f8f2">        Console.WriteLine(favoriteNumber);</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">OutputNumber</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        Console.WriteLine(favoriteNumber);</span>
+<span style="color: #f8f8f2">        favoriteNumber </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">18</span><span style="color: #f8f8f2">; </span><i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Declaration at the class level. Note that global variables must be <code>static</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>This changes the value of <code>favoriteNumber</code> to 18 for all methods in the program.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Instead, we&#8217;ll declare all of our variables within our methods; these are called <em>local variables</em>.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+The use of global or class-level variables in code that you turn in for an assignment in my class is very heavily penalized. As much as possible, I try to reinforce best practices&#8212;&#8203;and that means minimizing the use of global variables.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Of course, this presents a problem.
+What if we need access to a variable in another method?
+The best practice is to pass that variable value to the method as needed, and for the method to pass back a value when necessary.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In the chapter on <a href="#_0111_classes_and_objects">classes and objects</a>, we will start using variables that look a lot like the global variables I just said we shouldn&#8217;t use. To be clear, those <em>instance variables</em> behave differently and serve a different purpose. They are <em>global variables</em> as described here.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_passing_data_to_methods">3.3. Passing Data to Methods</h3>
+<div class="paragraph">
+<p>Sometimes a method needs some information in order to carry out its purpose.
+For example, the <code>print()</code> method needs to know what it&#8217;s supposed to print.
+To provide information to a method, we <em>pass</em> the information in as <strong>arguments</strong>.
+So, the <code>String</code> we want to output is passed to the <code>print()</code> method as an argument, and arguments are always placed inside the parentheses:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">Console.Write(</span><span style="color: #e6db74">&quot;Hello World&quot;</span><span style="color: #f8f8f2">);</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this example, "Hello World" is an argument.</p>
+</div>
+<div class="paragraph">
+<p>We establish what information a method needs as part of the method definition.
+Within the method we&#8217;re defining, those pieces of information are called <strong>parameters</strong>.
+A parameter is a variable that exists in the method and receives the argument, and it&#8217;s declared inside the parentheses in our method definition.
+The methods we&#8217;ve defined so far didn&#8217;t need any outside information, so we haven&#8217;t been putting anything in the parentheses&#8212;&#8203;but now let&#8217;s see an example with a parameter.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 3.5 - Method definition with a parameter, and a call with an argument.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="java"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span> <span style="color: #a6e22e">ParameterExample</span>
+<span style="color: #f8f8f2">{</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        OutputGreeting(</span><span style="color: #e6db74">&quot;Tim&quot;</span><span style="color: #f8f8f2">); </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">OutputGreeting</span><span style="color: #f8f8f2">(String name)</span>
+<span style="color: #f8f8f2">{ </span><i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: #f8f8f2">        Console.</span><span style="color: #a6e22e">WriteLine</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Hello, &quot;</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> name </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;!&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>"Tim" is the argument.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><code>name</code> is the parameter.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In the above example, "Tim" is passed to the <code>OutputGreeting()</code> method as an argument.
+Within that method, the parameter <code>name</code> stores the argument, so when this code runs, <code>name</code> is equal to "Tim".</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The actual value passed in when we call a method is referred to as an <em>argument</em>. The variable that receives that value within the method is referred to as a <em>parameter</em>. Though some people use the terms interchangeably, I&#8217;ll keep them separate.
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Time To Watch!</div>
+<div class="paragraph">
+<p>Passing Data to a Method in C# [COMING SOON!]</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_returning_values">3.4. Returning Values</h3>
+<div class="paragraph">
+<p>The methods we&#8217;ve seen to this point are basically commands&#8212;&#8203;they simply perform a task, and then when they&#8217;re done, program execution just goes back to the method that called it and resumes there.
+But we can also create methods that are like questions&#8212;&#8203;they execute a chunk of code, but when they are finished they give back an answer.</p>
+</div>
+<div class="paragraph">
+<p>Consider the two methods below.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 3.6 - A method that outputs a value and a method that returns a value.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">OutputFavNum</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{ </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> favNum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">-</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    Console.Write(favNum);</span>
+<span style="color: #f8f8f2">}</span>
+
+<span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">GetFavNum</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{ </span><i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> favNum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">-</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> favNum;</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This specifies a return type of <code>void</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>This specifies a return type of <code>int</code></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The first method is a command to print out a favorite number, so it does not return anything.
+The <code>void</code> in the method header is the return type, and <em>void</em> basically means nothing; this method returns nothing.
+The second method is asking to get a favorite number, so it is going to give back an <code>int</code>. The return type is specified as <code>int</code>.
+The <code>return</code> statement sends the <code>favNum</code> value back to the method that called <code>GetFavNum()</code>.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+If a method has a return type of anything other than <code>void</code>, it will only compile if it has a <code>return</code> statement followed by a value&#8212;&#8203;either literal or variable&#8212;&#8203;of the specified type.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>This means that methods themselves essentially have data types.
+<code>OutputFavNum()</code> has a data type of <code>void</code>.
+<code>GetFavNum()</code> has a data type of <code>int</code>.
+Since methods have types, we can use them in statements just as we&#8217;d use a literal or variable of that type.
+For example, the following line of code is valid:</p>
+</div>
+<div class="paragraph">
+<p><code>int answer = 18 + GetFavNum();</code></p>
+</div>
+<div class="paragraph">
+<p>This evaluated the same way as any other assignment statement. It starts on the right and finds that method call, so it will execute <code>getFavNum()</code> and plug the returned value into the operation, resulting in <code>18 + 7</code> and ultimately evaluating to <code>25</code>, which is then assigned to <code>answer</code>.</p>
+</div>
+<div class="paragraph">
+<p>A <code>return</code> statement in a <code>void</code> method stops execution of the method and returns to the calling method.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 3.7 - Invalid use of a <code>return</code> statement before the end of a method.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">ShortCircuit</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">   Console.Write(</span><span style="color: #ed007e; background-color: #1e0010">“</span><span style="color: #f8f8f2">This line of code runs...</span><span style="color: #ed007e; background-color: #1e0010">”</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">   </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">   Console.Write(</span><span style="color: #ed007e; background-color: #1e0010">“</span><span style="color: #f8f8f2">This can never run</span><span style="color: #ff4689">!</span><span style="color: #ed007e; background-color: #1e0010">”</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The second Write() statement won&#8217;t execute because the return statement ends the method. The compiler doesn&#8217;t like these kinds of <em>unreachable statements</em>, though, so it will not compile.</p>
+</div>
+<div class="paragraph">
+<p><code>return</code> statements in <code>void</code> methods will have some uses for us later on.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+C# offer a clever thing called a <em>tuple</em> that lets us return multiple values from one method. But that&#8217;s beyond what we&#8217;ll be doing, so as far as we&#8217;re concerned a method can only return one piece of data, and it can only have one return type.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_returning_vs_outputting">3.4.1. Returning vs. Outputting</h4>
+<div class="paragraph">
+<p>Generally speaking, it&#8217;s better to return values from a method rather than outputting values.
+There are a few reasons for this, but consider an obvious one.
+If we use a <code>Write()</code> method, our code is limited to only working in a console application.
+That&#8217;s fine for now, because it&#8217;s the only kind of application we know how to make!
+But what if we want to use that same code in a web application, or a mobile app?
+That <code>Write()</code> statement won&#8217;t work&#8212;&#8203;rather, the user will never see the result, because they won&#8217;t have a console window.</p>
+</div>
+<div class="paragraph">
+<p>Consider this code:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 3.8 - Improperly outputting a value rather than returning it.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">BadOutput</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        KingOfSoul();</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">KingOfSoul</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        Console.WriteLine(</span><span style="color: #e6db74">&quot;Sam Cooke&quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the <code>KingOfSoul()</code> method knows who the King of Soul is, how do we print that out if we can&#8217;t perform the output inside the method?
+The solution is to return the String and perform the output in <code>Main()</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 3.9 - Returning a value back to <code>Main()</code> to be output.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">GoodOutput</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        Console.WriteLine(KingOfSoul());</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> String </span><span style="color: #a6e22e">KingOfSoul</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Sam Cooke&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is another example of something that seems annoying, like it&#8217;s just extra work.
+When we&#8217;re learning new things, we sometimes have to accept the wisdom of people who are experienced&#8212;&#8203;and recognize that eventually we&#8217;ll see the point.
+We&#8217;re all about learning good habits and best practices around here, so we&#8217;ll almost always return values rather than printing them.</p>
+</div>
+<div class="paragraph">
+<p>There are times when we want a method whose sole purpose is to produce some output.
+In that case, we should give it an appropriate identifier.
+Notice that those kinds of methods in my examples have <em>print</em> or <em>output</em> in the name.</p>
+</div>
+<div class="paragraph">
+<p>On assignments, I rarely want students to create methods that produce output, and when I do I always make that explicit in my directions.
+When I refer to <em>returning</em> something, I mean just that.
+The rule of thumb is, <strong>all input and output statements should be in the <code>Main()</code> method</strong> and data should be passed around as necessary.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+I strongly penalize input and output statements outside of the <code>Main()</code> method because I&#8217;m trying to build habits that will serve you well as you learn more about programming.
+</td>
+</tr>
+</table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Time To Watch!</div>
+<div class="paragraph">
+<p>Returning Data from a Method in C# [COMING SOON!]</p>
+</div>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+The Lab Assignments in Canvas can be completed using what we&#8217;ve covered to this point. You might choose to complete that work now, then move onto the next section&#8212;&#8203;which you&#8217;ll need for the Programming Project.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_overloading_a_method">3.5. Overloading a Method</h3>
+<div class="paragraph">
+<p>Sometimes the task, action, or calculation that a method produces has different ways of operating depending on the circumstances.</p>
+</div>
+<div class="paragraph">
+<p>Consider a method that calculates the average age of two people:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 3.10 - The <code>AverageAge()</code> method, which calculates the average of two ages.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AverageAge</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age1, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age2)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2">) (age1 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age2) </span><span style="color: #ff4689">/</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is a pretty straightforward method.
+Notice that the return statement uses <a href="_variables_and_data_types.html#_converting_data_types">casting</a> with <code>(double)</code> to ensure that the result is not truncated.</p>
+</div>
+<div class="paragraph">
+<p>If we want to calculate an average age of 3 people, we could almost use the same method.
+We want a method that still calculates the average age, but takes three arguments and divides by 3, instead of 2.</p>
+</div>
+<div class="paragraph">
+<p>To create another version of a method that operates a little differently, we can use <em>method overloading</em>.
+To overload a method, we write a new method with the same identifier, but with a different set of parameters.
+An overload for our <code>averageAge()</code> method could look like this:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 3.11 - Overloading <code>AverageAge()</code> to calculate the average of three ages.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AverageAge</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age1, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age2, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age3)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2">) (age1 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age2 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age3) </span><span style="color: #ff4689">/</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    }</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that the method identifier is exactly the same, but this version accepts three <code>int</code> arguments instead of two.
+That difference allows the compiler to easily determine which implementation of the method is being called: if there are two `int`s in the parenthesis, it calls the first implementation, and if there are three `int`s, it calls the second implementation.
+When we&#8217;re using the method, we can call whichever best suits our needs at the time.</p>
+</div>
+<div class="paragraph">
+<p>The compiler can also easily distinguish overloaded methods if the <em>types</em> of the parameters are different.
+An implementation that accepts `double`s is valid:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 3.12 - Overloading <code>AverageAge()</code> to calculate the average of three ages, using <code>double</code> values.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AverageAge</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> age1, </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> age2, </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> age3)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2">) (age1 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age2 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age3) </span><span style="color: #ff4689">/</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    }</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the compiler sees a call to <code>AverageAge()</code> with three <code>double</code> values, it will invoke this last version.</p>
+</div>
+<div class="sect3">
+<h4 id="_incorrect_overloading">3.5.1. Incorrect Overloading</h4>
+<div class="paragraph">
+<p>Overloaded methods <strong>must</strong> have differences in the number and/or types of the parameters.
+The <em>names</em> of those parameters doesn&#8217;t differentiate them, so different names is not enough to make a valid overload.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 3.13 - An invalid attempt to overload a method.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">21</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">BadOverloading</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        Console.WriteLine(area(</span><span style="color: #ae81ff">15</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">)); </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #959077">// Calculates area of a rectangle</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Area</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> length, </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> width)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> length </span><span style="color: #ff4689">*</span><span style="color: #f8f8f2"> width;</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #959077">// Calculates area of an oval</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Area</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> smallRadius,</span>
+<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> bigRadius)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> area </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3.14</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">*</span><span style="color: #f8f8f2"> smallRadius </span><span style="color: #ff4689">*</span><span style="color: #f8f8f2"> bigRadius;</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> area;</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The compiler can&#8217;t tell if we want the area implementation of a rectangle of the implementation for an oval.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The term we use to describe a method&#8217;s identifier and parameter list (the number, order and types of parameters) is a <em>method signature</em>.
+The method signature must be unique so the compiler can identify which method code to run.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example 3.14 - Testing three overloaded implementations of <code>AverageAge()</code>.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AverageAge</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        Console.WriteLine(averageAge(</span><span style="color: #ae81ff">1.25</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">1.5</span><span style="color: #f8f8f2">, .</span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">)); </span><i class="conum" data-value="1"></i><b>(1)</b>
+<span style="color: #f8f8f2">        Console.WriteLine(averageAge(</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">20</span><span style="color: #f8f8f2">)); </span><i class="conum" data-value="2"></i><b>(2)</b>
+<span style="color: #f8f8f2">        Console.WriteLine(averageAge(</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">20</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">25</span><span style="color: #f8f8f2">)); </span><i class="conum" data-value="3"></i><b>(3)</b>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AverageAge</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age1, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age2)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2">) (age1 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age2) </span><span style="color: #ff4689">/</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AverageAge</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age1, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age2, </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> age3)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2">) (age1 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age2 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age3) </span><span style="color: #ff4689">/</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">AverageAge</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> age1, </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> age2, </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> age3)</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> (</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2">) (age1 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age2 </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> age3) </span><span style="color: #ff4689">/</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">    }</span>
+
+<span style="color: #f8f8f2">}</span></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The compiler sees three <code>double</code> values, so it calls the third implementation.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The compiler sees two <code>int</code> values, so it calls the first implementation.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The compiler sees three <code>int</code> values, so it calls the second implementation.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_solution_walkthrough">3.6. Solution Walkthrough</h3>
+<div class="paragraph">
+<p>In "solution walkthrough" videos, I give a problem/prompt that is similar to the kinds of work I assign, and then I record myself writing a solution. It&#8217;s not absolutely mandatory to watch this video, but students report that these videos are particularly helpful.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Time To Watch!</div>
+<div class="paragraph">
+<p>Methods with Parameters and Returns</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<iframe src="https://www.youtube.com/embed/f08bKXVqxZk?rel=0&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="paragraph">
+<p><a href="https://www.youtube.com/watch?v=2p2J7G8pz3U&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP" class="bare">https://www.youtube.com/watch?v=2p2J7G8pz3U&amp;list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP</a>
+Solution file from video:</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>{</p>
+</div>
+<hr>
+</div>
+<div class="sect2">
+<h3 id="_check_yourself_before_you_wreck_yourself_on_the_assignments_4">Check Yourself Before You Wreck Yourself (on the assignments)</h3>
+<div class="sect3">
+<h4 id="_can_you_answer_these_questions_4">Can you answer these questions?</h4>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>1.</p>
+</div>
+<div class="paragraph">
+<p>2.</p>
+</div>
+<div class="paragraph">
+<p>3.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph nav-footer">
+<p>← Previous: <a href="_variables_and_data_types.html">Variables and Data Types</a> | ↑ Up: <a href="index.html">Skimpy C#: An Introduction to Programming</a> | Next: <a href="_decisions.html">Decisions</a> →</p>
+</div>
+</div>
+<div id="footer">
+    <div id="footer-text">
+        Tripucka Edition,&nbsp;revised&nbsp;2025-04-09&nbsp;-&nbsp;16:06:03 -0700
+        <p xmlns:cc="http://creativecommons.org/ns#">This work is licensed under <a
+                href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
+                rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+    </div>
+    <script>
+        // Theme toggle functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggle = document.getElementById("theme-toggle");
+            const themeLink = document.getElementById("theme-link");
+
+            if (!themeToggle || !themeLink) return; // Exit if elements are not found
+
+            // Check if the user has a preferred theme set in localStorage
+            const currentTheme = localStorage.getItem("theme");
+
+            if (currentTheme) {
+                themeLink.href = currentTheme === "dark" ? "css/architech-dark.css" : "css/architech-light.css";
+            }
+
+            // Set the button text based on the current theme
+            themeToggle.textContent = currentTheme === "dark" ? "Light mode" : "Dark mode";
+
+            // Toggle the theme
+            themeToggle.addEventListener("click", () => {
+                const newTheme = themeLink.href.includes("architech-light.css") ? "css/architech-dark.css" : "css/architech-light.css";
+                themeLink.href = newTheme;
+
+                // Save the user's theme preference to localStorage
+                const themeName = newTheme === "css/architech-dark.css" ? "dark" : "light";
+                localStorage.setItem("theme", themeName);
+
+                // Update the button text based on the new theme
+                themeToggle.textContent = themeName === "dark" ? "Light mode" : "Dark mode";
+
+            });
+        });
+    </script>
+
+</div>
+</body>
+</html>

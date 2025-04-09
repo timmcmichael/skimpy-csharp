@@ -1,0 +1,120 @@
+/* Color styling for dark theme */
+
+@import url('../../css/architech.css');
+
+:root {
+  --maincolor: #0a0b0c;
+  --primarycolor: #b1bcc5;   /* #465a6a; */
+  --secondarycolor: #b0c4de; /* #b1bcc5; */
+  --tertiarycolor: #87ceeb;
+  --highlightcolor: #b98e00;
+  --sidebarbackground: #21252b;
+  --linkcolor: #34bdf8;
+  --linkcoloralternate: #ff9800;
+  --stickynote: #f9a825;
+  --black: #000000;
+  --white: #FFFFFF;
+}
+
+body {
+  background-color: var(--maincolor);
+  color: var(--white);
+}
+
+h1 {
+  color: var(--primarycolor) !important;
+}
+
+h2,
+h3,
+h5,
+h6 {
+  color: var(--secondarycolor) !important;
+}
+
+h4 {
+  color: var(--tertiarycolor) !important;
+}
+
+.title {
+  color: var(--white) !important;
+}
+
+.author, .email, .author a {
+  color: var(--white) !important;
+}
+
+
+a {
+  color: var(--linkcolor) !important;
+}
+
+#toc.toc2 a:link {
+  color: var(--linkcolor);
+}
+
+.ulist a:link, .ul a:visited {
+  color: var(--linkcolor) !important;
+}
+
+blockquote {
+  color: var(--tertiarycolor) !important
+}
+
+.quoteblock {
+  color: var(--white)
+}
+
+.sidebarblock {
+  background-color: var(--sidebarbackground);
+}
+
+
+code {
+  color: var(--linkcoloralternate);
+  background-color: var(--sidebarbackground) !important;
+  padding: 0 0.2em;
+  border-radius: 4px;
+}
+/* 
+.listingblock code {
+  /* Don't unset all styles, just avoid overriding necessary ones 
+  color: inherit;
+  background-color: inherit;
+} */
+
+
+/* Exclude code inside a listingblock */
+.listingblock code {
+  all: unset;
+}
+
+/* Table styles */
+th:not(.listingblock .content pre th) {
+  background-color: var(--maincolor);
+  color: var(--white) !important;
+}
+
+td:not(.listingblock .content pre td) {
+  background-color: var(--maincolor);
+  color: var(--linkcoloralternate) !important
+}
+
+#toc.toc2 {
+    background-image: url('../images/carbon_fibre.png');
+    background-color: var(--sidebarbackground);
+}
+
+#toctitle {
+  color: var(--tertiarycolor) !important;
+  font-family: var(--heading-font) !important;
+  font-weight: bold !important;
+  font-size: 1.5em !important;
+}
+
+
+/* callout numbers */
+.conum {
+  background-color: blue !important;  
+  color: #000 !important;
+}

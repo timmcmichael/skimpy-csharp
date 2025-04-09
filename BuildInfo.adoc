@@ -1,0 +1,57 @@
+= Setup and Build Info
+_to aid my failing memory!_
+
+== Initial Setup
+
+* Started from blank repo (did not fork from OOP repo)
+
+== Workstation Setup
+
+=== Windows
+
+asciidoctor
+
+* Install https://rubyinstaller.org/downloads/[Ruby Installer]. 
+** https://www.geeksforgeeks.org/how-to-install-rubygems-in-windows/
+* `gem install asciidoctor && asciidoctor --version`
+* `gem install asciidoctor-diagram`
+* `gem install asciidoctor-mutipage`
+* `gem install pygments.rb`
+* `pip install pygments`
+* remove python app alias in settings (apps -> application aliases)
+
+
+
+// *  `sudo gem install pygments.rb`
+// *  `sudo gem install asciidoctor`
+// *  `sudo gem install asciidoctor-multipage`
+// *  `sudo gem install asciidoctor-diagram`
+// *  `sudo gem install asciidoctor-pdf`
+
+
+
+== VS Code
+
+Ctrl-Shft-B or Cmd-Shft-B to build using .vscode/tasks.json
+
+
+== Asciidoctor
+
+
+
+=== Desktop
+/usr/local/bin/asciidoctor-multipage -r /Library/Ruby/Gems/2.6.0/gems/asciidoctor-diagram-2.3.1/lib/asciidoctor-diagram -a source-highlighter=pygments -D output-light index.adoc
+
+== GH Pages Setup
+
+* add .nojekyll file
+* Add permissions for Actions to read/write to repo, as well as push/pull
+
+
+
+
+== Test runs
+
+/usr/local/bin/asciidoctor-multipage -a stylesheet=css/dark.css -D output-dark index.adoc
+
+/usr/local/bin/asciidoctor-multipage -a stylesheet=css/asciidoctor.css -D output-light index.adoc

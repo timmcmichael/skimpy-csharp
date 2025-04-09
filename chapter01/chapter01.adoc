@@ -1,0 +1,329 @@
+:chapter-number: 1
+:github-folder: 01%20Computers%20and%20Coding
+:source-counter: 0
+
+== Computers and Coding
+[.subtitle]
+pass:[<span title='This is "Chapter One" in binary (base 2)'>Chapter 0001 <sub>2</sub></span>]
+
+include::../_includes/feedback.adoc[]
+
+:sectnums!:
+// TODO: Add chapter objectives
+=== What's the Point?
+* Understand the role of programming languages
+* Use `Write()` and `WriteLine()` to produce text output
+
+_Source code examples from this chapter and associated videos are available on {github-base}/{github-folder}[GitHub^]._
+
+_Note: This material is nearly identical to the corresponding material in https://timmcmichael.github.io/skimpy-oop/[Skimpy OOP], the eBook for CIS150AB. If you've gone through that material before, be sure to at least read the section <<_c_and_net, C# and .NET>> before you move on to the next chapter._
+
+:sectnums:
+'''
+
+A computer is basically a device that executes a set of commands--and does so very quickly.
+Because the guts of a computer (a CPU) are kinda like a bunch of light switches--and I mean a *BUNCH* of light switches--it can only deal with zeros and ones: a switch that is off is "zero," and a switch that's on is "one." 
+
+NOTE: Never before has the concept of a modern computer been so recklessly simplified. I feel shame.
+
+All of the information a computer handles ultimately has to be represented by some combination of 1s and 0s, which we call a *binary* (or "base-two") number system.
+
+.Interesting!
+****
+The chapters of this eBook are subtitled using binary to show basic examples of the numbering system: 0001 is, well, 1 in decimal. 
+And 0100 is 4 in decimal. We won't get into binary numbers, but it's not very complicated and is kind of interesting if you're a nerd.
+****
+
+Imagine that your BFF is in your programming class, but that cruel professor won't let you sit together.
+When the professor turns his back, you can use your fingers to send a quick message to your BFF.
+Holding up your index finger might mean, "meet me in the library after class;" two fingers could mean, "send me a copy of your homework."
+As long as you agree on what each number means, you could pass along commands or information--it would be like your own little language.
+
+If you're a sports fan, I have a better analogy.
+A quarterback and a coach could have a language based completely on numbers.
+The coach tells the QB "22" and the QB knows which play to run, because they've agreed on what instruction (play) the number 22 means--and there are football teams that do exactly this.
+
+Sending that number to the quarterback as a binary number would be a lot less efficient because the coach would have to say "10110" (which is the binary representation of twenty two) and the QB would have to know binary numbers,or have them written on his wrist-band thing as a cheatsheet.
+
+Want to take the analogy one step further?
+A player standing on the sideline with their helmet on could represent a 1, and a player with their helmet off could represent a 0.
+Now the coach could just line up five players and tell the 2nd and 5th ones to take their helmets off.
+The QB could look over, see the pattern of helmets (10110) and run play 22.
+
+Okay, that would be the nerdiest football team in history.
+
+.Learn More
+****
+The amazing https://code.org[code.org] project has a playlist of great, short videos on how computers work--including binary numbers--if you want to know a little more without going too crazy:
+
+https://www.youtube.com/playlist?list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-[How Computers Work]
+****
+
+And how is any of that relevant?
+Let's see...
+
+Remember that a computer can execute commands super fast.
+Each command, or *instruction* (like a football play), is represented by a number--a binary number, since that's the number system the computer uses.
+The collection of instructions the computer understands is called *machine language*.
+
+.Interesting!
+****
+Just like people in different cultures use different languages, different CPU types use different languages. There are lots of different machine languages out there.
+****
+
+You could give the computer a set of instructions (aka, a program) if you just looked up the binary number for each instruction you wanted to use. 
+Of course, even a simple program requires a lot of instructions, so you're going to be looking up a *lot* of stuff.
+
+Few people actually _want_ to do that, so the rest of us use programming languages instead.
+
+=== Programming Languages
+
+A programming language is something that's easier for humans to use than machine language, but is capable of being accurately translated to machine language.
+
+NOTE: There are many, many programming languages. https://en.wikipedia.org/wiki/List_of_programming_languages[Seriously, there are a lot].
+
+The instructions you write using a programming language are called *source code*.
+Translating source code file to a machine language file that can be executed is called *compiling*, and is done by an application called a compiler.
+When the computer runs the program, it's using the machine language translation created by the compiler.
+Clicking on the icon to open Microsoft Word runs a file that's been compiled from source code.
+
+.Time To Watch!
+****
+Coding and Compiling
+
+// TODO: Update YouTube description to encompass CIS162AD.
+
+// https://www.youtube.com/watch?v=yR939VDXPaM&list=PL_Lc2HVYD16ZaC1Qy_VcOHCNzT1y8hHJP&index=1
+video::yR939VDXPaM[youtube, list={playlist}]
+****
+
+Some programming languages don't get translated ahead of time--they get translated "on the fly," as the program is running.
+That's called *interpreting* instead of compiling, but it's conceptually the same thing.
+
+The C and C++ programming languages are examples of compiled languages, and Python is an example of an interpreted language. 
+
+=== C# and .NET
+
+The language we'll be learning is called C#, which we pronounce "see sharp."
+The name seems a little weird, but it's a bit of a joke.
+The language is similar to the C programming language, but the developers thought of themselves as improving on C and raising it to a new level.
+In musical notation, a "sharp" raises a note by a half-step, so the name C# is suggesting that C# is a "half-step" above C.
+
+As mentioned above, C is a compiled language. 
+C# is an interesting case, because it's both compiled *and* interpreted. 
+
+It relies on a collection of tools called the *Microsoft .NET Framework*, or just ".NET"--and we pronounce that "dot net."
+.NET includes a compiler translates our our source code into an intermediate language called *Common Intermediate Language (CIL)*. 
+To execute the program, we use the *Common Language Runtime (CLR)* to interpret that CIL file as it executes.
+So. Many. Acronyms!
+
+There are a handful of reasons for this approach, but the most important one for us is that it makes C# a *cross-platform* language.
+A compiled language only works on a computer that "speaks" the same machine language, but if you compile your program to an intermediate language like CIL, it'll run on any computer that has .NET (and the CLR)--and that will interpret the intermediate code as it executes.
+So, Microsoft provides versions of .NET for Windows, macOS, and Linux, and the C# programs we create can run on any of them.
+This "write once, run anywhere" ability contributes greatly to C#'s popularity.
+
+Hopefully, this explains why we needed to install the .NET SDK in order to get started with C# programming.
+
+NOTE: In addition to the compiler and runtime, .NET includes a handful of other technologies that can been confusing. *ASP.NET* is used to develop web applications, *.NET Core* is a version of .NET that's more lightweight and cross-platform, and *Xamarin* is used to develop mobile applications. Since we're cross-platform here, we'll be using *.NET Core* to execute our code and not worrying about the other stuff.
+
+Because it's based on the C language, C# has a lot in common with other C-based languages, like Java and JavaScript.
+If you have experience with Java, you're going to find that C# is very similar--almost identical, for the rudimentary stuff we'll be doing.
+And if you're new to programming, you'll find that the skills you learn here will translate well to other languages--especially other C-based languages.
+
+=== First C# Program
+
+Enough of that, let's write some code!
+
+Even a simple C# program is a little bit complicated for a beginner, but in recent versions of C#, it's gotten a lot easier.
+Like Java (for those of you familiar with that), programs have to be organized in a specific way and include a lot of "boilerplate" code just to get started.
+But in 2020, C# added a feature called *top-level statements* that allows us to write a program with just a few lines of code, which is a big improvement for a beginner.
+
+We do want to look at both the old way--which I'll refer to as a _traditional_ program--and top-level statements, because so many of the examples you'll see online are written traditionally, and I want you to be able to understand them.
+And, as our programs become more complex, that traditional approach will keep our code organized and easier to understand.
+
+Either way, there's an important naming convention for our programs. 
+Since we can't uses spaces in names, we start with a capital letter and then capitalize the first letter of each word after that.
+So, if we want to name our program "My Amazing App," we would write it as `MyAmazingApp`. 
+More on this later.
+
+
+// TODO: Confirm video links are correct and live - April 25, 2025
+
+.Time To Watch!
+****
+Starting with C# in Visual Studio Community
+
+video::-karIUkQv9s[youtube, list={playlist}&index=4]
+
+Starting with C# in Visual Studio Code
+
+video::H7DSUaLG1BE[youtube, list={playlist}&index=4]
+
+Starting with C# in Rider
+
+video::RM279ivIroE[youtube, list={playlist}&index=4]
+
+
+Files from videos:
+
+* Completed code: link:{github-base}/{github-folder}/FirstProgram.cs[`FirstProgram.cs`^]
+* Completed code: link:{github-base}/{github-folder}/SongLyrics.cs[`SongLyrics.cs`^]
+
+****
+
+[[top_level_statements]]
+Take a look at the code for a traditional "Hello World" program; we'll learn what all of these pieces are as we go, but we should at least identify them now.
+
+[caption="Example {chapter-number}.{counter:source-counter} - "]
+.`TraditionalHelloWorld.cs` - Hello World program in C#, the traditional way
+[source,csharp,linenums]
+----
+class TraditionalHelloWorld
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+    }
+}
+----
+
+And here's the same program using top-level statements.
+
+[caption="Example {chapter-number}.{counter:source-counter} - "]
+.`HelloWorld.cs` - Hello World program in C#, using top-level statements
+[source,csharp,linenums]
+----
+Console.WriteLine("Hello, World!");
+----
+
+The compiler produces the same CIL file from both programs, so they are functionally identical.
+But obviously, the top-level statements version is a lot easier to understand.
+Don't worry, before we're done, you'll understand and use all of the pieces in the traditional program. 
+
+But for now, we're off and running!
+
+NOTE: Since `Write` and `WriteLine` don't exist in the file we created, we have to tell the compiler where to find them. We do that by prefixing the method name with `Console.`--more on this in future chapters!
+
+=== Basic Output
+
+The first programs we create in C# are _console_ programs--they are text-based programs that can't really display any graphics.
+To start with, we'll use two basic ways to output text to the console: `Console.Write()` and `Console.WriteLine()` statements.
+`Write` outputs whatever text is in the parentheses, and we'll need to put that text in quotation marks:
+
+[source,csharp,linenums]
+----
+Console.Write("Michael Stipe");
+----
+
+This line of code outputs *Michael Stipe* to the console window.
+After `Write()` outputs the text in parentheses, the cursor remains at the end of the output.
+This is just like if we type something in a word processor but don't hit enter; the next time we start typing, the characters resume on the same line.
+In the same way, the next output statement will continue on the same line in the console.
+
+A `WriteLine()` statement works exactly the same way, but it advances the cursor to the next line when it's finished.
+Basically, it hits _enter_, and the next output statement will begin on a new line.
+
+To understand the difference between `Write()` and `WriteLine()`, consider this program.
+
+[caption="Example {chapter-number}.{counter:source-counter} - "]
+.`OutputExample.cs` - Simple console output in C#
+[source,csharp,linenums]
+----
+Console.Write("In the words of Michael Stipe,");
+Console.WriteLine("Don't go back to Rockville...");
+Console.WriteLine("...and waste another year.");
+----
+
+The program produces the following output:
+
+....
+In the words of Michael Stipe,Don't go back to Rockville...
+...and waste another year.
+....
+
+
+After the `Write()` statement executes, the cursor is still sitting right after the comma following *Stipe*, so when the next line of code outputs *_Don't go back to Rockville..._*, that output just gets jammed onto the end. 
+Notice that it doesn't even add a space; if we want a space there, we have to include it within our quotation marks.
+
+Because *_Don't go back to Rockville..._* is in a `WriteLine()` statement, the cursor advances and *_...and waste another year._* is on a new line.
+
+We'll use `Write()` and `WriteLine()` in every program we write for quite a while, so it's important to take time to experiment with them on our own to make sure we understand how they work.
+
+=== Code Comments
+
+The C# compiler goes through our source code file line by line, translating all of the code into something that we can execute (unless it finds something it doesn't understand, which causes it to stop and output an error message).
+If there's something in our source code we don't want the compiler to process, we can identify it as a _code comment_ and the compiler will ignore it.
+Code comments are generally used to provide information for any humans who might be looking at the code.
+And since it's ignored by the compiler, it can be written however we want; so our code comments should be written in plain human language (English, if you're submitting it to me).
+To indicate a comment, use two slashes:
+
+`// This is a comment!`
+
+Once the compiler sees two slashes, it just ignores the rest of the line.
+We can add a comment onto the end of a line of code:
+
+[caption="Example {chapter-number}.{counter:source-counter} - "]
+.Inline comment placed at the end of a line of code
+[source,csharp,linenums]
+----
+Console.WriteLine("Hello World"); // this line outputs text to the console
+----
+
+The `WriteLine()` statement still gets processed and will execute when we run our program, but everything after the slashes gets ignored.
+
+To make a comment that takes up multiple lines, start the comment block with `/{asterisk}` (that's a slash and an asterisk) and end it with `{asterisk}/` (asterisk and a slash).
+When the compiler sees `/{asterisk}` it will ignore everything until it finds `{asterisk}/`, and then it will resume processing as usual.
+
+[caption="Example {chapter-number}.{counter:source-counter} - "]
+.Multi-line comment block
+[source,csharp,linenums]
+----
+/*
+This program shows the difference between Write() and WriteLine().
+It is referring to an old R.E.M. song.
+
+Everything in this comment block will be ignored.
+*/
+Console.Write("In the words of Michael Stipe,");
+Console.WriteLine("Don't go back to Rockville...");
+Console.WriteLine("...and waste another year.");
+----
+
+In general, code comments are used to explain or provide context for our code.
+Programming often involves going back to old code to make updates or corrections.
+Maybe it's been a long time and we might not remember what the code is supposed to do, or maybe it's someone different looking at the code and trying to figure it out.
+So code comments should be descriptive, especially when code might be confusing.
+
+TIP: Code comments don't cost anything, so use lots of them!
+
+We often add a multiline comment block at the top of a file to provide information about the overall program or class.
+
+==== "Commenting Out" Code
+
+Coding is all about trial and error, and programmers spend a lot of time writing code in different ways until they get it working the way they want.
+In a process like that, it's not unusual to delete something only to regret it and wish we could have that old code back.
+
+Code commenting gives us a life hack to help prevent that regret.
+Instead of deleting code that's not working the way we want, we can just mark it as a comment. 
+As far as the compiler is concerned, we've deleted the code.
+But if we want to see or use the code again down the road, it's still there.
+
+TIP: Almost all IDEs have a keyboard shortcut for commenting out code--and in most, it's the same shortcut. Highlight a section of code and press kbd:[Alt,/] on Windows or kbd:[⌘,/] on macOS, and many IDEs will add `//` at the start of each line. Highlighting a comment and pressing the shortcut again will usually "uncomment" it and remove the slashes. If that doesn't work, check the IDE's documentation to see if there's a different shortcut.
+
+
+'''
+
+:sectnums!:
+=== Check Yourself Before You Wreck Yourself (on the assignments)
+
+==== Can you answer these questions?
+
+// TODO: remove check yourself question on SDLC
+
+****
+1. What is the primary role of a programming language in the context of computer programming?
+2. Explain the difference between compiled and interpreted programming languages. Provide an example of each.
+3. What are the key steps in the software development process as outlined in the chapter? Why is it important to follow these steps?
+****
+:sectnums:
+_Sample answers provided in <<_computers_and_coding,Stuff That's Tacked On The End>>_.
