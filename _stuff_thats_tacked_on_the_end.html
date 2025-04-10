@@ -61,6 +61,11 @@
 <li><a href="_stuff_thats_tacked_on_the_end.html"><span class="toc-current">Stuff That&#8217;s Tacked on the End</span></a>
 <ul class="sectlevel2">
 <li><a href="_stuff_thats_tacked_on_the_end.html#_sample_answers_to_check_yourself_questions">Sample answers to "Check Yourself&#8230;&#8203;" questions</a>
+<<<<<<< HEAD
+=======
+</li>
+<li><a href="_stuff_thats_tacked_on_the_end.html#_bonus_topics">Bonus Topics</a>
+>>>>>>> 72268a6 (Automated update from skimpy-csharp-dev on 2025-04-09 20:26:28)
 </li>
 </ul>
 </li>
@@ -83,7 +88,7 @@ Unfortunately, I didn&#8217;t take careful notes on which responses I used as I 
 It turned out that the Copilot responses were pretty good.</p>
 </div>
 <div class="sect3">
-<h4 id="_getting_started_chapter">Getting Started Chapter</h4>
+<h4 id="getting-started-chapter">1. Getting Started Chapter</h4>
 <div class="qlist qanda">
 <ol>
 <li>
@@ -102,7 +107,11 @@ It turned out that the Copilot responses were pretty good.</p>
 </div>
 </div>
 <div class="sect3">
+<<<<<<< HEAD
 <h4 id="_computers_and_coding_2">Computers and Coding</h4>
+=======
+<h4 id="computers-and-coding">Computers and Coding</h4>
+>>>>>>> 72268a6 (Automated update from skimpy-csharp-dev on 2025-04-09 20:26:28)
 <div class="qlist qanda">
 <ol>
 <li>
@@ -110,7 +119,19 @@ It turned out that the Copilot responses were pretty good.</p>
 <p>The primary role of a programming language is to act as a bridge between human language and machine language. It allows humans to write instructions in a way that is easier for them to understand and use, which can then be accurately translated into machine language that a computer can execute.</p>
 </li>
 <li>
-<p><em><strong>Explain the difference between compiled and interpreted programming languages. Provide an example of each.</strong></em></p>
+<p><em><strong>What happens when you run a C# program? Describe that process in simple terms.</strong></em></p>
+<p>When you run a C# program, your code gets compiled (translated) into something the computer can understand, then the computer follows your instructions step by step and shows the results (like printing text or doing math).</p>
+</li>
+<li>
+<p><em><strong>What’s the difference between Console.Write() and Console.WriteLine()? When would you use each?</strong></em></p>
+<p>Console.Write() prints text and keeps the cursor on the same line. Console.WriteLine() prints text and moves the cursor to a new line. Use Write() when you want output to continue on the same line, and WriteLine() when you want it to start a new line afterward.</p>
+</li>
+<li>
+<p><em><strong>How would you explain what a “program” is to an 8-year-old?</strong></em></p>
+<p>A program is like a list of instructions you give to a computer—kind of like a recipe. The computer follows the steps exactly to do something, like showing a message or solving a puzzle.</p>
+</li>
+<li>
+<p><em><strong>Explain the difference between compiled and interpreted programming languages. Describe how C# is both compiled *and</strong> interpreted.*</em></p>
 <div class="ulist">
 <ul>
 <li>
@@ -120,38 +141,154 @@ It turned out that the Copilot responses were pretty good.</p>
 <p><strong>Interpreted languages</strong> are those where the source code is translated into machine language on the fly, as the program is running, by an interpreter. An example of an interpreted language is Python.</p>
 </li>
 <li>
-<p><strong>Java</strong> is a unique case as it is both compiled and interpreted. The source code is first compiled into an intermediate language called bytecode, which is then interpreted by the Java Runtime Environment (JRE) at runtime.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><em><strong>What are the key steps in the software development process as outlined in the chapter? Why is it important to follow these steps?</strong></em></p>
-<div class="ulist">
-<ul>
-<li>
-<p>The key steps in the software development process are:</p>
-</li>
-<li>
-<p><strong>Analysis</strong>: Identifying the goals and scope of the program. This step ensures that you understand what the program needs to do.</p>
-</li>
-<li>
-<p><strong>Testing Plan</strong>: Determining how the final program will be tested. This step ensures that you have a clear understanding of how to verify that the program works correctly.</p>
-</li>
-<li>
-<p><strong>Implementation</strong>: Writing and testing the code iteratively. This step involves developing the program piece by piece, testing each part to ensure it works before moving on to the next.</p>
-</li>
-<li>
-<p><strong>Revise or Maintain</strong>: Updating the program as needed based on changing requirements or ensuring it continues to perform as expected over time.</p>
-</li>
-<li>
-<p>Following these steps is important because it helps keep the development process organized and focused, ensures efficient use of time, and makes complex programming tasks more approachable.</p>
+<p><strong>C#</strong> is a somewhat unique case, as it is both compiled and interpreted. The source code is first compiled into an intermediate language called CIL, which is then interpreted by the .NET runtime (CLR) when the program is executed. This allows C# to have some of the performance benefits of compiled languages while still being able to run on different platforms.</p>
 </li>
 </ul>
 </div>
 </li>
 </ol>
 </div>
+</div>
+<div class="sect3">
+<h4 id="variables-and-data-types">2. Variables and Data Types</h4>
+<div class="qlist qanda">
+<ol>
+<li>
+<p><em><strong>What is a variable, and why do we use them in programming?</strong></em></p>
+<p>A variable is a named storage location in a program that holds a value which can change as the program runs. We use variables to store, update, and reuse data.</p>
+</li>
+<li>
+<p><em><strong>Which C# data type would you use for each of the following?</strong></em></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>The number of people in The Beatles</strong> → <code>int</code></p>
+</li>
+<li>
+<p><strong>The full name of the Beatles bass player</strong> → <code>string</code></p>
+</li>
+<li>
+<p><strong>Whether the Beatles are a great band (yes or no)</strong> → <code>bool</code></p>
+</li>
+<li>
+<p><strong>The price of <em>Sgt. Pepper&#8217;s Lonely Hearts Club Band</em> on vinyl</strong> → <code>double</code></p>
+</li>
+<li>
+<p><strong>John Lennon&#8217;s middle initial (it&#8217;s W, incidentally)</strong> → <code>char</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><em><strong>Write a line of code that declares a variable named importantYear and sets it to 1964.</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> importantYear </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1964</span><span style="color: #f8f8f2">;</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>What will the following code print? Why?</strong></em></p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> drummer </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Pete Best&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">drummer </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Ringo Starr&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">Console.WriteLine(drummer);</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The code will print "Ringo Starr" because the variable <code>drummer</code> is first set to <a href="https://en.wikipedia.org/wiki/Pete_Best" target="_blank" rel="noopener">"Pete Best"</a> and then changed to "Ringo Starr". The most recent value assigned to the variable is what gets printed.</p>
+</div>
+</li>
+<li>
+<p><em><strong>What happens if you try to store a word (like "hello") in a variable declared as int?</strong></em></p>
+<p>The program will not compile. You can&#8217;t assign a value of one data type to a variable of another (incompatible) data type. You also can&#8217;t change the data type of a variable after you&#8217;ve declared it.</p>
+</li>
+<li>
+<p><em><strong>What&#8217;s wrong with this variable name: <code>4ladsFromLiverpool</code>?</strong></em></p>
+<p>A C# variable name can&#8217;t start with a number. You could call it <code>fourLadsFromLiverpool</code> instead.</p>
+</li>
+<li>
+<p><em><strong><em>True</em> or <em>False</em>: You must always assign a value to a variable at the same time you declare it</strong></em></p>
+<p><strong>False.</strong> You can declare a variable and assign a value to it later:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> albums;</span>
+<span style="color: #f8f8f2">albums </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">12</span><span style="color: #f8f8f2">;</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>What are compound assignment operators in C#? Provide examples of how they are used in arithmetic operations.</strong></em></p>
+<p>Compound assignment operators combine an arithmetic operation with assignment. Examples:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> numBeatles </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">numBeatles </span><span style="color: #ff4689">-=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">; </span><span style="color: #959077">// Rest in peace, Stuart Sutcliffe!</span></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>Write a short program that asks for the user&#8217;s name and the number of Beatles albums they own, and then prints a personalized message like: “Hello Stu, you have 5 Beatles albums.”</strong></em></p>
+<div class="listingblock">
+<div class="title"><code>BeatlesGreeting.cs</code></div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #f8f8f2">Console.Write(</span><span style="color: #e6db74">&quot;What is your name? &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> name </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Console.ReadLine();</span>
+
+<span style="color: #f8f8f2">Console.Write(</span><span style="color: #e6db74">&quot;How many Beatles albums do you own? &quot;</span><span style="color: #f8f8f2">);</span>
+<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> albums </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Convert.ToInt32(Console.ReadLine());</span>
+
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">$&quot;Hello {name}, you have {albums} Beatles albums.&quot;</span><span style="color: #f8f8f2">);</span></code></pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bonus_topics">Bonus Topics</h3>
+<div class="paragraph">
+<p>I strive to give you full value for the price you paid for this eBook, so I want to touch on a few bonus topics.
+These are things that I think are useful and/or interesting, but aren&#8217;t absolutely necessary to understand the material in this book&#8212;&#8203;and aren&#8217;t part of what I cover in my class.</p>
+</div>
+<div class="paragraph">
+<p>I like the C# language a lot, and there are a ton of cool features that I don&#8217;t get into because I know many of my students are just getting started with programming.
+So this is where I can put some of that stuff.</p>
+</div>
+<div class="sect3">
+<h4 id="_optional_arguments_chapter_3_methods">Optional Arguments (Chapter 3 - <a href="_methods.html">Methods</a>)</h4>
+<div class="paragraph">
+<p>C# allows us to specify that some arguments are optional.
+By default (the way we&#8217;ve defined parameters so far), a method call must provide a value for each parameter in the method.
+However, you can also assign a default value to a parameter; that makes it optional.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example Appendix.1 - <code>OptionalParameter.cs</code>. A method with an optional parameter</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">TotalBill</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> meal, </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> tipPercentage </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">20.0</span><span style="color: #f8f8f2">) {</span>
+<span style="color: #f8f8f2">   </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> meal </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> (meal </span><span style="color: #ff4689">*</span><span style="color: #f8f8f2"> tipPercentage</span><span style="color: #ff4689">/</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When calling <code>TotalBill</code>, we can provide one argument (price of the meal) or two (price of the meal and the tip percentage).
+If we don&#8217;t provide <code>tipPercentage</code>, the method will use <code>20.0</code> for that parameter.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> amount </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> TotalBill(</span><span style="color: #ae81ff">100.0</span><span style="color: #f8f8f2">);  </span><span style="color: #959077">// amount = 120.0</span>
+<span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> amount2 </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> TotalBill(</span><span style="color: #ae81ff">100.0</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">18.0</span><span style="color: #f8f8f2">);  </span><span style="color: #959077">// amount2 = 118.0</span></code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_named_arguments">Named Arguments</h4>
+
 </div>
 </div>
 </div>
@@ -162,7 +299,11 @@ It turned out that the Copilot responses were pretty good.</p>
 </div>
 <div id="footer">
     <div id="footer-text">
+<<<<<<< HEAD
         Tripucka Edition,&nbsp;revised&nbsp;2025-04-09&nbsp;-&nbsp;16:47:54 -0700
+=======
+        Tripucka Edition,&nbsp;revised&nbsp;2025-04-09&nbsp;-&nbsp;20:26:12 -0700
+>>>>>>> 72268a6 (Automated update from skimpy-csharp-dev on 2025-04-09 20:26:28)
         <p xmlns:cc="http://creativecommons.org/ns#">This work is licensed under <a
                 href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img

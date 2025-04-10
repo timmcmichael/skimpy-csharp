@@ -87,7 +87,12 @@ p {
   font-family: var(--main-font) ! important
 }
 
+<<<<<<< HEAD
 #toc.toc2 a:link {
+=======
+#toc.toc2 a:link,
+#toc.toc2 a:visited {
+>>>>>>> 72268a6 (Automated update from skimpy-csharp-dev on 2025-04-09 20:26:28)
   color: var(--linkcolor);
   font-family: var(--main-font) !important
 }
@@ -177,15 +182,32 @@ video {
 
 #theme-toggle {
   position: fixed;
+<<<<<<< HEAD
   top: 10px;   /* Adjust the vertical position */
   right: 10px; /* Adjust the horizontal position (right side of the screen) */
   z-index: 10; /* Ensure it appears above other content */
+=======
+  top: 10px;
+  /* Adjust the vertical position */
+  right: 10px;
+  /* Adjust the horizontal position (right side of the screen) */
+  z-index: 10;
+  /* Ensure it appears above other content */
+>>>>>>> 72268a6 (Automated update from skimpy-csharp-dev on 2025-04-09 20:26:28)
   background-color: transparent;
   border: none;
   padding: 0;
   font: inherit;
   font-size: smaller;
+<<<<<<< HEAD
   color: var(--linkcolor); /* or a custom color */
   cursor: pointer;
   text-decoration: underline;
 }
+=======
+  color: var(--linkcolor);
+  /* or a custom color */
+  cursor: pointer;
+  text-decoration: underline;
+}
+>>>>>>> 72268a6 (Automated update from skimpy-csharp-dev on 2025-04-09 20:26:28)
