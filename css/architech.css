@@ -89,7 +89,7 @@ p {
 
 #toc.toc2 a:link,
 #toc.toc2 a:visited {
-  color: var(--linkcolor);
+  color: var(----maincolor) !important;
   font-family: var(--main-font) !important
 }
 
