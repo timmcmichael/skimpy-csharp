@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.23">
+<meta name="author" content="Tim McMichael">
+<title>Skimpy C#: An Introduction to Programming</title>
+<link rel="stylesheet" href="./css/architech-light.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
+                       font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
+             .nav-footer{text-align: center; margin-top: auto;}
+             .nav-footer > p > a {white-space: nowrap;}</style>
+</head>
+<body id="b-sides-and-deep-cuts" class="article toc2 toc-left">
+<head>
+    <link id="theme-link" rel="stylesheet" href="css/architect-light.css">
+  </head>
+<div id="header">
+    <button id="theme-toggle">Toggle Dark/Light Mode</button>
+</div>
+<div id="header">
+<h1>Skimpy C#: An Introduction to Programming</h1>
+<div class="details">
+<span id="author" class="author"><a href="https://timmcmichael.github.io/" target=" blank" rel="noopener">Tim McMichael</a></span><br>
+<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
+</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Skimpy Contents</div>
+<p><span class="toc-root"><a href="index.html">Skimpy C#: An Introduction to Programming</a></span></p><ul class="sectlevel1">
+<li><a href="_skimpy_preface.html">Skimpy Preface</a>
+</li>
+<li><a href="_how_to_use_this_book.html">How to Use This Book</a>
+</li>
+<li><a href="_related_resources.html">Related Resources</a>
+</li>
+<li><a href="_getting_started.html">Getting Started</a>
+</li>
+<li><a href="_computers_and_coding.html">1. Computers and Coding</a>
+</li>
+<li><a href="_variables_and_data_types.html">2. Variables and Data Types</a>
+</li>
+<li><a href="_methods.html">3. Methods</a>
+</li>
+<li><a href="_decisions.html">4. Decisions</a>
+</li>
+<li><a href="_loops.html">5. Loops</a>
+</li>
+<li><a href="_debugging_and_generative_ai.html">6. Debugging and Generative AI</a>
+</li>
+<li><a href="_classes_and_objects.html">7. Classes and Objects</a>
+</li>
+<li><a href="_arrays.html">8. Arrays</a>
+</li>
+<li><a href="_software_development_life_cycle.html">9. Software Development Life Cycle</a>
+</li>
+<li><a href="_graphical_user_interfaces.html">10. Graphical User Interfaces</a>
+</li>
+<li><a href="_liner_notes.html">Liner Notes</a>
+</li>
+<li><a href="b-sides-and-deep-cuts.html"><span class="toc-current">B-Sides and Deep Cuts</span></a>
+<ul class="sectlevel2">
+<li><a href="b-sides-and-deep-cuts.html#_optional_arguments">Optional Arguments</a>
+</li>
+<li><a href="b-sides-and-deep-cuts.html#_named_arguments">Named Arguments</a>
+</li>
+<li><a href="b-sides-and-deep-cuts.html#_recursion">Recursion</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="b-sides-and-deep-cuts">B-Sides and Deep Cuts</h2>
+<div class="sectionbody">
+<div class="paragraph subtitle">
+<p>WTF is a B-side? A deep cut?</p>
+</div>
+<div class="paragraph">
+<p>In the days when we all got our music on vinyl, a single wasn&#8217;t something you played on Spotify or Apple Music&#8212;&#8203;you went down to the record store and bought it.
+The single would take up one side of the record, and the artist could put another song on the back.
+The <strong>A-side</strong> was the hit everyone knew, and the <strong>B-side</strong> was a lesser-known track — sometimes a surprise gem, like <a href="https://www.youtube.com/watch?v=BGLGzRXY5Bwp" target="_blank" rel="noopener">"Revolution"</a> on the b-side of <a href="https://www.youtube.com/watch?v=A_MjCqQoLLA" target="_blank" rel="noopener">"Hey Jude."</a>
+And on a full album, a <strong>deep cut</strong> is a song buried deep in an album that wasn&#8217;t a radio single but still totally worth hearing.
+Try <a href="https://www.youtube.com/watch?v=Nryc7h6TCIE" target="_blank" rel="noopener">"Loving Cup"</a>, which is smack dab in the middle of <em>Exile on Main St.</em></p>
+</div>
+<div class="paragraph">
+<p>This section is like that: cool stuff that isn&#8217;t front and center in the course, but might turn out to be really interesting or useful.
+I like the C# language a lot, and there are a ton of great features that I don&#8217;t get into because I know many of my students don&#8217;t need a bunch of extra stuff thrown at them.
+So this is where I can put some of that stuff.
+They&#8217;re brief and, where appropriate, I link to a reliable source of additional information on the topic.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><strong>Deep cuts</strong></dt>
+<dd>
+<p>Things are really are useful and relevant, but just not quite critical enough to include in the chapter.</p>
+</dd>
+<dt class="hdlist1"><strong>B-sides</strong></dt>
+<dd>
+<p>Things that are outside the scope of the course, but that nerds or more advanced students might like.</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>And just to be clear, this is what normal books would call the <strong>appendices</strong>&#8230;&#8203;</p>
+</div>
+<div class="sect2">
+<h3 id="_optional_arguments">Optional Arguments</h3>
+<div class="paragraph subtitle">
+<p>Deep Cut from Chapter 3 - <a href="_methods.html">Methods</a></p>
+</div>
+<div class="paragraph">
+<p>C# allows us to specify that some arguments are optional.
+By default (the way we&#8217;ve defined parameters so far), a method call must provide a value for each parameter in the method.
+However, you can also assign a default value to a parameter; that makes it optional.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example A1 - <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/Appendices/OptionalArgument.cs"><code>OptionalArgument.cs</code></a>. A method with an optional argument.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">TotalBill</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> meal, </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> tipPercentage </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">20.0</span><span style="color: #f8f8f2">) {</span>
+<span style="color: #f8f8f2">   </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> meal </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> (meal </span><span style="color: #ff4689">*</span><span style="color: #f8f8f2"> tipPercentage</span><span style="color: #ff4689">/</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When calling <code>TotalBill</code>, we can provide one argument (price of the meal) or two (price of the meal and the tip percentage).
+If we don&#8217;t provide <code>tipPercentage</code>, the method will use <code>20.0</code> for that parameter.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> amount </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> TotalBill(</span><span style="color: #ae81ff">100.0</span><span style="color: #f8f8f2">);  </span><span style="color: #959077">// amount = 120.0</span>
+<span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> amount2 </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> TotalBill(</span><span style="color: #ae81ff">100.0</span><span style="color: #f8f8f2">, </span><span style="color: #ae81ff">18.0</span><span style="color: #f8f8f2">);  </span><span style="color: #959077">// amount2 = 118.0</span></code></pre>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+If you use optional parameters, they must be at the end of the parameter list. In other words, in the example above, I couldn&#8217;t have the optional <code>tipPercentage</code> before <code>meal</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Learn more about optional parameters in the official Microsoft documentation: <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments#optional-arguments" target="_blank" rel="noopener">Optional Arguments (C# Programming Guide)</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_named_arguments">Named Arguments</h3>
+<div class="paragraph subtitle">
+<p>Deep Cut from Chapter 3 - <a href="_methods.html">Methods</a></p>
+</div>
+<div class="paragraph">
+<p>Another nice C# feature related methods is named arguments.
+Named arguments allow you to specify the name of the parameter you&#8217;re providing a value for, so you can list the arguments in any order. Simply put the name of the parameter followed by a colon and the value you want to assign to it.</p>
+</div>
+<div class="paragraph">
+<p>It means you don&#8217;t have to remember the order of the parameters in the method as long as you remember the names.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example A2 - <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/Appendices/NamedArguments.cs"><code>NamedArguments.cs</code></a>. A method call using named arguments.</div>
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">NamedArguments</span>
+<span style="color: #f8f8f2">{</span>
+<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
+<span style="color: #f8f8f2">    {</span>
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> amount </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> TotalBill(tipPercentage: </span><span style="color: #ae81ff">18.0</span><span style="color: #f8f8f2">, tax: </span><span style="color: #ae81ff">1.0</span><span style="color: #f8f8f2">, meal: </span><span style="color: #ae81ff">100.0</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        Console.WriteLine(amount);</span>
+
+<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">TotalBill</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> meal, </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> tax, </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> tipPercentage)</span>
+<span style="color: #f8f8f2">        {</span>
+<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> meal </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> (meal </span><span style="color: #ff4689">*</span><span style="color: #f8f8f2"> tax </span><span style="color: #ff4689">/</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">) </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> (meal </span><span style="color: #ff4689">*</span><span style="color: #f8f8f2"> tipPercentage </span><span style="color: #ff4689">/</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">);</span>
+<span style="color: #f8f8f2">        }</span>
+
+<span style="color: #f8f8f2">    }</span>
+<span style="color: #f8f8f2">}</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Learn more about named arguments in the official Microsoft documentation: <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments#named-arguments" target="_blank" rel="noopener">Named Arguments (C# Programming Guide)</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_recursion">Recursion</h3>
+<div class="paragraph subtitle">
+<p>B-Side to Chapter 5 - <a href="_loops.html">Loops</a></p>
+</div>
+<div class="paragraph">
+<p><mark>Coming Soon!</mark></p>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph nav-footer">
+<p>← Previous: <a href="_liner_notes.html">Liner Notes</a> | ↑ Up: <a href="index.html">Skimpy C#: An Introduction to Programming</a></p>
+</div>
+</div>
+<div id="footer">
+    <div id="footer-text">
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-04-10&nbsp;-&nbsp;20:25:15 -0700
+        <p xmlns:cc="http://creativecommons.org/ns#">This work is licensed under <a
+                href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
+                rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img
+                    style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
+                    src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+    </div>
+    <script>
+        // Theme toggle functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggle = document.getElementById("theme-toggle");
+            const themeLink = document.getElementById("theme-link");
+
+            if (!themeToggle || !themeLink) return; // Exit if elements are not found
+
+            // Check if the user has a preferred theme set in localStorage
+            const currentTheme = localStorage.getItem("theme");
+
+            if (currentTheme) {
+                themeLink.href = currentTheme === "dark" ? "css/architech-dark.css" : "css/architech-light.css";
+            }
+
+            // Set the button text based on the current theme
+            themeToggle.textContent = currentTheme === "dark" ? "Light mode" : "Dark mode";
+
+            // Toggle the theme
+            themeToggle.addEventListener("click", () => {
+                const newTheme = themeLink.href.includes("architech-light.css") ? "css/architech-dark.css" : "css/architech-light.css";
+                themeLink.href = newTheme;
+
+                // Save the user's theme preference to localStorage
+                const themeName = newTheme === "css/architech-dark.css" ? "dark" : "light";
+                localStorage.setItem("theme", themeName);
+
+                // Update the button text based on the new theme
+                themeToggle.textContent = themeName === "dark" ? "Light mode" : "Dark mode";
+
+            });
+        });
+    </script>
+
+</div>
+</body>
+</html>
