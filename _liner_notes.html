@@ -62,9 +62,6 @@
 <ul class="sectlevel2">
 <li><a href="_liner_notes.html#getting-started-chapter">Getting Started Chapter</a>
 </li>
-<<<<<<< HEAD:_stuff_thats_tacked_on_the_end.html
-<li><a href="_stuff_thats_tacked_on_the_end.html#_b_sides_and_deep_cuts">B-Sides and Deep Cuts</a>
-=======
 <li><a href="_liner_notes.html#computers-and-coding">1. Computers and Coding</a>
 </li>
 <li><a href="_liner_notes.html#variables-and-data-types">2. Variables and Data Types</a>
@@ -84,7 +81,6 @@
 <li><a href="_liner_notes.html#software-development-live-cycle">9. Software Development Life Cycle</a>
 </li>
 <li><a href="_liner_notes.html#graphical-user-interfaces">10. Graphical User Interfaces</a>
->>>>>>> 8e13c81 (Automated update from skimpy-csharp-dev on 2025-04-10 20:26:43):_liner_notes.html
 </li>
 </ul>
 </li>
@@ -280,38 +276,6 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 </div>
 </div>
 <div class="sect2">
-<<<<<<< HEAD:_stuff_thats_tacked_on_the_end.html
-<h3 id="_b_sides_and_deep_cuts">B-Sides and Deep Cuts</h3>
-<div class="paragraph subtitle">
-<p>WTF is a B-side? A deep cut?</p>
-</div>
-<div class="paragraph">
-<p>In the days when we all got our music on vinyl, a single had two songs: the <strong>A-side</strong> was the hit everyone knew, and the <strong>B-side</strong> was a lesser-known track — sometimes a surprise gem, like "Revolution" on the b-side of "Hey Jude."
-And on a full album, a <strong>deep cut</strong> is a song buried deep in an album that wasn&#8217;t a radio single but still totally worth hearing.
-Try "Loving Cup", which is smack dab in the middle of <em>Exile on Main St.</em></p>
-</div>
-<div class="paragraph">
-<p>This section is like that: cool stuff that isn&#8217;t front and center in the course, but might just become one of your favorite discoveries.
-I like the C# language a lot, and there are a ton of cool features that I don&#8217;t get into because I know many of my students don&#8217;t need a bunch of extra stuff thrown at them.
-So this is where I can put some of that stuff.</p>
-</div>
-<div class="sect3">
-<h4 id="_optional_arguments_b_side_to_chapter_3_methods">Optional Arguments (B-Side to Chapter 3 - <a href="_methods.html">Methods</a>)</h4>
-<div class="paragraph">
-<p>C# allows us to specify that some arguments are optional.
-By default (the way we&#8217;ve defined parameters so far), a method call must provide a value for each parameter in the method.
-However, you can also assign a default value to a parameter; that makes it optional.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example A1 - <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/Appendices/OptionalArgument.cs"><code>OptionalArgument.cs</code></a>. A method with an optional argument.</div>
-<div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">TotalBill</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> meal, </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> tipPercentage </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">20.0</span><span style="color: #f8f8f2">) {</span>
-<span style="color: #f8f8f2">   </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> meal </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> (meal </span><span style="color: #ff4689">*</span><span style="color: #f8f8f2"> tipPercentage</span><span style="color: #ff4689">/</span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">}</span>
-</pre></div></td></tr></table></div></code></pre>
-=======
 <h3 id="decisions">4. Decisions</h3>
 <div class="qlist qanda">
 <ol>
@@ -320,7 +284,6 @@ However, you can also assign a default value to a parameter; that makes it optio
 <p>Answer</p>
 </li>
 </ol>
->>>>>>> 8e13c81 (Automated update from skimpy-csharp-dev on 2025-04-10 20:26:43):_liner_notes.html
 </div>
 </div>
 <div class="sect2">
@@ -334,69 +297,6 @@ However, you can also assign a default value to a parameter; that makes it optio
 </ol>
 </div>
 </div>
-<<<<<<< HEAD:_stuff_thats_tacked_on_the_end.html
-<div class="admonitionblock important">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-important" title="Important"></i>
-</td>
-<td class="content">
-If you use optional parameters, they must be at the end of the parameter list. In other words, in the example above, I couldn&#8217;t have the optional <code>tipPercentage</code> before <code>meal</code>.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Learn more about optional parameters in the official Microsoft documentation: <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments#optional-arguments" target="_blank" rel="noopener">Optional Arguments (C# Programming Guide)</a></p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_named_arguments_b_side_to_chapter_3_methods">Named Arguments (B-Side to Chapter 3 - <a href="_methods.html">Methods</a>)</h4>
-<div class="paragraph">
-<p>Another nice C# feature related methods is named arguments.
-Named arguments allow you to specify the name of the parameter you&#8217;re providing a value for, so you can list the arguments in any order. Simply put the name of the parameter followed by a colon and the value you want to assign to it.</p>
-</div>
-<div class="paragraph">
-<p>It means you don&#8217;t have to remember the order of the parameters in the method as long as you remember the names.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example A2 - <a href="https://github.com/timmcmichael/EMCCTimFiles/tree/main/Intro%20to%20C-Sharp%20(CIS162AD)/Appendices/NamedArguments.cs"><code>NamedArguments.cs</code></a>. A method call using named arguments.</div>
-<div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">class</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">NamedArguments</span>
-<span style="color: #f8f8f2">{</span>
-<span style="color: #f8f8f2">    </span><span style="color: #66d9ef">public</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">void</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">Main</span><span style="color: #f8f8f2">()</span>
-<span style="color: #f8f8f2">    {</span>
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> amount </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> TotalBill(tipPercentage: </span><span style="color: #ae81ff">18.0</span><span style="color: #f8f8f2">, tax: </span><span style="color: #ae81ff">1.0</span><span style="color: #f8f8f2">, meal: </span><span style="color: #ae81ff">100.0</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">        Console.WriteLine(amount);</span>
-
-<span style="color: #f8f8f2">        </span><span style="color: #66d9ef">static</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> </span><span style="color: #a6e22e">TotalBill</span><span style="color: #f8f8f2">(</span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> meal, </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> tax, </span><span style="color: #66d9ef">double</span><span style="color: #f8f8f2"> tipPercentage)</span>
-<span style="color: #f8f8f2">        {</span>
-<span style="color: #f8f8f2">            </span><span style="color: #66d9ef">return</span><span style="color: #f8f8f2"> meal </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> (meal </span><span style="color: #ff4689">*</span><span style="color: #f8f8f2"> tax </span><span style="color: #ff4689">/</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">) </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> (meal </span><span style="color: #ff4689">*</span><span style="color: #f8f8f2"> tipPercentage </span><span style="color: #ff4689">/</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">100</span><span style="color: #f8f8f2">);</span>
-<span style="color: #f8f8f2">        }</span>
-
-<span style="color: #f8f8f2">    }</span>
-<span style="color: #f8f8f2">}</span>
-</pre></div></td></tr></table></div></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Learn more about named arguments in the official Microsoft documentation: <a href="https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments#named-arguments" target="_blank" rel="noopener">Named Arguments (C# Programming Guide)</a></p>
-</div>
-=======
 <div class="sect2">
 <h3 id="debugging-and-generative-ai">6. Debugging and Generative AI</h3>
 <div class="qlist qanda">
@@ -450,7 +350,6 @@ Named arguments allow you to specify the name of the parameter you&#8217;re prov
 <p>Answer</p>
 </li>
 </ol>
->>>>>>> 8e13c81 (Automated update from skimpy-csharp-dev on 2025-04-10 20:26:43):_liner_notes.html
 </div>
 </div>
 </div>
@@ -461,11 +360,7 @@ Named arguments allow you to specify the name of the parameter you&#8217;re prov
 </div>
 <div id="footer">
     <div id="footer-text">
-<<<<<<< HEAD:_stuff_thats_tacked_on_the_end.html
-        Tripucka Edition,&nbsp;revised&nbsp;2025-04-10&nbsp;-&nbsp;10:46:58 -0700
-=======
         Quarrymen Edition,&nbsp;revised&nbsp;2025-04-10&nbsp;-&nbsp;20:25:15 -0700
->>>>>>> 8e13c81 (Automated update from skimpy-csharp-dev on 2025-04-10 20:26:43):_liner_notes.html
         <p xmlns:cc="http://creativecommons.org/ns#">This work is licensed under <a
                 href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img
