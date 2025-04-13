@@ -17,6 +17,8 @@
 <body id="_variables_and_data_types" class="article toc2 toc-left">
 <head>
     <link id="theme-link" rel="stylesheet" href="css/architect-light.css">
+    <!-- TODO: Keep link to font awesome? -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
 <div id="header">
     <button id="theme-toggle">Toggle Dark/Light Mode</button>
@@ -85,6 +87,8 @@
 <li><a href="_liner_notes.html">Liner Notes</a>
 </li>
 <li><a href="b-sides-and-deep-cuts.html">B-Sides and Deep Cuts</a>
+</li>
+<li><a href="_acknowledgements.html">Acknowledgements</a>
 </li>
 </ul>
 </div>
@@ -238,7 +242,7 @@ If you have programming experience in Python or JavaScript, the idea of a data t
 </tr>
 </table>
 </div>
-<div class="sidebarblock">
+<div class="sidebarblock timetowatch">
 <div class="content">
 <div class="title">Time To Watch!</div>
 <div class="paragraph">
@@ -603,30 +607,13 @@ The easiest for beginners is to put the <code>$</code> symbol in front of the op
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>You can also interpolate values by placing integers in the curly braces, which will insert the value of the variable or constant in the order they appear in the <code>Write()</code> or <code>WriteLine()</code> statement.
-Beginners often find this style a little more confusing, but it&#8217;s good to know about it&#8212;&#8203;and programmers from some other languages may prefer it.</p>
+<div class="paragraph deepcut">
+<p><span class="icon"><i class="fa fa-headphones fa-4x"></i></span>
+<a href="b-sides-and-deep-cuts.html#_alternative_interpolation_syntax">Alternative Interpolation Syntax</a></p>
 </div>
-<div class="listingblock">
-<div class="title">Example 2.10 - Outtputting variables with interpolation - alternative</div>
+<div class="sidebarblock timetowatch">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> artistName </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Elvis Presley&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> birthYear </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1935</span><span style="color: #f8f8f2">;</span>
-
-<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">$&quot;{0} was born in {1}&quot;</span><span style="color: #f8f8f2">, artistName, birthYear);</span>
-</pre></div></td></tr></table></div></code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>{0}</code> and <code>{1}</code> in the string act as placeholders, and then the values are added on with commas after the string.
-<code>artistName</code> is the first variable listed, so it goes in the first placeholder; <code>birthYear</code> is the second variable listed, so it goes in the second placeholder.</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="title">Time to Watch!</div>
+<div class="title">Time To Watch!</div>
 <div class="paragraph">
 <p>Outputting Variables in C#</p>
 </div>
@@ -702,7 +689,7 @@ In C#, there are five basic arithmetic operators:</p>
 Each operator acts on the value to either side:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.11 - Simple arithmetic operations in C#</div>
+<div class="title">Example 2.10 - Simple arithmetic operations in C#</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> sum </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">7</span><span style="color: #f8f8f2">; </span><i class="conum" data-value="1"></i><b>(1)</b>
@@ -722,7 +709,7 @@ Each operator acts on the value to either side:</p>
 </tr>
 </table>
 </div>
-<div class="sidebarblock">
+<div class="sidebarblock timetowatch">
 <div class="content">
 <div class="title">Time To Watch!</div>
 <div class="paragraph">
@@ -768,7 +755,7 @@ We call this <em>operator precedence</em>, and here are the guidlines:</p>
 <p>Consider the following examples:</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.12 - Operator precedence in C#</div>
+<div class="title">Example 2.11 - Operator precedence in C#</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="c#"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> result1 </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">17</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">-</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">*</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">6</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">/</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">3</span><span style="color: #f8f8f2">; </span><i class="conum" data-value="1"></i><b>(1)</b>
 <span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> result2 </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">17</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">-</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">4</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">/</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2"> </span><span style="color: #ff4689">+</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">2</span><span style="color: #f8f8f2">; </span><i class="conum" data-value="2"></i><b>(2)</b>
@@ -874,7 +861,7 @@ To produce output, we&#8217;ve been using <code>Console.WriteLine</code> and <co
 For input, we&#8217;ll use <code>Console.ReadLine</code> (and, occasionally, <code>Console.Read</code>).</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.13 - Simple user input in C#</div>
+<div class="title">Example 2.12 - Simple user input in C#</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -890,7 +877,7 @@ For input, we&#8217;ll use <code>Console.ReadLine</code> (and, occasionally, <co
 <p><code>Console.ReadLine</code> only deals with <code>string</code> values; even if the user types in a number, it will be stored as a <code>string</code>--which means we&#8217;ll need to convert it to a number if we want to do any math with it.</p>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.14 - Incorrect use of user input</div>
+<div class="title">Example 2.13 - Incorrect use of user input</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
@@ -948,7 +935,7 @@ The 32 in <code>ToInt32</code> is the number of bits used to store the number, a
 </table>
 </div>
 <div class="listingblock">
-<div class="title">Example 2.15 - Correct conversion of user input</div>
+<div class="title">Example 2.14 - Correct conversion of user input</div>
 <div class="content">
 <pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
 <span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
@@ -972,7 +959,7 @@ The 32 in <code>ToInt32</code> is the number of bits used to store the number, a
 </pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
-<div class="sidebarblock">
+<div class="sidebarblock timetowatch">
 <div class="content">
 <div class="title">Time To Watch!</div>
 <div class="paragraph">
@@ -985,8 +972,9 @@ The 32 in <code>ToInt32</code> is the number of bits used to store the number, a
 </div>
 <div class="sect2">
 <h3 id="_check_yourself_before_you_wreck_yourself_on_the_assignments_3">Check Yourself Before You Wreck Yourself (on the assignments)</h3>
-<div class="sect3">
-<h4 id="_can_you_answer_these_questions_3">Can you answer these questions?</h4>
+<div class="paragraph subtitle">
+<p>Chapter Review Questions</p>
+</div>
 <div class="sidebarblock">
 <div class="content">
 <div class="olist arabic">
@@ -1054,14 +1042,13 @@ The 32 in <code>ToInt32</code> is the number of bits used to store the number, a
 </div>
 </div>
 </div>
-</div>
 <div class="paragraph nav-footer">
 <p>← Previous: <a href="_computers_and_coding.html">Computers and Coding</a> | ↑ Up: <a href="index.html">Skimpy C#: An Introduction to Programming</a> | Next: <a href="_methods.html">Methods</a> →</p>
 </div>
 </div>
 <div id="footer">
     <div id="footer-text">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-04-12&nbsp;-&nbsp;15:54:18 -0700
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-04-12&nbsp;-&nbsp;22:36:25 -0700
         <p xmlns:cc="http://creativecommons.org/ns#">This work is licensed under <a
                 href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img

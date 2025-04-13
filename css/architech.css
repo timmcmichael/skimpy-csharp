@@ -101,11 +101,18 @@ blockquote {
 .subtitle p {
   font-size: 1.7em !important;
   margin-top: 0;
-  margin-left: 80px;
+  margin-left: 50px;
   color: var(--tertiarycolor);
   font-family: var(--heading-font) !important;
   font-weight: bold;
   letter-spacing: 1.5px;
+}
+
+.subtitle a,
+.subtitle a:visited,
+.subtitle a:hover,
+.subtitle a:active {
+  color: var(--tertiarycolor);
 }
 
 
@@ -194,3 +201,15 @@ video {
   cursor: pointer;
   text-decoration: underline;
 }
+
+.sidebarblock.learnmore {
+  /* border-color: #3b82f6;
+  border-width: thick;
+  background-color: #f3f3f2; */
+}
+
+.sidebarblock.interesting {
+  /* border-color: #f59e0b;
+  background-color: #fff7e6; */
+}
+
