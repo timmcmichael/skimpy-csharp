@@ -145,7 +145,7 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p>When you run a C# program, your code gets compiled (translated) into something the computer can understand, then the computer follows your instructions step by step and shows the results (like printing text or doing math).</p>
 </li>
 <li>
-<p><em><strong>What’s the difference between Console.Write() and Console.WriteLine()? When would you use each?</strong></em></p>
+<p><em><strong>What&#8217;s the difference between Console.Write() and Console.WriteLine()? When would you use each?</strong></em></p>
 <p>Console.Write() prints text and keeps the cursor on the same line. Console.WriteLine() prints text and moves the cursor to a new line. Use Write() when you want output to continue on the same line, and WriteLine() when you want it to start a new line afterward.</p>
 </li>
 <li>
@@ -213,9 +213,12 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p><em><strong>What will the following code print? Why?</strong></em></p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> drummer </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Pete Best&quot;</span><span style="color: #f8f8f2">;</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> drummer </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Pete Best&quot;</span><span style="color: #f8f8f2">;</span>
 <span style="color: #f8f8f2">drummer </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Ringo Starr&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">Console.WriteLine(drummer);</span></code></pre>
+<span style="color: #f8f8f2">Console.WriteLine(drummer);</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -235,8 +238,10 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p><strong>False.</strong> You can declare a variable and assign a value to it later:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> albums;</span>
-<span style="color: #f8f8f2">albums </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">12</span><span style="color: #f8f8f2">;</span></code></pre>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> albums;</span>
+<span style="color: #f8f8f2">albums </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">12</span><span style="color: #f8f8f2">;</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 </li>
@@ -245,8 +250,10 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <p>Compound assignment operators combine an arithmetic operation with assignment. Examples:</p>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> numBeatles </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">;</span>
-<span style="color: #f8f8f2">numBeatles </span><span style="color: #ff4689">-=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">; </span><span style="color: #959077">// Rest in peace, Stuart Sutcliffe!</span></code></pre>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> numBeatles </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">5</span><span style="color: #f8f8f2">;</span>
+<span style="color: #f8f8f2">numBeatles </span><span style="color: #ff4689">-=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1</span><span style="color: #f8f8f2">; </span><span style="color: #959077">// Rest in peace, Stuart Sutcliffe!</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 </li>
@@ -255,13 +262,34 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 <div class="listingblock">
 <div class="title"><code>BeatlesGreeting.cs</code></div>
 <div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><span></span><span style="color: #f8f8f2">Console.Write(</span><span style="color: #e6db74">&quot;What is your name? &quot;</span><span style="color: #f8f8f2">);</span>
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">7</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #f8f8f2">Console.Write(</span><span style="color: #e6db74">&quot;What is your name? &quot;</span><span style="color: #f8f8f2">);</span>
 <span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> name </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Console.ReadLine();</span>
 
 <span style="color: #f8f8f2">Console.Write(</span><span style="color: #e6db74">&quot;How many Beatles albums do you own? &quot;</span><span style="color: #f8f8f2">);</span>
 <span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> albums </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Convert.ToInt32(Console.ReadLine());</span>
 
-<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">$&quot;Hello {name}, you have {albums} Beatles albums.&quot;</span><span style="color: #f8f8f2">);</span></code></pre>
+<span style="color: #f8f8f2">Console.WriteLine(</span><span style="color: #e6db74">$&quot;Hello {name}, you have {albums} Beatles albums.&quot;</span><span style="color: #f8f8f2">);</span>
+</pre></div></td></tr></table></div></code></pre>
+</div>
+</div>
+</li>
+<li>
+<p><em><strong>10. What are the two ways to convert a <code>string</code> to a numeric type, such as <code>int</code> or <code>double</code>? Show the syntax of each.</strong></em></p>
+<p>You can convert a string to a numeric type using either the <code>Convert</code> class or the <code>Parse</code> method. Here are examples of both:</p>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> nineteenSixtyNine </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;1969&quot;</span><span style="color: #f8f8f2">;</span>
+<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> woodstockYear </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> Convert.ToInt32(nineteenSixtyNine); </span><span style="color: #959077">// Using Convert class</span>
+<span style="color: #f8f8f2">woodstockYear </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">int</span><span style="color: #f8f8f2">.Parse(nineteenSixtyNine); </span><span style="color: #959077">// Using Parse method</span>
+</pre></div></td></tr></table></div></code></pre>
 </div>
 </div>
 </li>
@@ -467,7 +495,7 @@ These aren&#8217;t meant to be comprehensive answers, just a little information 
 </div>
 <div id="footer">
     <div id="footer-text">
-        Quarrymen Edition,&nbsp;revised&nbsp;2025-04-14&nbsp;-&nbsp;18:51:28 -0700
+        Quarrymen Edition,&nbsp;revised&nbsp;2025-04-15&nbsp;-&nbsp;13:26:30 -0700
         <p xmlns:cc="http://creativecommons.org/ns#">This work is licensed under <a
                 href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank"
                 rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img

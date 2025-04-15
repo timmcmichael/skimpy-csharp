@@ -4,8 +4,10 @@
 
 :root {
   --maincolor: #0a0b0c;
-  --primarycolor: #b1bcc5;   /* #465a6a; */
-  --secondarycolor: #b0c4de; /* #b1bcc5; */
+  --primarycolor: #b1bcc5;
+  /* #465a6a; */
+  --secondarycolor: #b0c4de;
+  /* #b1bcc5; */
   --tertiarycolor: #87ceeb;
   --highlightcolor: #b98e00;
   --sidebarbackground: #21252b;
@@ -40,7 +42,9 @@ h4 {
   color: var(--white) !important;
 }
 
-.author, .email, .author a {
+.author,
+.email,
+.author a {
   color: var(--white) !important;
 }
 
@@ -53,7 +57,8 @@ a {
   color: var(--linkcolor);
 }
 
-.ulist a:link, .ul a:visited {
+.ulist a:link,
+.ul a:visited {
   color: var(--linkcolor) !important;
 }
 
@@ -76,6 +81,7 @@ code {
   padding: 0 0.2em;
   border-radius: 4px;
 }
+
 /* 
 .listingblock code {
   /* Don't unset all styles, just avoid overriding necessary ones 
@@ -101,8 +107,8 @@ td:not(.listingblock .content pre td) {
 }
 
 #toc.toc2 {
-    background-image: url('../images/carbon_fibre.png');
-    background-color: var(--sidebarbackground);
+  background-image: url('../images/carbon_fibre.png');
+  background-color: var(--sidebarbackground);
 }
 
 #toctitle {
@@ -110,11 +116,4 @@ td:not(.listingblock .content pre td) {
   font-family: var(--heading-font) !important;
   font-weight: bold !important;
   font-size: 1.5em !important;
-}
-
-
-/* callout numbers */
-.conum {
-  background-color: blue !important;  
-  color: #000 !important;
 }

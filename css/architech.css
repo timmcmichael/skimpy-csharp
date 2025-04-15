@@ -262,20 +262,22 @@ video {
     margin-right: .3em;
   }
 
-  .callout-title {
-    color: var(--stickynote) !important;
-    font-family: var(--heading-font);
-    font-weight: bold;
-    letter-spacing: 1.5px;
-    font-size: 2.0em;
-    margin-left: 0.5em;
-  }
 
-  .video-title {
-    font-size: 1.5em !important;
-    /* font-weight: bold; */
-  }
 
+}
+
+.callout-title {
+  color: var(--stickynote) !important;
+  font-family: var(--heading-font);
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  font-size: 2.0em;
+  margin-left: 0.5em;
+}
+
+.video-title {
+  font-size: 1.5em !important;
+  /* font-weight: bold; */
 }
 
 /* Below no longer needed? */
@@ -296,3 +298,9 @@ video {
   vertical-align: middle;
   background-color: #fffef7 !important;
 } */
+
+/* code listing callout numbers */
+.conum {
+  background-color: blue !important;
+  color: #000 !important;
+}
