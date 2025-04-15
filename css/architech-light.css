@@ -6,7 +6,6 @@
   --maincolor: #FFFFFF;
   --primarycolor: #000000;
   --secondarycolor: #1a237e;
-  --tertiarycolor: inherit;
   --tertiarycolor: #9ddcff;
   --highlightcolor: #ffd600;
   --sidebarbackground: #CACACA;
@@ -44,6 +43,7 @@
     color: var(--white);
     font-family: var(--main-font) !important;
   }
+
   code {
     color: var(--primarycolor);
     background-color: var(--tertiarycolor);

@@ -38,23 +38,23 @@ h1 {
 
 h2,
 h3,
+h4,
 h5,
 h6 {
-  color: var(--secondarycolor) !important;
   font-family: var(--heading-font);
   font-weight: bold;
   letter-spacing: 1.5px;
 }
 
-h2 {
-  margin-bottom: 0;
+h2,
+h3,
+h5,
+h6 {
+  color: var(--secondarycolor) !important;
 }
 
 h4 {
   color: var(--tertiarycolor) !important;
-  font-family: var(--heading-font);
-  font-weight: bold;
-  letter-spacing: 1.5px;
 }
 
 h2::before {
@@ -82,7 +82,6 @@ h4::before {
   font-weight: normal;
 }
 
-/*a{text-decoration: none;}*/
 p {
   font-family: var(--main-font) ! important
 }
@@ -133,15 +132,6 @@ th {
   background-color: var(--maincolor);
   color: var(--black) !important;
 }
-
-
-/* GOTCHA!!! */
-/*
-td {
-  background-color: var(--maincolor);
-  color: var(--black) !important
-}
-*/
 
 td:not(.listingblock .content pre td) {
   background-color: var(--maincolor);
@@ -202,14 +192,107 @@ video {
   text-decoration: underline;
 }
 
-.sidebarblock.learnmore {
-  /* border-color: #3b82f6;
-  border-width: thick;
-  background-color: #f3f3f2; */
+/* Callout styles */
+
+/* TODO: Consolidate CSS for callouts */
+/* TODO: Define variables for callout colors */
+
+.callout {
+  border-left: 4px solid var(--highlightcolor);
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 1em;
+  margin: 1.5em 0;
+  border-radius: 0.5em;
+  display: flex;
+  align-items: flex-start;
+  vertical-align: middle;
+  gap: 0.75em;
+
+  .callout-title {
+    font-family: var(--heading-font);
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-size: 2.0em;
+  }
+
 }
 
-.sidebarblock.interesting {
-  /* border-color: #f59e0b;
-  background-color: #fff7e6; */
+.callout.bs {
+  border-color: var(--linkcoloralternate);
+
+
+  .bs-icon {
+    fill: var(--linkcoloralternate);
+    width: 3em;
+    height: 3em;
+    vertical-align: text-center;
+    margin-right: 1em;
+  }
+
+  .callout-title {
+    color: var(--linkcoloralternate) !important;
+  }
+
 }
 
+.callout.dc {
+  border-color: var(--linkcolor);
+
+  .dc-icon {
+    fill: var(--linkcolor);
+    width: 3em;
+    height: 3em;
+    vertical-align: text-center;
+    margin-right: 1em;
+  }
+
+  .callout-title {
+    color: var(--linkcolor) !important;
+  }
+}
+
+.timetowatch {
+  /* border-color: var(--linkcolor); */
+
+  .ttw-icon {
+    fill: var(--stickynote);
+    width: 3em;
+    height: 3em;
+    vertical-align: text-middle;
+    margin-right: .3em;
+  }
+
+  .callout-title {
+    color: var(--stickynote) !important;
+    font-family: var(--heading-font);
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    font-size: 2.0em;
+    margin-left: 0.5em;
+  }
+
+  .video-title {
+    font-size: 1.5em !important;
+    /* font-weight: bold; */
+  }
+
+}
+
+/* Below no longer needed? */
+/* .callout.table {
+  width: 100%;
+}
+
+.callout.dc td:first-child,
+.callout.bs td:first-child {
+  text-align: center;
+  vertical-align: middle;
+  padding-right: 1em;
+  line-height: 1.2;
+}
+
+.callout.dc td,
+.callout.bs td {
+  vertical-align: middle;
+  background-color: #fffef7 !important;
+} */
