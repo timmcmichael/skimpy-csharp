@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.23">
-<meta name="author" content="Tim McMichael">
-<title>Skimpy C#: An Introduction to Programming</title>
-<link rel="stylesheet" href="./css/architech-light.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
-                       font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
-             .nav-footer{text-align: center; margin-top: auto;}
-             .nav-footer > p > a {white-space: nowrap;}</style>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="10; url=https://timmcmichael.github.io/lofi-csharp/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C# Book Has Moved</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 2em;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        a {
+            color: #0066cc;
+        }
+    </style>
 </head>
+<<<<<<< HEAD
 <body id="_software_development" class="article toc2 toc-left">
 <head>
   <link id="theme-link" rel="stylesheet" href="css/architech-light.css">
@@ -227,35 +234,15 @@ And when we are faced with solving a programming problem that really intimidates
         document.addEventListener("DOMContentLoaded", () => {
             const themeToggle = document.getElementById("theme-toggle");
             const themeLink = document.getElementById("theme-link");
+=======
+>>>>>>> f9b5ab5 (redirect to new URL)
 
-            if (!themeToggle || !themeLink) return; // Exit if elements are not found
-
-            // Check if the user has a preferred theme set in localStorage
-            const currentTheme = localStorage.getItem("theme");
-
-            if (currentTheme) {
-                themeLink.href = currentTheme === "dark" ? "css/architech-dark.css" : "css/architech-light.css";
-            }
-
-            // Set the button text based on the current theme
-            themeToggle.textContent = currentTheme === "dark" ? "Light mode" : "Dark mode";
-
-            // Toggle the theme
-            themeToggle.addEventListener("click", () => {
-                const newTheme = themeLink.href.includes("architech-light.css") ? "css/architech-dark.css" : "css/architech-light.css";
-                themeLink.href = newTheme;
-
-                // Save the user's theme preference to localStorage
-                const themeName = newTheme === "css/architech-dark.css" ? "dark" : "light";
-                localStorage.setItem("theme", themeName);
-
-                // Update the button text based on the new theme
-                themeToggle.textContent = themeName === "dark" ? "Light mode" : "Dark mode";
-
-            });
-        });
-    </script>
-
-</div>
+<body>
+    <h1>My C# Book Has Moved!</h1>
+    <h2>Please update your bookmarks/links to <a
+            href="https://timmcmichael.github.io/lofi-csharp/">https://timmcmichael.github.io/lofi-csharp/</a></h2>
+    <p>You’ll be redirected to the new location in a few seconds.</p>
+    <p>If not, <a href="https://timmcmichael.github.io/lofi-csharp/">click here to go there now</a>.</p>
 </body>
+
 </html>

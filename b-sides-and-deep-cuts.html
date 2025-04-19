@@ -1,139 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.23">
-<meta name="author" content="Tim McMichael">
-<title>Skimpy C#: An Introduction to Programming</title>
-<link rel="stylesheet" href="./css/architech-light.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>.toc-current{font-weight: bold;} .toc-root{font-family: "Open Sans","DejaVu Sans",sans-serif;
-                       font-size: 0.9em;} #content{display: flex; flex-direction: column; flex: 1 1 auto;}
-             .nav-footer{text-align: center; margin-top: auto;}
-             .nav-footer > p > a {white-space: nowrap;}</style>
-</head>
-<body id="b-sides-and-deep-cuts" class="article toc2 toc-left">
-<head>
-  <link id="theme-link" rel="stylesheet" href="css/architech-light.css">
-  <!-- TODO: Keep link to font awesome? -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<div id="header">
-  <button id="theme-toggle">Toggle Dark/Light Mode</button>
-</div>
-<div id="header">
-<h1>Skimpy C#: An Introduction to Programming</h1>
-<div class="details">
-<span id="author" class="author"><a href="https://timmcmichael.github.io/" target=" blank" rel="noopener">Tim McMichael</a></span><br>
-<span id="email" class="email"><a href="mailto:tim.mcmichael@estrellamountain.edu">tim.mcmichael@estrellamountain.edu</a></span><br>
-</div>
-<div id="toc" class="toc2">
-<div id="toctitle">Skimpy Contents</div>
-<p><span class="toc-root"><a href="index.html">Skimpy C#: An Introduction to Programming</a></span></p><ul class="sectlevel1">
-<li><a href="_skimpy_preface.html">Skimpy Preface</a>
-</li>
-<li><a href="_how_to_use_this_book.html">How to Use This Book</a>
-</li>
-<li><a href="_related_resources.html">Related Resources</a>
-</li>
-<li><a href="_getting_started.html">Getting Started</a>
-</li>
-<li><a href="_computers_and_coding.html">1. Computers and Coding</a>
-</li>
-<li><a href="_variables_and_data_types.html">2. Variables and Data Types</a>
-</li>
-<li><a href="_methods.html">3. Methods</a>
-</li>
-<li><a href="_decisions.html">4. Decisions</a>
-</li>
-<li><a href="_loops.html">5. Loops</a>
-</li>
-<li><a href="_debugging_and_generative_ai.html">6. Debugging and Generative AI</a>
-</li>
-<li><a href="_classes_and_objects.html">7. Classes and Objects</a>
-</li>
-<li><a href="_arrays.html">8. Arrays</a>
-</li>
-<li><a href="_graphical_user_interfaces.html">9. Graphical User Interfaces</a>
-</li>
-<li><a href="_software_development.html">10. Software Development</a>
-</li>
-<li><a href="_liner_notes.html">Liner Notes</a>
-</li>
-<li><a href="b-sides-and-deep-cuts.html"><span class="toc-current">B-Sides and Deep Cuts</span></a>
-<ul class="sectlevel2">
-<li><a href="b-sides-and-deep-cuts.html#_string_format_method"><code>string.Format()</code> Method</a>
-</li>
-<li><a href="b-sides-and-deep-cuts.html#_optional_arguments">Optional Arguments</a>
-</li>
-<li><a href="b-sides-and-deep-cuts.html#_named_arguments">Named Arguments</a>
-</li>
-<li><a href="b-sides-and-deep-cuts.html#_recursion">Recursion</a>
-</li>
-</ul>
-</li>
-<li><a href="_acknowledgements.html">Acknowledgements</a>
-</li>
-</ul>
-</div>
-</div>
-<div id="content">
-<div class="sect1">
-<h2 id="b-sides-and-deep-cuts">B-Sides and Deep Cuts</h2>
-<div class="sectionbody">
-<div class="paragraph subtitle">
-<p>WTF is a B-side? A deep cut?</p>
-</div>
-<div class="paragraph">
-<p>In the days when we all got our music on vinyl, a single wasn&#8217;t something you played on Spotify or Apple Music&#8212;&#8203;you went down to the record store and bought it.
-The single would take up one side of the record, and the artist could put another song on the back.
-The <strong>A-side</strong> was the hit everyone knew, and the <strong>B-side</strong> was a lesser-known track — sometimes a surprise gem, like <a href="https://www.youtube.com/watch?v=BGLGzRXY5Bwp" target="_blank" rel="noopener">"Revolution"</a> on the b-side of <a href="https://www.youtube.com/watch?v=A_MjCqQoLLA" target="_blank" rel="noopener">"Hey Jude."</a>
-And on a full album, a <strong>deep cut</strong> is a song buried deep in an album that wasn&#8217;t a radio single but still totally worth hearing.
-Try <a href="https://www.youtube.com/watch?v=Nryc7h6TCIE" target="_blank" rel="noopener">"Loving Cup"</a>, which is smack dab in the middle of <em>Exile on Main St.</em></p>
-</div>
-<div class="paragraph">
-<p>This section is like that: cool stuff that isn&#8217;t front and center in the course, but might turn out to be really interesting or useful.
-I like the C# language a lot, and there are a ton of great features that I don&#8217;t get into because I know many of my students don&#8217;t need a bunch of extra stuff thrown at them.
-So this is where I can put some of that stuff.
-They&#8217;re brief and, where appropriate, I link to a reliable source of additional information on the topic.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><strong>Deep cuts</strong></dt>
-<dd>
-<p>Things are really are useful and relevant, but just not quite critical enough to include in the chapter.</p>
-</dd>
-<dt class="hdlist1"><strong>B-sides</strong></dt>
-<dd>
-<p>Things that are outside the scope of the course, but that nerds or more advanced students might like.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>And just to be clear, this is what normal books would call the <strong>appendices</strong>&#8230;&#8203;</p>
-</div>
-<div class="sect2">
-<h3 id="_string_format_method"><code>string.Format()</code> Method</h3>
-<div class="paragraph subtitle">
-<p>Deep Cut from Chapter 2 - <a href="_variables_and_data_types.html">Variables and Data Types</a></p>
-</div>
-<div class="paragraph">
-<p>You can also place variable values in a string using the <code>string.Format()</code> method.
-This method accepts a string with numbered placeholders, along with the variables you want to insert&#8212;&#8203;in the order they appear in the string.</p>
-</div>
-<div class="listingblock">
-<div class="title">Example 10.1 - Outtputting variables with interpolation - alternative</div>
-<div class="content">
-<pre class="pygments highlight" style="background: #272822; color: #f8f8f2"><code data-lang="csharp"><div class="lineno"><table class="linenotable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">1</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">2</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">3</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">4</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">5</span>
-<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">6</span></pre></div></td><td class="code"><div><pre style="line-height: 125%;"><span></span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> artistName </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #e6db74">&quot;Elvis Presley&quot;</span><span style="color: #f8f8f2">;</span>
-<span style="color: #66d9ef">int</span><span style="color: #f8f8f2"> birthYear </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #ae81ff">1935</span><span style="color: #f8f8f2">;</span>
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="10; url=https://timmcmichael.github.io/lofi-csharp/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C# Book Has Moved</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 2em;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        a {
+            color: #0066cc;
+        }
+    </style>
+</head>
+
+<<<<<<< HEAD
 <span style="color: #66d9ef">string</span><span style="color: #f8f8f2"> output </span><span style="color: #ff4689">=</span><span style="color: #f8f8f2"> </span><span style="color: #66d9ef">string</span><span style="color: #f8f8f2">.Format(</span><span style="color: #e6db74">&quot;{0} was born in {1}&quot;</span><span style="color: #f8f8f2">, artistName, birthYear);</span>
 
 <span style="color: #f8f8f2">Console.WriteLine(output);</span>
@@ -311,5 +199,14 @@ Named arguments allow you to specify the name of the parameter you&#8217;re prov
     </script>
 
 </div>
+=======
+<body>
+    <h1>My C# Book Has Moved!</h1>
+    <h2>Please update your bookmarks/links to <a
+            href="https://timmcmichael.github.io/lofi-csharp/">https://timmcmichael.github.io/lofi-csharp/</a></h2>
+    <p>You’ll be redirected to the new location in a few seconds.</p>
+    <p>If not, <a href="https://timmcmichael.github.io/lofi-csharp/">click here to go there now</a>.</p>
+>>>>>>> f9b5ab5 (redirect to new URL)
 </body>
+
 </html>
